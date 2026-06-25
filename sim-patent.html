@@ -1,1255 +1,397 @@
 <!DOCTYPE html>
-<!-- saved from url=(0443)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%94%D0%B8%D1%82%D1%8F%D1%87%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8E/%D0%A2%D0%95%D0%A1%D0%A2%D0%98%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_files/%D0%BA%D0%BE%D1%80%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C.html -->
+<!-- saved from url=(0476)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82/%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82/%D0%9F%D0%B0%D1%82%D0%B5%D0%BD%D1%82%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%D1%83%20%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.html -->
 <html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Корисні моделі та Промислові зразки — Юридична кухня Сосновського</title>
+<title>Патенти для бізнесу — Юридична кухня Сосновського</title>
 <link href="./sim-patent_files/css2" rel="stylesheet">
 <style>
 :root{
-  --bg:#08090f;
-  --panel:#0e1017;
-  --card:#131620;
-  --border:#1e2235;
-  --cyan:#00e5ff;
-  --lime:#aaff00;
-  --orange:#ff6b1a;
-  --pink:#ff2d9b;
-  --blue:#4d6fff;
-  --text:#e8ecff;
-  --muted:#5a6080;
-  --green:#00d97e;
-  --red:#ff3a5c;
-  --yellow:#ffd600;
+  --bg:#080c14;--card:#0f1520;--card2:#161e2e;
+  --blue:#2563eb;--blue2:#60a5fa;--gold:#c8992a;--gold2:#ffd166;
+  --red:#e05050;--red-bg:rgba(224,80,80,0.1);
+  --ok:#22c98e;--ok-bg:rgba(34,201,142,0.1);
+  --text:#d0d8f0;--muted:#6a7590;--border:rgba(255,255,255,0.07);
+  --orange:#f59e0b;--orange2:#fbbf24;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  min-height:100vh;
-  overflow-x:hidden;
-}
-
-/* GRID OVERLAY */
-body::before{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background-image:
-    linear-gradient(rgba(0,229,255,.03) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,229,255,.03) 1px,transparent 1px);
-  background-size:40px 40px;
-}
-
-/* SCANLINES */
-body::after{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.15) 2px,rgba(0,0,0,.15) 4px);
-}
-
-.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:28px 20px 80px;}
-
-/* ── HEADER ── */
-header{
-  text-align:center;
-  border:1px solid var(--border);
-  background:var(--panel);
-  padding:36px 24px 32px;
-  margin-bottom:32px;
-  position:relative;overflow:hidden;
-}
-header::before{
-  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
-  width:60%;height:2px;
-  background:linear-gradient(90deg,transparent,var(--cyan),var(--lime),transparent);
-}
-header::after{
-  content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
-  width:40%;height:1px;
-  background:linear-gradient(90deg,transparent,var(--muted),transparent);
-}
-.h-sys{
-  font-family:'Orbitron',monospace;font-size:9px;letter-spacing:4px;
-  color:var(--cyan);text-transform:uppercase;margin-bottom:16px;opacity:.8;
-}
-header h1{
-  font-family:'Orbitron',monospace;
-  font-size:clamp(1.4rem,4vw,2.4rem);
-  font-weight:900;line-height:1.1;
-  letter-spacing:2px;
-  background:linear-gradient(135deg,var(--cyan),var(--lime));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  margin-bottom:8px;
-}
-header .sub{
-  font-size:13px;color:var(--muted);font-weight:400;letter-spacing:1px;
-}
-.h-tags{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap;}
-.h-tag{
-  font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
-  border:1px solid;padding:5px 12px;text-transform:uppercase;
-}
-.h-tag.t1{border-color:var(--cyan);color:var(--cyan);}
-.h-tag.t2{border-color:var(--lime);color:var(--lime);}
-
-/* ── HUD / SCORE ── */
-.hud{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:10px;margin-bottom:24px;
-}
-.hud-cell{
-  background:var(--panel);border:1px solid var(--border);
-  padding:14px 12px;text-align:center;position:relative;
-  overflow:hidden;
-}
-.hud-cell::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-}
-.hud-cell:nth-child(1)::before{background:var(--green);}
-.hud-cell:nth-child(2)::before{background:var(--red);}
-.hud-cell:nth-child(3)::before{background:var(--yellow);}
-.hud-cell:nth-child(4)::before{background:var(--cyan);}
-.hud-cell .val{
-  font-family:'Orbitron',monospace;font-size:1.9rem;font-weight:900;
-  line-height:1;
-}
-.hud-cell:nth-child(1) .val{color:var(--green);}
-.hud-cell:nth-child(2) .val{color:var(--red);}
-.hud-cell:nth-child(3) .val{color:var(--yellow);}
-.hud-cell:nth-child(4) .val{color:var(--cyan);}
-.hud-cell .lbl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;font-family:'Orbitron',monospace;}
-
-/* PROGRESS */
-.pg-row{display:flex;justify-content:space-between;font-size:10px;font-family:'Orbitron',monospace;letter-spacing:2px;color:var(--muted);margin-bottom:6px;}
-.pg-track{height:4px;background:var(--border);margin-bottom:28px;position:relative;}
-.pg-fill{position:absolute;left:0;top:0;height:100%;background:linear-gradient(90deg,var(--cyan),var(--lime));transition:width .5s ease;box-shadow:0 0 10px var(--cyan);}
-
-/* ── MODE SWITCHER ── */
-.mode-switch{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:0;border:1px solid var(--border);
-  margin-bottom:28px;overflow:hidden;
-}
-.mode-btn{
-  background:var(--panel);border:none;
-  font-family:'Orbitron',monospace;font-size:11px;font-weight:700;
-  letter-spacing:2px;text-transform:uppercase;
-  padding:16px 12px;cursor:pointer;
-  transition:all .25s;color:var(--muted);
-  border-right:1px solid var(--border);
-  position:relative;overflow:hidden;
-}
-.mode-btn:last-child{border-right:none;}
-.mode-btn::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
-  transform:scaleX(0);transition:transform .25s;
-}
-.mode-btn.m1::after{background:var(--cyan);}
-.mode-btn.m2::after{background:var(--lime);}
-.mode-btn.on.m1{background:rgba(0,229,255,.08);color:var(--cyan);}
-.mode-btn.on.m2{background:rgba(170,255,0,.08);color:var(--lime);}
-.mode-btn.on::after{transform:scaleX(1);}
-.mode-btn .mic{font-size:1.5rem;display:block;margin-bottom:6px;}
-
-/* ── SECTIONS ── */
-.game-sec{display:none;}
-.game-sec.on{display:block;}
-
-/* TABS within section */
-.tabs{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap;}
-.tab{
-  background:var(--panel);border:1px solid var(--border);
-  font-family:'Orbitron',monospace;font-size:9px;font-weight:700;
-  letter-spacing:2px;text-transform:uppercase;
-  padding:8px 14px;cursor:pointer;transition:all .2s;color:var(--muted);
-}
-.tab:hover{border-color:var(--cyan);color:var(--text);}
-.tab.on.c1{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,.06);}
-.tab.on.c2{border-color:var(--lime);color:var(--lime);background:rgba(170,255,0,.06);}
-
-/* SUB-SECTIONS */
-.sub-sec{display:none;}
-.sub-sec.on{display:block;}
-
-/* ── THEORY ── */
-.theory{
-  background:var(--panel);border:1px solid var(--border);
-  border-left:3px solid var(--cyan);
-  padding:18px 22px;margin-bottom:22px;
-  position:relative;
-}
-.theory.lime{border-left-color:var(--lime);}
-.theory .t-head{
-  font-family:'Orbitron',monospace;font-size:10px;letter-spacing:3px;
-  text-transform:uppercase;color:var(--cyan);margin-bottom:10px;
-}
-.theory.lime .t-head{color:var(--lime);}
-.theory p{font-size:14px;line-height:1.7;color:#c0c8e8;}
-.theory strong{color:var(--cyan);}
-.theory.lime strong{color:var(--lime);}
-.theory .note{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic;}
-
-/* ── QCARD ── */
-.qcard{
-  background:var(--card);border:1px solid var(--border);
-  margin-bottom:16px;position:relative;
-  transition:box-shadow .2s;
-}
-.qcard:hover{box-shadow:0 0 24px rgba(0,229,255,.06);}
-.qcard.lime-card:hover{box-shadow:0 0 24px rgba(170,255,0,.06);}
-.qcard-head{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:12px 20px;border-bottom:1px solid var(--border);
-}
-.qcard-head .qnum{
-  font-family:'Orbitron',monospace;font-size:9px;
-  letter-spacing:2px;color:var(--muted);text-transform:uppercase;
-}
-.qcard-head .qtag{
-  font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;
-  padding:3px 10px;text-transform:uppercase;
-}
-.qtag.c1{border:1px solid var(--cyan);color:var(--cyan);}
-.qtag.c2{border:1px solid var(--lime);color:var(--lime);}
-.qcard-body{padding:22px 22px 20px;}
-.q-ico{font-size:2.2rem;margin-bottom:12px;display:block;}
-.q-txt{font-size:16px;font-weight:700;line-height:1.45;margin-bottom:20px;color:var(--text);}
-
-/* SCENE */
-.scene{
-  background:rgba(77,111,255,.07);
-  border:1px solid rgba(77,111,255,.25);
-  padding:14px 18px;margin-bottom:18px;
-  font-size:14px;line-height:1.65;color:#b0badd;
-}
-.scene.lime-s{background:rgba(170,255,0,.05);border-color:rgba(170,255,0,.2);}
-.scene b{color:var(--cyan);}
-.scene.lime-s b{color:var(--lime);}
-
-/* ── OPTIONS ── */
-.opts{display:grid;gap:8px;}
-.opts.two{grid-template-columns:1fr 1fr;}
-.opt{
-  background:var(--panel);border:1px solid var(--border);
-  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;
-  padding:13px 16px;cursor:pointer;text-align:left;
-  transition:all .15s;color:var(--text);line-height:1.35;
-  position:relative;
-}
-.opt:hover:not(:disabled){border-color:var(--cyan);background:rgba(0,229,255,.05);}
-.opt.lime-opt:hover:not(:disabled){border-color:var(--lime);background:rgba(170,255,0,.04);}
-.opt.ok{border-color:var(--green)!important;background:rgba(0,217,126,.08)!important;color:var(--green)!important;}
-.opt.no{border-color:var(--red)!important;background:rgba(255,58,92,.08)!important;color:var(--red)!important;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+.brand{background:#050810;text-align:center;padding:16px 20px 14px;border-bottom:1px solid var(--border);}
+.brand-name{font-family:'Unbounded',sans-serif;font-size:clamp(0.85rem,2.5vw,1.1rem);color:#fff;font-weight:700;}
+.brand-name span{color:var(--gold2);}
+.brand-slogan{font-size:0.7rem;color:#7aa3e8;font-style:italic;margin-top:4px;}
+.brand-line{width:36px;height:2px;background:var(--gold);margin:8px auto 0;border-radius:2px;}
+.hero{background:linear-gradient(160deg,#080c14 0%,#0a1428 50%,#080c14 100%);padding:52px 24px 48px;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.hero::before{content:'⚙';font-size:16rem;position:absolute;right:-30px;top:-40px;opacity:0.025;color:var(--blue2);pointer-events:none;line-height:1;}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 55%,rgba(37,99,235,0.08) 0%,transparent 55%);pointer-events:none;}
+.hero-tag{display:inline-block;background:rgba(37,99,235,0.12);color:var(--blue2);border:1px solid rgba(37,99,235,0.25);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:20px;position:relative;z-index:1;}
+.hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(1.6rem,5vw,2.6rem);color:#fff;font-weight:900;line-height:1.1;margin-bottom:16px;position:relative;z-index:1;}
+.hero h1 em{font-style:normal;color:var(--blue2);}
+.hero-sub{font-size:15px;color:var(--muted);max-width:540px;margin:0 auto 12px;line-height:1.75;position:relative;z-index:1;}
+.hero-note{font-size:13px;color:rgba(96,165,250,0.6);margin-bottom:28px;position:relative;z-index:1;}
+.start-btn{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:15px 44px;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.5px;box-shadow:0 4px 20px rgba(37,99,235,0.3);transition:transform .2s;position:relative;z-index:1;}
+.start-btn:hover{transform:translateY(-2px);}
+.progress-wrap{background:#050810;padding:12px 24px;display:none;align-items:center;gap:14px;border-bottom:1px solid var(--border);}
+.progress-wrap.show{display:flex;}
+.progress-track{flex:1;height:3px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--gold));border-radius:3px;transition:width .5s ease;}
+.progress-label{font-size:11px;color:var(--muted);white-space:nowrap;font-weight:700;letter-spacing:1px;}
+.score-row{display:none;background:#060a12;border-bottom:1px solid var(--border);padding:10px 24px;}
+.score-row.show{display:flex;}
+.sc-cell{flex:1;text-align:center;border-right:1px solid var(--border);padding:6px 0;}
+.sc-cell:last-child{border-right:none;}
+.sc-cell .n{font-family:'Unbounded',sans-serif;font-size:1.4rem;font-weight:900;line-height:1;}
+.sc-cell:nth-child(1) .n{color:var(--ok);}
+.sc-cell:nth-child(2) .n{color:var(--red);}
+.sc-cell:nth-child(3) .n{color:var(--gold2);}
+.sc-cell .l{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+.main{max-width:720px;margin:0 auto;padding:36px 20px 64px;}
+.intro-text{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:24px;}
+.intro-text strong{color:#fff;}
+.intro-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:32px;}
+.prof-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:border-color .2s;}
+.prof-card:hover{border-color:rgba(37,99,235,0.3);}
+.prof-ico{font-size:2.2rem;margin-bottom:10px;}
+.prof-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;}
+.prof-issue{font-size:12px;color:var(--muted);line-height:1.5;}
+.q-type{display:inline-block;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:2px 8px;border-radius:10px;margin-right:6px;}
+.q-type.tech{background:rgba(37,99,235,0.12);color:var(--blue2);border:1px solid rgba(37,99,235,0.2);}
+.q-type.design{background:rgba(245,158,11,0.1);color:var(--orange2);border:1px solid rgba(245,158,11,0.2);}
+.q-type.strategy{background:rgba(34,201,142,0.1);color:var(--ok);border:1px solid rgba(34,201,142,0.2);}
+.q-type.process{background:rgba(167,139,250,0.1);color:#c4b5fd;border:1px solid rgba(167,139,250,0.2);}
+.q-meta{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+.q-num{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue2);}
+.q-diff{font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;}
+.q-diff.med{background:rgba(200,153,42,0.12);color:var(--gold2);border:1px solid rgba(200,153,42,0.2);}
+.q-diff.hard{background:rgba(224,80,80,0.1);color:#f0a0a0;border:1px solid rgba(224,80,80,0.2);}
+.q-text{font-size:17px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:20px;}
+.case-box{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:20px;}
+.case-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue2);margin-bottom:8px;}
+.case-text{font-size:14px;color:var(--text);line-height:1.75;}
+.case-text strong{color:#fff;}
+.opts{display:grid;gap:9px;margin-bottom:16px;}
+.opt{background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:15px 18px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--text);cursor:pointer;text-align:left;line-height:1.45;transition:border-color .15s,background .15s,transform .1s;}
+.opt:hover:not(:disabled){border-color:rgba(37,99,235,0.5);background:rgba(37,99,235,0.07);transform:translateX(3px);}
+.opt.correct{border-color:var(--ok)!important;background:var(--ok-bg)!important;color:var(--ok)!important;}
+.opt.wrong{border-color:var(--red)!important;background:var(--red-bg)!important;color:var(--red)!important;}
 .opt:disabled{cursor:default;}
-
-/* FEEDBACK */
-.fb{display:none;padding:12px 16px;font-size:13px;line-height:1.6;border-top:1px solid var(--border);}
-.fb.show{display:block;}
-.fb.ok{background:rgba(0,217,126,.07);color:#00ff94;border-color:var(--green);}
-.fb.no{background:rgba(255,58,92,.07);color:#ff7090;border-color:var(--red);}
-
-/* ── COMPARE TABLE ── */
-.compare-wrap{overflow-x:auto;margin-bottom:16px;}
-.compare-table{width:100%;border-collapse:collapse;font-size:13px;}
-.compare-table th{
-  background:var(--panel);
-  font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  padding:12px 14px;border:1px solid var(--border);text-align:left;
-  white-space:nowrap;
-}
-.compare-table th:nth-child(2){color:var(--cyan);}
-.compare-table th:nth-child(3){color:var(--lime);}
-.compare-table td{
-  padding:11px 14px;border:1px solid var(--border);
-  color:#c0c8e8;line-height:1.4;vertical-align:top;
-}
-.compare-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
-
-/* ── MULTI-SELECT chips ── */
-.chip-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
-  gap:8px;margin-bottom:14px;
-}
-.chip{
-  background:var(--panel);border:1px solid var(--border);
-  padding:12px 14px;cursor:pointer;text-align:center;
-  font-size:13px;font-weight:500;transition:all .15s;color:var(--text);
-}
-.chip .ci{font-size:1.6rem;display:block;margin-bottom:5px;}
-.chip:hover{border-color:var(--cyan);}
-.chip.lime-c:hover{border-color:var(--lime);}
-.chip.sel{border-color:var(--cyan);background:rgba(0,229,255,.08);color:var(--cyan);}
-.chip.sel.lime-c{border-color:var(--lime);background:rgba(170,255,0,.06);color:var(--lime);}
-.chip.ok{border-color:var(--green);background:rgba(0,217,126,.08);color:var(--green);pointer-events:none;}
-.chip.no{border-color:var(--red);background:rgba(255,58,92,.08);color:var(--red);pointer-events:none;}
-
-/* ── SORT GAME ── */
-.sort-pool{display:flex;flex-wrap:wrap;gap:8px;min-height:48px;margin-bottom:18px;}
-.sc{
-  background:var(--panel);border:1px solid var(--border);
-  font-size:12px;font-weight:600;font-family:'Orbitron',monospace;
-  letter-spacing:.5px;padding:8px 14px;cursor:pointer;
-  transition:all .15s;color:var(--text);
-}
-.sc:hover{border-color:var(--cyan);}
-.sc.sel{border-color:var(--yellow);color:var(--yellow);}
-.sc.used{opacity:.2;pointer-events:none;}
-
-.buckets-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.bucket{
-  background:var(--panel);border:1px dashed var(--border);
-  padding:14px;min-height:90px;cursor:pointer;transition:border-color .15s;
-}
-.bucket:hover{border-color:var(--cyan);}
-.bucket.lime-bk:hover{border-color:var(--lime);}
-.bucket h5{
-  font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
-  text-transform:uppercase;color:var(--muted);margin-bottom:10px;
-}
-.bucket .btags{display:flex;flex-wrap:wrap;gap:6px;}
-.btag{
-  font-family:'Orbitron',monospace;font-size:10px;letter-spacing:1px;
-  padding:4px 10px;background:var(--blue);color:#fff;
-}
-.bucket.ok-bk{border-color:var(--green)!important;border-style:solid;}
-.bucket.no-bk{border-color:var(--red)!important;border-style:solid;}
-
-/* ── MATCH ── */
-.match-wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
-.match-col h4{
-  font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;
-  text-transform:uppercase;color:var(--muted);margin-bottom:8px;
-}
-.mi{
-  background:var(--panel);border:1px solid var(--border);
-  padding:11px 14px;font-size:13px;font-weight:500;
-  cursor:pointer;margin-bottom:7px;transition:all .15s;
-  line-height:1.4;color:var(--text);
-}
-.mi:hover{border-color:var(--cyan);}
-.mi.lime-mi:hover{border-color:var(--lime);}
-.mi.sel{border-color:var(--yellow);color:var(--yellow);}
-.mi.ok{border-color:var(--green);background:rgba(0,217,126,.07);color:var(--green);pointer-events:none;}
-.mi.nm{border-color:var(--red);}
-
-/* ── CALC ── */
-.calc-panel{
-  background:var(--panel);border:1px solid var(--border);
-  padding:0;overflow:hidden;margin-bottom:16px;
-}
-.calc-row{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:11px 18px;border-bottom:1px solid var(--border);
-  font-size:14px;
-}
-.calc-row:last-child{border-bottom:none;}
-.calc-row .v{
-  font-family:'Orbitron',monospace;font-size:13px;font-weight:700;color:var(--cyan);
-}
-.calc-row.total{background:rgba(0,229,255,.04);}
-.calc-inp{
-  background:var(--bg);border:1px solid var(--border);
-  color:var(--cyan);font-family:'Orbitron',monospace;
-  font-size:14px;font-weight:700;
-  padding:10px 14px;width:160px;text-align:center;
-  transition:border-color .2s;
-}
-.calc-inp:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 10px rgba(0,229,255,.15);}
-
-/* ── BUTTONS ── */
-.chk-btn{
-  background:transparent;
-  font-family:'Orbitron',monospace;font-weight:700;font-size:10px;
-  letter-spacing:3px;text-transform:uppercase;
-  padding:12px 24px;cursor:pointer;margin-top:12px;
-  transition:all .2s;border:1px solid var(--cyan);color:var(--cyan);
-}
-.chk-btn:hover{background:rgba(0,229,255,.1);box-shadow:0 0 16px rgba(0,229,255,.2);}
-.chk-btn.lime{border-color:var(--lime);color:var(--lime);}
-.chk-btn.lime:hover{background:rgba(170,255,0,.08);box-shadow:0 0 16px rgba(170,255,0,.15);}
-
-/* ── RESULT ── */
-.result{
-  display:none;
-  background:var(--panel);border:1px solid var(--border);
-  padding:52px 32px;text-align:center;
-  position:relative;overflow:hidden;
-}
-.result::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--cyan),var(--lime),var(--orange));
-}
+.feedback{display:none;border-radius:10px;padding:16px 18px;font-size:14px;line-height:1.7;margin-bottom:16px;}
+.feedback.show{display:block;}
+.feedback.ok{background:var(--ok-bg);border:1px solid rgba(34,201,142,0.25);color:#90e8c0;}
+.feedback.no{background:var(--red-bg);border:1px solid rgba(224,80,80,0.25);color:#f0a8a8;}
+.feedback strong{display:block;font-size:15px;margin-bottom:6px;color:#fff;}
+.law-ref{font-size:11px;color:rgba(96,165,250,0.5);margin-top:8px;font-style:italic;}
+.next-btn{background:linear-gradient(135deg,var(--blue),#3b82f6);color:#fff;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 30px;border:none;border-radius:4px;cursor:pointer;display:none;transition:transform .15s;}
+.next-btn.show{display:inline-block;}
+.next-btn:hover{transform:translateY(-1px);}
+.result{display:none;}
 .result.show{display:block;}
-.res-ico{font-size:5rem;margin-bottom:16px;}
-.res-h{
-  font-family:'Orbitron',monospace;
-  font-size:clamp(1.5rem,5vw,2.5rem);font-weight:900;
-  letter-spacing:3px;text-transform:uppercase;
-  background:linear-gradient(135deg,var(--cyan),var(--lime));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  margin-bottom:10px;
-}
-.res-p{color:var(--muted);font-size:15px;margin-bottom:32px;}
-.res-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-bottom:36px;}
-.rs .n{font-family:'Orbitron',monospace;font-size:3rem;font-weight:900;color:var(--cyan);line-height:1;}
-.rs .l{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;font-family:'Orbitron',monospace;}
-.restart-btn{
-  background:transparent;border:1px solid var(--cyan);
-  font-family:'Orbitron',monospace;font-weight:700;font-size:11px;
-  letter-spacing:3px;text-transform:uppercase;
-  color:var(--cyan);padding:14px 40px;cursor:pointer;
-  transition:all .2s;
-}
-.restart-btn:hover{background:rgba(0,229,255,.1);box-shadow:0 0 24px rgba(0,229,255,.25);}
-
-/* ── BADGE ── */
-@keyframes glitch{
-  0%{transform:translate(-50%,-50%) skewX(0deg);}
-  20%{transform:translate(-52%,-50%) skewX(-2deg);}
-  40%{transform:translate(-48%,-50%) skewX(2deg);}
-  60%{transform:translate(-50%,-50%) skewX(0deg);}
-  100%{transform:translate(-50%,-50%) skewX(0deg);}
-}
-.badge{
-  display:none;position:fixed;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  background:var(--card);
-  border:2px solid var(--cyan);
-  padding:36px 52px;text-align:center;z-index:999;
-  box-shadow:0 0 60px rgba(0,229,255,.3),0 0 120px rgba(0,229,255,.1);
-}
-.badge.show{display:block;animation:glitch .3s ease;}
-.badge.lime-bdg{border-color:var(--lime);box-shadow:0 0 60px rgba(170,255,0,.25);}
-.badge .be{font-size:3.5rem;margin-bottom:10px;}
-.badge .bt{
-  font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:900;
-  letter-spacing:3px;text-transform:uppercase;color:var(--cyan);
-}
-.badge.lime-bdg .bt{color:var(--lime);}
-.badge .bp{font-size:12px;color:var(--muted);margin-top:6px;}
-.badge .bc{
-  margin-top:16px;font-family:'Orbitron',monospace;font-size:9px;
-  letter-spacing:2px;text-transform:uppercase;
-  color:var(--muted);cursor:pointer;padding-top:12px;
-  border-top:1px solid var(--border);
-}
-.badge .bc:hover{color:var(--cyan);}
-
-@media(max-width:580px){
-  .hud{grid-template-columns:1fr 1fr;}
-  .opts.two{grid-template-columns:1fr;}
-  .buckets-row{grid-template-columns:1fr;}
-  .match-wrap{grid-template-columns:1fr;}
-  .chip-grid{grid-template-columns:1fr 1fr;}
-  .mode-btn{font-size:9px;}
-}
-
-  /* ── BRAND ── */
-  .brand-block {
-    text-align: center;
-    margin-bottom: 20px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .brand-name {
-    font-family: 'Orbitron', sans-serif;
-    font-size: clamp(1rem, 3.5vw, 1.5rem);
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 1px;
-    line-height: 1.2;
-  }
-  .brand-name .gold { color: #ffd166; }
-  .brand-slogan {
-    font-size: clamp(0.7rem, 1.8vw, 0.82rem);
-    color: rgba(255,255,255,0.5);
-    font-weight: 300;
-    font-style: italic;
-    margin-top: 6px;
-    letter-spacing: 0.2px;
-  }
-  .brand-line {
-    width: 44px; height: 2px;
-    background: #ffd166;
-    margin: 10px auto 0;
-    border-radius: 2px;
-  }
-  .site-footer {
-    text-align: center;
-    margin-top: 36px;
-    padding-top: 16px;
-    border-top: 1px solid rgba(255,255,255,0.07);
-    font-size: 0.73rem;
-    color: rgba(255,255,255,0.25);
-    letter-spacing: 0.3px;
-  }
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:44px 32px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden;}
+.result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue2),transparent);}
+.result-icon{font-size:4rem;margin-bottom:16px;}
+.result-title{font-family:'Unbounded',sans-serif;font-size:clamp(1.2rem,4vw,1.8rem);color:#fff;font-weight:900;margin-bottom:10px;}
+.result-sub{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:24px;}
+.score-bar-wrap{background:rgba(255,255,255,0.05);border-radius:4px;height:6px;margin:0 0 8px;overflow:hidden;}
+.score-bar-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--gold));border-radius:4px;transition:width 1.2s ease;}
+.score-nums{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);font-weight:700;}
+.rec-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue2);margin:28px 0 14px;}
+.rec-card{background:var(--card);border:1px solid var(--border);border-left:2px solid var(--blue);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:10px;text-align:left;}
+.rec-card h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px;}
+.rec-card p{font-size:13px;color:var(--muted);line-height:1.65;}
+.cta-box{background:linear-gradient(135deg,#080c1f,#080c14);border:1px solid rgba(37,99,235,0.2);border-radius:12px;padding:32px 24px;text-align:center;margin-top:20px;}
+.cta-box p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:18px;}
+.cta-box strong{color:var(--gold2);}
+.cta-btn{background:var(--gold);color:#080c14;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:14px 36px;border:none;border-radius:4px;cursor:pointer;transition:background .2s;}
+.cta-btn:hover{background:var(--gold2);}
+.restart-link{display:block;margin-top:14px;font-size:12px;color:rgba(255,255,255,0.2);cursor:pointer;text-decoration:underline;}
+.restart-link:hover{color:var(--muted);}
+.footer{text-align:center;padding:16px;font-size:11px;color:rgba(255,255,255,0.15);border-top:1px solid var(--border);}
+@media(max-width:500px){.q-text{font-size:15px;}.main{padding:24px 14px 48px;}.intro-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-
-<!-- HEADER -->
-<header>
-  <div class="brand-block">
-    <div class="brand-name">Юридична кухня <span class="gold">Сосновського</span></div>
-    <div class="brand-slogan">Правовий захист — це не формальність, а продовження вашого твору</div>
-    <div class="brand-line"></div>
-  </div>
-  <div class="h-sys">// МОДУЛЬ 03 · ПРАВО ІВ · ВІКОВА ГРУПА 12–15</div>
-  <h1>КОРИСНІ МОДЕЛІ<br>+ ПРОМИСЛОВІ ЗРАЗКИ</h1>
-  <p class="sub">Два типи інтелектуальної власності · 22 практичних завдання</p>
-  <div class="h-tags">
-    <span class="h-tag t1">⚙️ Корисна модель</span>
-    <span class="h-tag t2">🎨 Промисловий зразок</span>
-  </div>
-</header>
-
-<!-- HUD -->
-<div class="hud">
-  <div class="hud-cell"><div class="val" id="hc">0</div><div class="lbl">✓ Вірно</div></div>
-  <div class="hud-cell"><div class="val" id="hw">0</div><div class="lbl">✗ Помилки</div></div>
-  <div class="hud-cell"><div class="val" id="hs">0</div><div class="lbl">★ Очки</div></div>
-  <div class="hud-cell"><div class="val" id="hd">0</div><div class="lbl">⬡ Прог.</div></div>
+<div class="brand">
+  <div class="brand-name">Юридична кухня <span>Сосновського</span></div>
+  <div class="brand-slogan">Правовий захист — це не формальність, а продовження вашого твору</div>
+  <div class="brand-line"></div>
 </div>
-<div class="pg-row"><span>СТАТУС</span><span id="pgn">0 / 22</span></div>
-<div class="pg-track"><div class="pg-fill" id="pgf" style="width:0%"></div></div>
-
-<!-- MODE SWITCH -->
-<div class="mode-switch">
-  <button class="mode-btn m1 on" onclick="switchMode(&#39;util&#39;,this)">
-    <span class="mic">⚙️</span>
-    КОРИСНІ МОДЕЛІ
-  </button>
-  <button class="mode-btn m2" onclick="switchMode(&#39;design&#39;,this)">
-    <span class="mic">🎨</span>
-    ПРОМИСЛОВІ ЗРАЗКИ
-  </button>
+<div class="hero" id="hero">
+  <div class="hero-tag">⚙️ Патенти · Для бізнесу та стартапів</div>
+  <h1>Чи захищена<br><em>ваша технологія?</em></h1>
+  <div class="hero-sub">12 кейсів для стартапів, інженерів, дизайнерів і підприємців. Патентна стратегія, службові винаходи, ноу-хау, промисловий дизайн — практично і без зайвої теорії.</div>
+  <div class="hero-note">⏱ ~10 хвилин · Норма закону після кожного питання</div>
+  <button class="start-btn" onclick="startQuiz()">Розпочати тест →</button>
 </div>
-
-<!-- ═══════════════ UTILITY MODELS ═══════════════ -->
-<div id="game-util" class="game-sec on">
-
-  <div class="tabs">
-    <button class="tab on c1" onclick="subTab(&#39;util&#39;,&#39;basics&#39;,this)">⚙️ Основи</button>
-    <button class="tab c1" onclick="subTab(&#39;util&#39;,&#39;apply&#39;,this)">🔬 Застосування</button>
-    <button class="tab c1" onclick="subTab(&#39;util&#39;,&#39;cases&#39;,this)">⚖️ Кейси</button>
-  </div>
-
-  <!-- UTIL BASICS -->
-  <div id="util-basics" class="sub-sec on">
-
-    <div class="theory">
-      <div class="t-head">⚙️ // КОРИСНА МОДЕЛЬ — ЩО ЦЕ?</div>
-      <p><strong>Корисна модель</strong> — це захист для технічних рішень: пристроїв, конструкцій, механізмів. Її ще називають «маленьким патентом».</p>
-      <p style="margin-top:8px;">Головні ознаки: <strong>новизна</strong> (ще ніхто такого не робив) + <strong>придатність для промислового використання</strong>.</p>
-      <p class="note">На відміну від патенту — НЕ потрібна «винахідницький рівень» (тобто не треба бути генієм). Швидша реєстрація: ~3–6 місяців. Термін охорони: 10 років.</p>
-    </div>
-
-    <!-- ПОРІВНЯЛЬНА ТАБЛИЦЯ -->
-    <div class="qcard" data-num="U01">
-      <div class="qcard-head">
-        <span class="qnum">U-01 / 22 · Таблиця порівняння</span>
-        <span class="qtag c1">⚙️ ОСНОВИ</span>
-      </div>
-      <div class="qcard-body">
-        <div class="q-txt">Вивчи різницю. Потім дай відповідь нижче.</div>
-        <div class="compare-wrap">
-          <table class="compare-table">
-            <tbody><tr>
-              <th>Характеристика</th>
-              <th>Корисна модель</th>
-              <th>Патент на винахід</th>
-            </tr>
-            <tr><td>Новизна</td><td>Потрібна ✓</td><td>Потрібна ✓</td></tr>
-            <tr><td>Винахідницький рівень</td><td>НЕ потрібен ✓</td><td>Обов'язковий ✗</td></tr>
-            <tr><td>Термін охорони</td><td>10 років</td><td>20 років</td></tr>
-            <tr><td>Швидкість реєстрації</td><td>3–6 міс.</td><td>2–3 роки</td></tr>
-            <tr><td>Що захищає</td><td>Пристрої, конструкції</td><td>Процеси, речовини, пристрої</td></tr>
-          </tbody></table>
-        </div>
-        <div class="q-txt" style="margin-top:16px;">Яка головна перевага корисної моделі перед патентом на винахід?</div>
-        <div class="opts">
-          <button class="opt" onclick="ans(this,&#39;u01&#39;,false,&#39;Ні — термін коротший: 10 проти 20 років.&#39;)">Довший термін охорони</button>
-          <button class="opt" onclick="ans(this,&#39;u01&#39;,true,&#39;Правильно! &lt;strong&gt;Не потрібен винахідницький рівень&lt;/strong&gt; + швидша реєстрація. Ідеально для простих, але корисних технічних рішень ✓&#39;)">Швидша реєстрація і простіші вимоги</button>
-          <button class="opt" onclick="ans(this,&#39;u01&#39;,false,&#39;Ні — навпаки, патент охоплює більше типів об\&#39;єктів.&#39;)">Захищає більше типів об'єктів</button>
-        </div>
-        <div class="fb" id="fb-u01"></div>
-      </div>
-    </div>
-
-    <!-- U02 -->
-    <div class="qcard" data-num="U02">
-      <div class="qcard-head">
-        <span class="qnum">U-02 / 22</span>
-        <span class="qtag c1">⚙️ ОСНОВИ</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">🔧</span>
-        <div class="q-txt">Що можна захистити корисною моделлю?</div>
-        <div class="chip-grid" id="cgu02">
-          <div class="chip" id="cu1" onclick="tChip(&#39;cu1&#39;,&#39;u&#39;)"><span class="ci">🪑</span>Складаний стілець з новим механізмом</div>
-          <div class="chip" id="cu2" onclick="tChip(&#39;cu2&#39;,&#39;u&#39;)"><span class="ci">🎵</span>Музичний твір</div>
-          <div class="chip" id="cu3" onclick="tChip(&#39;cu3&#39;,&#39;u&#39;)"><span class="ci">🔩</span>Нова конструкція замка</div>
-          <div class="chip" id="cu4" onclick="tChip(&#39;cu4&#39;,&#39;u&#39;)"><span class="ci">💊</span>Хімічна сполука (ліки)</div>
-          <div class="chip" id="cu5" onclick="tChip(&#39;cu5&#39;,&#39;u&#39;)"><span class="ci">🔋</span>Пристрій для зберігання енергії</div>
-          <div class="chip" id="cu6" onclick="tChip(&#39;cu6&#39;,&#39;u&#39;)"><span class="ci">👗</span>Дизайн сукні</div>
-        </div>
-        <button class="chk-btn" onclick="chkMulti(&#39;u02&#39;,[&#39;cu1&#39;,&#39;cu3&#39;,&#39;cu5&#39;],&#39;Корисна модель захищає &lt;strong&gt;пристрої і конструкції&lt;/strong&gt;. Музика — авторське право. Хімічна сполука — патент. Дизайн — промисловий зразок.&#39;)">Перевірити →</button>
-        <div class="fb" id="fb-u02"></div>
-      </div>
-    </div>
-
-    <!-- U03 -->
-    <div class="qcard" data-num="U03">
-      <div class="qcard-head">
-        <span class="qnum">U-03 / 22</span>
-        <span class="qtag c1">⚙️ ОСНОВИ</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">⏳</span>
-        <div class="q-txt">Максим зареєстрував корисну модель у 2024 році. У якому році закінчиться охорона?</div>
-        <div class="opts two">
-          <button class="opt" onclick="ans(this,&#39;u03&#39;,false,&#39;5 — замало.&#39;)">2029</button>
-          <button class="opt" onclick="ans(this,&#39;u03&#39;,true,&#39;Правильно! 2024 + 10 = &lt;strong&gt;2034&lt;/strong&gt;. Корисна модель охороняється 10 років з дати реєстрації ✓&#39;)">2034</button>
-          <button class="opt" onclick="ans(this,&#39;u03&#39;,false,&#39;20 років — це патент на винахід.&#39;)">2044</button>
-          <button class="opt" onclick="ans(this,&#39;u03&#39;,false,&#39;70 — це авторське право.&#39;)">2094</button>
-        </div>
-        <div class="fb" id="fb-u03"></div>
-      </div>
-    </div>
-
-  </div><!-- util-basics -->
-
-  <!-- UTIL APPLY -->
-  <div id="util-apply" class="sub-sec">
-
-    <div class="theory">
-      <div class="t-head">⚙️ // ЗАСТОСУВАННЯ</div>
-      <p><strong>Реєстрація корисної моделі в Україні</strong>: подається до <strong>УКРПАТЕНТ</strong>. Проводиться формальна експертиза (чи правильно оформлено) — без перевірки новизни «по суті». Тому відповідальність за новизну лежить на заявнику.</p>
-      <p class="note">Після реєстрації — свідоцтво. Власник може: використовувати, ліцензувати, продати, заборонити іншим.</p>
-    </div>
-
-    <!-- U04 SORT -->
-    <div class="qcard" data-num="U04-09">
-      <div class="qcard-head">
-        <span class="qnum">U-04–09 / 22 · Сортування</span>
-        <span class="qtag c1">⚙️ ЗАСТОСУВАННЯ</span>
-      </div>
-      <div class="qcard-body">
-        <div class="q-txt">Натисни об'єкт → потім натисни категорію. Розсортуй: корисна модель чи інший тип ІВ?</div>
-        <div class="sort-pool" id="sp-u">
-          <div class="sc" id="su1" onclick="selSC(&#39;su1&#39;,&#39;u&#39;)">🪝 Новий тип гачка</div>
-          <div class="sc" id="su2" onclick="selSC(&#39;su2&#39;,&#39;u&#39;)">🎨 Форма пляшки Coca-Cola</div>
-          <div class="sc" id="su3" onclick="selSC(&#39;su3&#39;,&#39;u&#39;)">⚙️ Механізм авт. сортування</div>
-          <div class="sc" id="su4" onclick="selSC(&#39;su4&#39;,&#39;u&#39;)">📱 Логотип додатку</div>
-          <div class="sc" id="su5" onclick="selSC(&#39;su5&#39;,&#39;u&#39;)">🔌 Нова конструкція розетки</div>
-          <div class="sc" id="su6" onclick="selSC(&#39;su6&#39;,&#39;u&#39;)">🧪 Нова хімічна реакція</div>
-        </div>
-        <div class="buckets-row">
-          <div class="bucket" id="bku1" onclick="dropIn(&#39;bku1&#39;,&#39;u&#39;)">
-            <h5>⚙️ КОРИСНА МОДЕЛЬ</h5>
-            <div class="btags" id="btu1"></div>
-          </div>
-          <div class="bucket" id="bku2" onclick="dropIn(&#39;bku2&#39;,&#39;u&#39;)">
-            <h5>🔀 ІНШИЙ ВИД ІВ</h5>
-            <div class="btags" id="btu2"></div>
-          </div>
-        </div>
-        <button class="chk-btn" id="sort-u-btn" onclick="chkSort(&#39;u&#39;)" style="display:none;">Перевірити →</button>
-        <div class="fb" id="fb-u04"></div>
-      </div>
-    </div>
-
-    <!-- U10 -->
-    <div class="qcard" data-num="U10">
-      <div class="qcard-head">
-        <span class="qnum">U-10 / 22</span>
-        <span class="qtag c1">⚙️ ЗАСТОСУВАННЯ</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">🏭</span>
-        <div class="q-txt">Куди подається заявка на реєстрацію корисної моделі в Україні?</div>
-        <div class="opts two">
-          <button class="opt" onclick="ans(this,&#39;u10&#39;,false,&#39;Суд — не реєструє ІВ.&#39;)">До суду</button>
-          <button class="opt" onclick="ans(this,&#39;u10&#39;,true,&#39;Правильно! &lt;strong&gt;УКРПАТЕНТ&lt;/strong&gt; — Державне підприємство «Укрпатент» при Мінекономіки. Саме туди подаються всі заявки на патенти та корисні моделі ✓&#39;)">До УКРПАТЕНТ</button>
-          <button class="opt" onclick="ans(this,&#39;u10&#39;,false,&#39;МВС — не займається ІВ.&#39;)">До МВС</button>
-          <button class="opt" onclick="ans(this,&#39;u10&#39;,false,&#39;ДФС — податкова.&#39;)">До ДФС</button>
-        </div>
-        <div class="fb" id="fb-u10"></div>
-      </div>
-    </div>
-
-    <!-- U11 CALC -->
-    <div class="qcard" data-num="U11">
-      <div class="qcard-head">
-        <span class="qnum">U-11 / 22 · Розрахунок</span>
-        <span class="qtag c1">⚙️ ФІНАНСИ</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">💰</span>
-        <div class="q-txt">Власник корисної моделі видає ліцензію. Розрахуй дохід.</div>
-        <div class="calc-panel">
-          <div class="calc-row"><span>Ліцензіат виготовив виробів</span><span class="v">10 000 шт</span></div>
-          <div class="calc-row"><span>Ціна одного виробу</span><span class="v">150 грн</span></div>
-          <div class="calc-row"><span>Ставка роялті власнику</span><span class="v">4%</span></div>
-          <div class="calc-row total"><span>Власник отримає =</span><span>?</span></div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-          <input class="calc-inp" id="uci" type="number" placeholder="грн">
-          <button class="chk-btn" onclick="chkCalcU()" style="margin-top:0;">Відповісти →</button>
-        </div>
-        <div class="fb" id="fb-u11"></div>
-      </div>
-    </div>
-
-  </div><!-- util-apply -->
-
-  <!-- UTIL CASES -->
-  <div id="util-cases" class="sub-sec">
-
-    <!-- U12 -->
-    <div class="qcard" data-num="U12">
-      <div class="qcard-head">
-        <span class="qnum">U-12 / 22 · Кейс</span>
-        <span class="qtag c1">⚙️ КЕЙС</span>
-      </div>
-      <div class="qcard-body">
-        <div class="scene">
-          <b>Ірина</b> придумала зручний механізм для складання дитячого візка. Вона думає: «Ця ідея проста — навіщо реєструвати?»
-        </div>
-        <div class="q-txt">Що може статися, якщо вона НЕ зареєструє корисну модель?</div>
-        <div class="opts">
-          <button class="opt" onclick="ans(this,&#39;u12&#39;,false,&#39;Ні — без реєстрації немає правового захисту.&#39;)">Ідея захищена — вона її придумала першою</button>
-          <button class="opt" onclick="ans(this,&#39;u12&#39;,true,&#39;Правильно! Без реєстрації &lt;strong&gt;будь-хто може скопіювати&lt;/strong&gt; ідею і зареєструвати від свого імені. Тоді Ірині навіть заборонять використовувати власну ідею! 😱&#39;)">Конкурент може скопіювати і зареєструвати від свого імені</button>
-          <button class="opt" onclick="ans(this,&#39;u12&#39;,false,&#39;Авторське право захищає тексти та твори, але не конструкції.&#39;)">Захищена авторським правом автоматично</button>
-        </div>
-        <div class="fb" id="fb-u12"></div>
-      </div>
-    </div>
-
-    <!-- U13 MATCH -->
-    <div class="qcard" data-num="U13-16">
-      <div class="qcard-head">
-        <span class="qnum">U-13–16 / 22 · Пари</span>
-        <span class="qtag c1">⚙️ ТЕРМІНИ</span>
-      </div>
-      <div class="qcard-body">
-        <div class="q-txt">З'єднай терміни з визначеннями. Натисни термін → потім визначення.</div>
-        <div class="match-wrap">
-          <div class="match-col">
-            <h4>Термін</h4>
-            <div class="mi" id="umt1" onclick="mClick(&#39;umt1&#39;,&#39;L&#39;,&#39;u&#39;)">Новизна</div>
-            <div class="mi" id="umt2" onclick="mClick(&#39;umt2&#39;,&#39;L&#39;,&#39;u&#39;)">Ліцензіат</div>
-            <div class="mi" id="umt3" onclick="mClick(&#39;umt3&#39;,&#39;L&#39;,&#39;u&#39;)">Свідоцтво</div>
-            <div class="mi" id="umt4" onclick="mClick(&#39;umt4&#39;,&#39;L&#39;,&#39;u&#39;)">Роялті</div>
-          </div>
-          <div class="match-col">
-            <h4>Визначення</h4>
-            <div class="mi" id="umd1" onclick="mClick(&#39;umd1&#39;,&#39;R&#39;,&#39;u&#39;)">Документ, що підтверджує право на корисну модель</div>
-            <div class="mi" id="umd2" onclick="mClick(&#39;umd2&#39;,&#39;R&#39;,&#39;u&#39;)">Об'єкт невідомий раніше у світі</div>
-            <div class="mi" id="umd3" onclick="mClick(&#39;umd3&#39;,&#39;R&#39;,&#39;u&#39;)">Той, хто отримав ліцензію на використання</div>
-            <div class="mi" id="umd4" onclick="mClick(&#39;umd4&#39;,&#39;R&#39;,&#39;u&#39;)">Платіж власнику за кожне використання</div>
-          </div>
-        </div>
-        <div class="fb" id="fb-u13"></div>
-      </div>
-    </div>
-
-  </div><!-- util-cases -->
-
-</div><!-- game-util -->
-
-<!-- ═══════════════ INDUSTRIAL DESIGNS ═══════════════ -->
-<div id="game-design" class="game-sec">
-
-  <div class="tabs">
-    <button class="tab on c2" onclick="subTab(&#39;design&#39;,&#39;basics&#39;,this)">🎨 Основи</button>
-    <button class="tab c2" onclick="subTab(&#39;design&#39;,&#39;apply&#39;,this)">🖌️ Застосування</button>
-    <button class="tab c2" onclick="subTab(&#39;design&#39;,&#39;cases&#39;,this)">⚖️ Кейси</button>
-  </div>
-
-  <!-- DESIGN BASICS -->
-  <div id="design-basics" class="sub-sec on">
-
-    <div class="theory lime">
-      <div class="t-head">🎨 // ПРОМИСЛОВИЙ ЗРАЗОК — ЩО ЦЕ?</div>
-      <p><strong>Промисловий зразок</strong> — це захист <em>зовнішнього вигляду</em> виробу: форми, кольору, орнаменту, текстури. Це «патент на дизайн».</p>
-      <p style="margin-top:8px;">Захищає: як річ <strong>виглядає</strong>, а не як вона <strong>працює</strong>.</p>
-      <p class="note">Термін охорони: 25 років (5 + 5-річні продовження). Реєстрація: УКРПАТЕНТ або Гаазька система ВОІВ (міжнародно).</p>
-    </div>
-
-    <!-- COMPARE TABLE DESIGNS -->
-    <div class="qcard lime-card" data-num="D01">
-      <div class="qcard-head">
-        <span class="qnum">D-01 / 22 · Таблиця</span>
-        <span class="qtag c2">🎨 ОСНОВИ</span>
-      </div>
-      <div class="qcard-body">
-        <div class="q-txt">Вивчи різницю між корисною моделлю і промисловим зразком.</div>
-        <div class="compare-wrap">
-          <table class="compare-table">
-            <tbody><tr>
-              <th>Критерій</th>
-              <th>Корисна модель ⚙️</th>
-              <th>Промисловий зразок 🎨</th>
-            </tr>
-            <tr><td>Що захищає</td><td>Як річ <em>працює</em></td><td>Як річ <em>виглядає</em></td></tr>
-            <tr><td>Приклад</td><td>Механізм замку</td><td>Форма ручки замку</td></tr>
-            <tr><td>Термін</td><td>10 років</td><td>До 25 років</td></tr>
-            <tr><td>Об'єкт</td><td>Пристрій, конструкція</td><td>Форма, колір, орнамент</td></tr>
-          </tbody></table>
-        </div>
-        <div class="q-txt" style="margin-top:16px;">Компанія хоче захистити унікальну форму свого смартфона. Що їм потрібно?</div>
-        <div class="opts two">
-          <button class="opt lime-opt" onclick="ans(this,&#39;d01&#39;,false,&#39;Корисна модель — для конструкції (як працює), а не для форми.&#39;)">Корисна модель</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;d01&#39;,true,&#39;Правильно! &lt;strong&gt;Промисловий зразок&lt;/strong&gt; захищає зовнішній вигляд — форму, колір, текстуру. Саме те, що потрібно для форми смартфона ✓&#39;)">Промисловий зразок</button>
-        </div>
-        <div class="fb" id="fb-d01"></div>
-      </div>
-    </div>
-
-    <!-- D02 multi -->
-    <div class="qcard lime-card" data-num="D02">
-      <div class="qcard-head">
-        <span class="qnum">D-02 / 22</span>
-        <span class="qtag c2">🎨 ОСНОВИ</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">🎨</span>
-        <div class="q-txt">Що можна захистити промисловим зразком? Обери ВСЕ правильне.</div>
-        <div class="chip-grid" id="cgd02">
-          <div class="chip lime-c" id="cd1" onclick="tChip(&#39;cd1&#39;,&#39;d&#39;)"><span class="ci">🍾</span>Форма пляшки</div>
-          <div class="chip lime-c" id="cd2" onclick="tChip(&#39;cd2&#39;,&#39;d&#39;)"><span class="ci">⚙️</span>Принцип роботи мотора</div>
-          <div class="chip lime-c" id="cd3" onclick="tChip(&#39;cd3&#39;,&#39;d&#39;)"><span class="ci">👟</span>Дизайн кросівка</div>
-          <div class="chip lime-c" id="cd4" onclick="tChip(&#39;cd4&#39;,&#39;d&#39;)"><span class="ci">🪑</span>Форма стільця</div>
-          <div class="chip lime-c" id="cd5" onclick="tChip(&#39;cd5&#39;,&#39;d&#39;)"><span class="ci">💡</span>Ідея нового сервісу</div>
-          <div class="chip lime-c" id="cd6" onclick="tChip(&#39;cd6&#39;,&#39;d&#39;)"><span class="ci">🎨</span>Орнамент на тканині</div>
-        </div>
-        <button class="chk-btn lime" onclick="chkMulti(&#39;d02&#39;,[&#39;cd1&#39;,&#39;cd3&#39;,&#39;cd4&#39;,&#39;cd6&#39;],&#39;Промисловий зразок захищає &lt;strong&gt;зовнішній вигляд&lt;/strong&gt;: форму, орнамент, дизайн. Принцип роботи — патент/модель. Ідея сервісу — не захищається окремо.&#39;)">Перевірити →</button>
-        <div class="fb" id="fb-d02"></div>
-      </div>
-    </div>
-
-    <!-- D03 -->
-    <div class="qcard lime-card" data-num="D03">
-      <div class="qcard-head">
-        <span class="qnum">D-03 / 22</span>
-        <span class="qtag c2">🎨 ОСНОВИ</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">🏆</span>
-        <div class="q-txt">Apple зареєструвала зовнішній вигляд iPhone (форма, кути, кнопки) як промисловий зразок. Samsung випустила дуже схожий телефон. Що може зробити Apple?</div>
-        <div class="opts">
-          <button class="opt lime-opt" onclick="ans(this,&#39;d03&#39;,false,&#39;Авторське право — не те. Форма пристрою = промисловий зразок.&#39;)">Нічого — форма не захищається</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;d03&#39;,true,&#39;Правильно! Apple подала в суд на Samsung у реальному житті (2011–2018) і виграла &lt;strong&gt;$539 млн&lt;/strong&gt; за порушення промислового зразка! ✓&#39;)">Подати в суд за порушення промислового зразка</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;d03&#39;,false,&#39;Торгова марка — для назви/логотипу, не для форми виробу.&#39;)">Подати за порушення торгової марки</button>
-        </div>
-        <div class="fb" id="fb-d03"></div>
-      </div>
-    </div>
-
-  </div><!-- design-basics -->
-
-  <!-- DESIGN APPLY -->
-  <div id="design-apply" class="sub-sec">
-
-    <div class="theory lime">
-      <div class="t-head">🎨 // КРИТЕРІЇ ТА РЕЄСТРАЦІЯ</div>
-      <p>Три умови для реєстрації промислового зразка: <strong>1) Новизна</strong> — такого зовнішнього вигляду ще не існувало. <strong>2) Оригінальність</strong> — відрізняється від існуючих. <strong>3) Промислова застосовність</strong> — можна виготовити серійно.</p>
-      <p class="note">Не захищається: функціональні ознаки (тільки для роботи), нейтральні форми, що диктуються технічною функцією.</p>
-    </div>
-
-    <!-- D04 SORT -->
-    <div class="qcard lime-card" data-num="D04-09">
-      <div class="qcard-head">
-        <span class="qnum">D-04–09 / 22 · Сортування</span>
-        <span class="qtag c2">🎨 ЗАСТОСУВАННЯ</span>
-      </div>
-      <div class="qcard-body">
-        <div class="q-txt">Натисни об'єкт → потім категорію. Що є промисловим зразком?</div>
-        <div class="sort-pool" id="sp-d">
-          <div class="sc" id="sd1" onclick="selSC(&#39;sd1&#39;,&#39;d&#39;)">🧴 Унікальна форма тюбика</div>
-          <div class="sc" id="sd2" onclick="selSC(&#39;sd2&#39;,&#39;d&#39;)">📐 Спосіб зварювання металу</div>
-          <div class="sc" id="sd3" onclick="selSC(&#39;sd3&#39;,&#39;d&#39;)">🚗 Дизайн кузова авто</div>
-          <div class="sc" id="sd4" onclick="selSC(&#39;sd4&#39;,&#39;d&#39;)">🎵 Мелодія рингтону</div>
-          <div class="sc" id="sd5" onclick="selSC(&#39;sd5&#39;,&#39;d&#39;)">🏺 Орнамент на кераміці</div>
-          <div class="sc" id="sd6" onclick="selSC(&#39;sd6&#39;,&#39;d&#39;)">⚗️ Новий хімічний препарат</div>
-        </div>
-        <div class="buckets-row">
-          <div class="bucket lime-bk" id="bkd1" onclick="dropIn(&#39;bkd1&#39;,&#39;d&#39;)">
-            <h5>🎨 ПРОМИСЛОВИЙ ЗРАЗОК</h5>
-            <div class="btags" id="btd1"></div>
-          </div>
-          <div class="bucket lime-bk" id="bkd2" onclick="dropIn(&#39;bkd2&#39;,&#39;d&#39;)">
-            <h5>🔀 ІНШИЙ ВИД ІВ</h5>
-            <div class="btags" id="btd2"></div>
-          </div>
-        </div>
-        <button class="chk-btn lime" id="sort-d-btn" onclick="chkSort(&#39;d&#39;)" style="display:none;">Перевірити →</button>
-        <div class="fb" id="fb-d04"></div>
-      </div>
-    </div>
-
-    <!-- D10 -->
-    <div class="qcard lime-card" data-num="D10">
-      <div class="qcard-head">
-        <span class="qnum">D-10 / 22</span>
-        <span class="qtag c2">🎨 РЕЄСТРАЦІЯ</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">🌍</span>
-        <div class="q-txt">Яка міжнародна система дозволяє зареєструвати промисловий зразок у багатьох країнах одразу?</div>
-        <div class="opts">
-          <button class="opt lime-opt" onclick="ans(this,&#39;d10&#39;,false,&#39;Мадридська — для торгових марок.&#39;)">Мадридська система (ВОІВ)</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;d10&#39;,true,&#39;Правильно! &lt;strong&gt;Гаазька система ВОІВ&lt;/strong&gt; — спеціально для промислових зразків. Одна заявка = захист у 90+ країнах ✓&#39;)">Гаазька система (ВОІВ)</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;d10&#39;,false,&#39;PCT — для патентів на винаходи.&#39;)">Договір PCT (ВОІВ)</button>
-        </div>
-        <div class="fb" id="fb-d10"></div>
-      </div>
-    </div>
-
-    <!-- D11 CALC -->
-    <div class="qcard lime-card" data-num="D11">
-      <div class="qcard-head">
-        <span class="qnum">D-11 / 22 · Розрахунок</span>
-        <span class="qtag c2">🎨 ФІНАНСИ</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">💰</span>
-        <div class="q-txt">Дизайнер продав ліцензію на свій промисловий зразок. Порахуй дохід.</div>
-        <div class="calc-panel">
-          <div class="calc-row"><span>Партнер виготовив виробів</span><span class="v">5 000 шт</span></div>
-          <div class="calc-row"><span>Ціна виробу</span><span class="v">400 грн</span></div>
-          <div class="calc-row"><span>Ставка роялті дизайнеру</span><span class="v">6%</span></div>
-          <div class="calc-row total"><span>Дизайнер отримає =</span><span>?</span></div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-          <input class="calc-inp" id="dci" type="number" placeholder="грн" style="border-color:var(--lime);color:var(--lime);">
-          <button class="chk-btn lime" onclick="chkCalcD()" style="margin-top:0;">Відповісти →</button>
-        </div>
-        <div class="fb" id="fb-d11"></div>
-      </div>
-    </div>
-
-  </div><!-- design-apply -->
-
-  <!-- DESIGN CASES -->
-  <div id="design-cases" class="sub-sec">
-
-    <!-- D12 -->
-    <div class="qcard lime-card" data-num="D12">
-      <div class="qcard-head">
-        <span class="qnum">D-12 / 22 · Кейс</span>
-        <span class="qtag c2">⚖️ КЕЙС</span>
-      </div>
-      <div class="qcard-body">
-        <div class="scene lime-s">
-          <b>Ольга</b> — дизайнер, розробила унікальну форму для лампи. Виробник скопіював форму і продав 10 000 ламп. Ольга зареєструвала промисловий зразок 2 роки тому.
-        </div>
-        <div class="q-txt">Яке право є у Ольги?</div>
-        <div class="opts">
-          <button class="opt lime-opt" onclick="ans(this,&#39;d12&#39;,false,&#39;Вибачення — не єдиний варіант і не головне.&#39;)">Лише вимагати публічних вибачень</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;d12&#39;,true,&#39;Правильно! Ольга може: &lt;strong&gt;заборонити продаж&lt;/strong&gt;, вимагати &lt;strong&gt;вилучення з обігу&lt;/strong&gt; і &lt;strong&gt;грошову компенсацію&lt;/strong&gt; (включно з упущеною вигодою) ✓&#39;)">Заборонити продаж, вимагати компенсацію і вилучення</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;d12&#39;,false,&#39;Ні — форма виробу = промисловий зразок, а не авторське право.&#39;)">Тільки авторське право захищає форму</button>
-        </div>
-        <div class="fb" id="fb-d12"></div>
-      </div>
-    </div>
-
-    <!-- D13 MATCH -->
-    <div class="qcard lime-card" data-num="D13-16">
-      <div class="qcard-head">
-        <span class="qnum">D-13–16 / 22 · Пари</span>
-        <span class="qtag c2">🎨 ТЕРМІНИ</span>
-      </div>
-      <div class="qcard-body">
-        <div class="q-txt">З'єднай. Натисни термін → потім визначення.</div>
-        <div class="match-wrap">
-          <div class="match-col">
-            <h4>Термін</h4>
-            <div class="mi lime-mi" id="dmt1" onclick="mClick(&#39;dmt1&#39;,&#39;L&#39;,&#39;d&#39;)">Оригінальність</div>
-            <div class="mi lime-mi" id="dmt2" onclick="mClick(&#39;dmt2&#39;,&#39;L&#39;,&#39;d&#39;)">Патент на зразок</div>
-            <div class="mi lime-mi" id="dmt3" onclick="mClick(&#39;dmt3&#39;,&#39;L&#39;,&#39;d&#39;)">Гаазька система</div>
-            <div class="mi lime-mi" id="dmt4" onclick="mClick(&#39;dmt4&#39;,&#39;L&#39;,&#39;d&#39;)">Контрафакт</div>
-          </div>
-          <div class="match-col">
-            <h4>Визначення</h4>
-            <div class="mi lime-mi" id="dmd1" onclick="mClick(&#39;dmd1&#39;,&#39;R&#39;,&#39;d&#39;)">Міжнародна реєстрація зразків через ВОІВ</div>
-            <div class="mi lime-mi" id="dmd2" onclick="mClick(&#39;dmd2&#39;,&#39;R&#39;,&#39;d&#39;)">Документ-підтвердження права на зовнішній вигляд</div>
-            <div class="mi lime-mi" id="dmd3" onclick="mClick(&#39;dmd3&#39;,&#39;R&#39;,&#39;d&#39;)">Копія виробу без дозволу власника зразка</div>
-            <div class="mi lime-mi" id="dmd4" onclick="mClick(&#39;dmd4&#39;,&#39;R&#39;,&#39;d&#39;)">Відрізняється від усіх відомих зразків</div>
-          </div>
-        </div>
-        <div class="fb" id="fb-d13"></div>
-      </div>
-    </div>
-
-    <!-- D17 FINAL -->
-    <div class="qcard lime-card" data-num="D17">
-      <div class="qcard-head">
-        <span class="qnum">D-17–22 / 22 · ФІНАЛЬНИЙ КЕЙС 🏆</span>
-        <span class="qtag c2">🎨 PRO</span>
-      </div>
-      <div class="qcard-body">
-        <span class="q-ico">🚀</span>
-        <div class="scene lime-s">
-          <b>Стартап «FutureCup»</b> розробив революційну термокружку: нова конструкція кришки (патент ⚙️) + унікальна форма корпусу (🎨) + власна назва бренду. Конкурент скопіював і форму, і конструкцію.
-        </div>
-        <div class="q-txt">Скільки об'єктів ІВ порушено конкурентом?</div>
-        <div class="opts two">
-          <button class="opt lime-opt" onclick="ans(this,&#39;dfinal&#39;,false,&#39;Підрахуй усі типи ІВ.&#39;)">1 — лише патент</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;dfinal&#39;,false,&#39;2 — близько, але є ще один вид.&#39;)">2 — патент і зразок</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;dfinal&#39;,true,&#39;Правильно! &lt;strong&gt;3 об\&#39;єкти:&lt;/strong&gt; ① Патент/корисна модель на конструкцію кришки ② Промисловий зразок на форму корпусу ③ Торгова марка (назва бренду). За кожне порушення — окремий позов і компенсація! 🏆&#39;)">3 — корисна модель, зразок і торгова марка</button>
-          <button class="opt lime-opt" onclick="ans(this,&#39;dfinal&#39;,false,&#39;4 — забагато.&#39;)">4 і більше</button>
-        </div>
-        <div class="fb" id="fb-dfinal"></div>
-      </div>
-    </div>
-
-  </div><!-- design-cases -->
-
-</div><!-- game-design -->
-
-<!-- RESULT -->
-<div class="result" id="result">
-  <div class="res-ico" id="r-ico">🏆</div>
-  <div class="res-h" id="r-h">МІСІЯ ВИКОНАНА</div>
-  <div class="res-p" id="r-p">Ти пройшов усі завдання!</div>
-  <div class="res-stats">
-    <div class="rs"><div class="n" id="r-c">0</div><div class="l">Правильних</div></div>
-    <div class="rs"><div class="n" id="r-s">0</div><div class="l">Очків</div></div>
-    <div class="rs"><div class="n" id="r-pct">0%</div><div class="l">Результат</div></div>
-  </div>
-  <button class="restart-btn" onclick="location.reload()">↺ ПЕРЕЗАПУСТИТИ</button>
+<div class="progress-wrap" id="progress-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="progress-label" id="progress-label">1 / 12</div>
 </div>
-
-</div><!-- wrap -->
-
-<!-- BADGE -->
-<div class="badge" id="bdg">
-  <div class="be" id="be"></div>
-  <div class="bt" id="bt"></div>
-  <div class="bp" id="bp"></div>
-  <div class="bc" onclick="closeBadge()">[ ЗАКРИТИ ]</div>
+<div class="score-row" id="score-row">
+  <div class="sc-cell"><div class="n" id="sc-ok">0</div><div class="l">✅ Правильно</div></div>
+  <div class="sc-cell"><div class="n" id="sc-no">0</div><div class="l">❌ Помилки</div></div>
+  <div class="sc-cell"><div class="n" id="sc-pt">0</div><div class="l">★ Балів</div></div>
 </div>
+<div class="main">
+  <div id="intro-block">
+    <div class="intro-text">Патент — це не просто папірець. Це <strong>юридична монополія на ринку</strong> строком до 20 років. Але патентна система має правила, які більшість підприємців дізнається надто пізно.</div>
+    <div class="intro-grid">
+      <div class="prof-card"><div class="prof-ico">🚀</div><div class="prof-title">Стартап</div><div class="prof-issue">Коли патентувати? До пітчу чи після? Як не втратити новизну?</div></div>
+      <div class="prof-card"><div class="prof-ico">🔬</div><div class="prof-title">Інженер / винахідник</div><div class="prof-issue">Хто власник — ви чи роботодавець? Як оформити службовий винахід?</div></div>
+      <div class="prof-card"><div class="prof-ico">👗</div><div class="prof-title">Дизайнер / виробник</div><div class="prof-issue">Чим промисловий зразок відрізняється від патенту на винахід?</div></div>
+      <div class="prof-card"><div class="prof-ico">💼</div><div class="prof-title">Інвестор / M&amp;A</div><div class="prof-issue">Як оцінити патентний портфель при покупці бізнесу?</div></div>
+    </div>
+  </div>
+  <div id="q-container"></div>
+  <div class="result" id="result">
+    <div class="result-card">
+      <div class="result-icon" id="r-icon">⚙️</div>
+      <div class="result-title" id="r-title">Ваш результат</div>
+      <div class="result-sub" id="r-sub"></div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" id="r-bar"></div></div>
+      <div class="score-nums"><span id="r-correct">0 правильних</span><span id="r-pct">0%</span></div>
+    </div>
+    <div class="rec-title">Рекомендації за вашими результатами</div>
+    <div id="r-recs"></div>
+    <div class="cta-box">
+      <p>Патентна стратегія — це не витрати, це <strong>інвестиція у захист ринкової позиції</strong>.<br>Отримайте консультацію патентного спеціаліста для вашого проєкту.</p>
+      <button class="cta-btn" onclick="alert(&#39;Вставте посилання на форму або Telegram&#39;)">Записатися на консультацію</button>
+      <span class="restart-link" onclick="location.reload()">↺ Пройти ще раз</span>
+    </div>
+  </div>
+</div>
+<div class="footer">© Юридична кухня Сосновського · Всі права захищені</div>
 
 <script>
-// ── STATE ──
-let cor=0,wrn=0,pts=0,dn=0;
-const TOTAL=22;
-const AD={};
-
-function upd(){
-  document.getElementById('hc').textContent=cor;
-  document.getElementById('hw').textContent=wrn;
-  document.getElementById('hs').textContent=pts;
-  document.getElementById('hd').textContent=dn;
-  const pct=Math.round(dn/TOTAL*100);
-  document.getElementById('pgf').style.width=pct+'%';
-  document.getElementById('pgn').textContent=dn+' / '+TOTAL;
-}
-
-// ── SIMPLE ANSWER ──
-function ans(btn,qid,ok,exp){
-  if(AD[qid]) return;
-  AD[qid]=true; dn++;
-  const par=btn.closest('.qcard-body');
-  par.querySelectorAll('.opt').forEach(b=>b.disabled=true);
-  const fb=document.getElementById('fb-'+qid);
-  if(ok){btn.classList.add('ok');cor++;pts+=10;fb.className='fb show ok';fb.innerHTML='✓ '+exp;}
-  else{btn.classList.add('no');wrn++;fb.className='fb show no';fb.innerHTML='✗ '+exp;
-    par.querySelectorAll('.opt').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes(',true,')) b.classList.add('ok');});
+const Q=[
+  {
+    diff:"med", type:"strategy",
+    case:"Стартап готується до публічного пітчу перед інвесторами. Засновник планує детально розповісти про технологію, а патентну заявку подати після — «коли будуть гроші від інвестора».",
+    text:"Який ключовий ризик несе публічний пітч до подачі патентної заявки?",
+    opts:["Жодного — інвестори підписують NDA","Публічне розкриття технології знищує критерій новизни і може позбавити права на патент у більшості юрисдикцій","Лише якщо пітч записується на відео","Ризик лише для апаратних рішень, не для ПЗ"],
+    correct:1,
+    ok:"Правильно. <strong>Новизна</strong> — ключова вимога патентоздатності. Публічне розкриття до подачі заявки руйнує новизну. В Україні та ЄС — подавай ДО будь-якої публікації. У США є 12-місячний пільговий період, але краще не ризикувати.",
+    no:"NDA — не захист патентної новизни. Публічний пітч, конференція, публікація у LinkedIn — все це може знищити можливість запатентувати технологію. Правило: спочатку заявка, потім публічність.",
+    law:"ст. 7 ЗУ «Про охорону прав на винаходи і корисні моделі»",
+    tag:"novelty"
+  },
+  {
+    diff:"hard", type:"tech",
+    case:"Інженер розробив новий алгоритм стиснення даних, що скорочує розмір файлів на 40%. Патентний повірений каже, що «чистий алгоритм» не патентується, але пропонує альтернативний шлях.",
+    text:"Яке технічне рішення може бути запатентоване у сфері ПЗ та алгоритмів?",
+    opts:["Будь-який оригінальний код — як літературний твір","Алгоритм як математичний метод не патентується. Але технічна система або спосіб з конкретним вимірюваним технічним ефектом — може","Лише якщо алгоритм реалізований на спеціальному чипі","ПЗ взагалі не патентується в Україні"],
+    correct:1,
+    ok:"Правильно. В Україні та ЄС <strong>алгоритм як такий не патентується</strong> — але технічне рішення на його основі з вимірюваним ефектом (економія пам'яті, швидкість обробки) — може. Ключове слово: «технічний характер».",
+    no:"ПЗ захищається авторським правом (код як текст), але не патентом. Виняток: якщо алгоритм є частиною технічного рішення з конкретним технічним ефектом — заявка можлива. Формулювання у заявці вирішує все.",
+    law:"ст. 6 ЗУ «Про охорону прав на винаходи і корисні моделі»",
+    tag:"tech"
+  },
+  {
+    diff:"med", type:"strategy",
+    case:"Компанія розробила унікальний виробничий процес і стоїть перед вибором: запатентувати його (розкрити публічно) або зберегти як комерційну таємницю (ноу-хау).",
+    text:"Які ключові відмінності між патентом і комерційною таємницею (ноу-хау) при виборі стратегії?",
+    opts:["Патент дорожчий — єдина відмінність","Патент: публічне розкриття + монополія 20 років + спливає строк. Ноу-хау: таємність + необмежений строк + втрачається якщо конкурент самостійно розкриє","Ноу-хау дає більш сильний захист завжди","Ноу-хау підходить лише для рецептур харчових продуктів"],
+    correct:1,
+    ok:"Правильно. Це стратегічний вибір. <strong>Патент</strong> дає монополію, але через 20 років технологія стає публічною. <strong>Ноу-хау</strong> — необмежений строк, але якщо конкурент самостійно винайде те саме — він не порушує закону.",
+    no:"Coca-Cola тримає рецепт як ноу-хау 130+ років. Але якщо конкурент самостійно розкриє рецепт — він може вільно використовувати його. Патент дає монополію, але розкриває технологію. Стратегія залежить від галузі.",
+    law:"ст. 505 ЦКУ (комерційна таємниця); ЗУ «Про захист від недобросовісної конкуренції»",
+    tag:"strategy"
+  },
+  {
+    diff:"hard", type:"strategy",
+    case:"Стартап отримав патент в Україні на медичний пристрій. Американський венчурний фонд готовий інвестувати за умови, що патент захищений у США і ЄС. Стартап не подавав міжнародних заявок.",
+    text:"Який найефективніший спосіб отримати міжнародний патентний захист на ранньому етапі?",
+    opts:["Подати окремі заявки у кожній країні одночасно","Подати PCT-заявку через ВОІВ — одна заявка відкриває шлях до 150+ країн з пріоритетом від дати першої заявки","Просто зареєструвати торгову марку у США","Достатньо українського патенту для залучення інвестицій"],
+    correct:1,
+    ok:"Правильно. <strong>PCT (Patent Cooperation Treaty)</strong> — ключовий інструмент міжнародної патентної стратегії. Одна заявка, єдиний пріоритет, 30 місяців для виходу в національні фази у 150+ країнах. Для стартапів — це час щоб зібрати гроші на національні фази.",
+    no:"PCT не дає «міжнародний патент» — такого не існує. Але дає час і пріоритет. Одна заявка → 30 місяців → вибираєте країни для національних фаз. Для інвесторів це сигнал серйозності намірів.",
+    law:"Договір про патентну кооперацію (PCT), ВОІВ 1970",
+    tag:"international"
+  },
+  {
+    diff:"med", type:"strategy",
+    case:"Інженер, працюючи у компанії, у вільний час вдома розробив інноваційне технічне рішення, не пов'язане з діяльністю компанії. Компанія стверджує, що має право на цей винахід.",
+    text:"Чи належить винахід, створений поза роботою, роботодавцю?",
+    opts:["Так — всі винаходи працівника під час трудового договору належать компанії","Ні — якщо винахід не пов'язаний з трудовими обов'язками і не використовував ресурси компанії, він належить працівнику","Залежить від розміру зарплати працівника","Лише якщо компанія може довести, що ідея виникла на роботі"],
+    correct:1,
+    ok:"Правильно. <strong>Службовий винахід</strong> — лише той, що створений у зв'язку з виконанням трудових обов'язків або з використанням ресурсів роботодавця. Якщо ні — винахід належить автору. Але межа часто розмита, тому важливо документувати процес.",
+    no:"Не все, що створив працівник, є «службовим». Ключові критерії: чи входило це в трудові обов'язки і чи використовувались ресурси компанії. Якщо ні — права у автора. Перевірте свій трудовий договір на відповідні пункти.",
+    law:"ст. 9 ЗУ «Про охорону прав на винаходи і корисні моделі»",
+    tag:"employment"
+  },
+  {
+    diff:"hard", type:"design",
+    case:"Виробник меблів розробив унікальний дизайн крісла з оригінальною формою підлокітників і ніжок. Конкурент скопіював форму, але використав інший матеріал і колір.",
+    text:"Який інструмент захищає зовнішній вигляд виробу і чи допоможе він у цьому випадку?",
+    opts:["Патент на винахід — захищає будь-яке нове рішення","Патент на промисловий зразок захищає зовнішній вигляд виробу; зміна матеріалу не рятує копіювача від порушення","Лише торгова марка на назву моделі","Авторське право на ескіз, але лише якщо ескіз зареєстровано"],
+    correct:1,
+    ok:"Правильно. <strong>Промисловий зразок</strong> захищає зовнішній вигляд: форму, конфігурацію, лінії, кольори, орнамент. Зміна матеріалу при збереженні форми — порушення, якщо загальне зорове враження однакове.",
+    no:"Промисловий зразок — спеціальний інструмент для захисту дизайну. Суд оцінює «загальне зорове враження» на інформованого споживача. Якщо враження однакове — матеріал і колір не рятують копіювача.",
+    law:"ЗУ «Про охорону прав на промислові зразки»",
+    tag:"design"
+  },
+  {
+    diff:"hard", type:"strategy",
+    case:"Компанія виявила, що конкурент використовує технологію, захищену її патентом. Конкурент стверджує, що патент недійсний, бо аналогічне рішення існувало ще до подачі заявки (є публікація 2010 року).",
+    text:"Що таке «рівень техніки» і як він впливає на дійсність патенту?",
+    opts:["Рівень техніки — це складність технології, не правовий термін","Рівень техніки — вся сукупність загальнодоступних відомостей до дати подачі заявки. Якщо аналог існував і був публічним — патент може бути визнано недійсним","Публікація 2010 року не має значення якщо патент вже зареєстровано","Рівень техніки враховується лише для хімічних винаходів"],
+    correct:1,
+    ok:"Правильно. <strong>Рівень техніки</strong> — все, що стало загальнодоступним до дати пріоритету заявки: публікації, патенти, виставки, відео. Якщо конкурент доведе, що публікація 2010 року розкривала суть винаходу — патент може бути скасовано.",
+    no:"Патент — не абсолютна гарантія. Конкурент може ініціювати процедуру визнання патенту недійсним, довівши невідповідність умові новизни або винахідницького рівня на момент подачі заявки.",
+    law:"ст. 7, 33 ЗУ «Про охорону прав на винаходи і корисні моделі»",
+    tag:"strategy"
+  },
+  {
+    diff:"med", type:"process",
+    case:"Фармацевтична компанія розробила новий спосіб синтезу вже відомої молекули (діючої речовини), що робить виробництво на 60% дешевшим. Сама молекула вже є у суспільному надбанні.",
+    text:"Чи може новий спосіб синтезу відомої речовини бути запатентований?",
+    opts:["Ні — якщо речовина відома, будь-що пов'язане з нею не патентується","Так — новий спосіб виробництва є самостійним об'єктом патентування, незалежно від відомості самої речовини","Лише якщо новий спосіб дає нову речовину","Лише у фармацевтичній галузі і лише через ЄМА"],
+    correct:1,
+    ok:"Правильно. <strong>Спосіб виробництва</strong> — самостійний об'єкт патентування. Навіть якщо сама речовина відома, новий ефективний спосіб її отримання може бути новим і мати винахідницький рівень. Це поширена стратегія у фармацевтиці.",
+    no:"Патент на спосіб і патент на речовину — різні об'єкти. Новий спосіб синтезу може бути запатентований як самостійний винахід, навіть якщо кінцева речовина вже відома. Ключове — чи є новизна і винахідницький рівень у самому способі.",
+    law:"ст. 6 ЗУ «Про охорону прав на винаходи і корисні моделі»",
+    tag:"process"
+  },
+  {
+    diff:"hard", type:"strategy",
+    case:"Стартап при due diligence перед угодою M&A виявив, що ключовий патент компанії-цілі не використовується вже 6 років. Продавець стверджує, що патент є цінним активом.",
+    text:"Яку загрозу несе тривале невикористання патенту і як це впливає на оцінку активу?",
+    opts:["Жодної — патент діє до закінчення строку незалежно від використання","У деяких юрисдикціях можлива примусова ліцензія або оскарження через невикористання; це знижує реальну вартість патенту як активу","Патент автоматично анулюється після 5 років невикористання в Україні","Невикористання патенту є кримінальним порушенням"],
+    correct:1,
+    ok:"Правильно. В Україні після <strong>3 років невикористання</strong> будь-яка особа може подати заяву про надання примусової ліцензії. Це знижує ексклюзивність патенту як активу. При M&A — це суттєвий фактор дисконту у оцінці.",
+    no:"Примусова ліцензія — механізм захисту суспільного інтересу від «патентних тролів». Патент, що не використовується, може бути ліцензований третій стороні примусово через суд. При купівлі бізнесу це критичний ризик для оцінки патентного портфелю.",
+    law:"ст. 30 ЗУ «Про охорону прав на винаходи і корисні моделі»",
+    tag:"strategy"
+  },
+  {
+    diff:"med", type:"design",
+    case:"Виробник одягу хоче захистити унікальний геометричний принт тканини і оригінальну конструкцію кишені на куртці. Консультант пропонує два різні інструменти захисту.",
+    text:"Які два різні інструменти захищають принт і конструктивне рішення кишені?",
+    opts:["Обидва захищаються патентом на промисловий зразок","Принт — авторським правом (художній твір), конструкція кишені — патентом на промисловий зразок або корисну модель","Обидва захищаються торговою маркою","Лише реєстрація у спеціальному реєстрі моди"],
+    correct:1,
+    ok:"Правильно. <strong>Авторське право</strong> захищає художній принт автоматично. <strong>Промисловий зразок або корисна модель</strong> — конструктивне рішення кишені. Комбінований захист дає найсильнішу позицію проти копіювання.",
+    no:"У модній індустрії діє кілька інструментів ІВ одночасно. Принт як художній твір — авторське право (автоматично). Конструктивне рішення — промисловий зразок. Торгова марка — на назву бренду. Стратегія — комбінувати все.",
+    law:"ЗУ «Про авторське право», ЗУ «Про охорону прав на промислові зразки»",
+    tag:"design"
+  },
+  {
+    diff:"hard", type:"tech",
+    case:"Компанія A має патент на технологію X. Компанія B незалежно розробила ту саму технологію і використовує її у виробництві. Компанія A вимагає виплат або припинення виробництва.",
+    text:"Чи захищає незалежне паралельне розроблення від патентних претензій?",
+    opts:["Так — незалежна розробка завжди є захистом від патентних позовів","Ні — патент захищає технологію незалежно від того, як конкурент її отримав. Незалежна розробка не є захистом від порушення патенту","Лише якщо компанія B розробила технологію раніше","Лише у США, в Україні є виняток для незалежних розробників"],
+    correct:1,
+    ok:"Правильно. Це принципова відмінність патенту від авторського права. <strong>Патент захищає технологію як таку</strong> — незалежно від того, як конкурент її отримав: вкрав, купив або самостійно розробив. Авторське право — лише від копіювання.",
+    no:"Незалежна розробка — захист від звинувачень у крадіжці, але не від порушення патенту. Патент — монополія на технічне рішення. Хто перший подав заявку і отримав патент — той і правий, навіть якщо інший розробив самостійно.",
+    law:"ст. 28 ЗУ «Про охорону прав на винаходи і корисні моделі»",
+    tag:"tech"
+  },
+  {
+    diff:"hard", type:"strategy",
+    case:"IT-компанія розглядає два підходи до захисту своєї технологічної платформи: патентування ключових рішень або aggressively ліцензування третім особам без патентів.",
+    text:"Яку роль відіграє патентний портфель при ліцензуванні технологій і переговорах з великими гравцями?",
+    opts:["Патенти не мають значення при ліцензуванні — важливий лише продукт","Патентний портфель є переговорним активом: дає право блокувати конкурентів, cross-licensing з великими гравцями і захист від патентних атак","Патенти потрібні лише для судових позовів","Ліцензування без патентів завжди вигідніше"],
+    correct:1,
+    ok:"Правильно. Патентний портфель — це <strong>переговорний актив</strong>. Великі технологічні компанії (Google, Apple, Samsung) використовують перехресне ліцензування (cross-licensing): «ми не судимось — ми обмінюємось правами». Без патентів — ви приходите на переговори без козирів.",
+    no:"Патентна стратегія у IT — не лише про суди. Це переговорний важіль. Cross-licensing, захист від патентних тролів, привабливість для інвесторів — все це залежить від наявності патентного портфелю.",
+    law:"ст. 28-31 ЗУ «Про охорону прав на винаходи і корисні моделі»",
+    tag:"strategy"
   }
-  upd();chkBadge();if(dn>=TOTAL)setTimeout(showResult,1400);
-}
-
-// ── MULTI-SELECT ──
-const CS={};
-function tChip(id,mode){if(AD['multi_'+mode+'_'+id.slice(0,2)]) return; CS[id]=!CS[id]; const el=document.getElementById(id); el.classList.toggle('sel',CS[id]); if(el.classList.contains('lime-c')&&CS[id]) el.classList.add('sel');}
-function chkMulti(qid,correct,exp){
-  if(AD[qid]) return; AD[qid]=true; dn++;
-  const allIds=Object.keys(CS); let c=0,w=0;
-  // Get all chips in this card
-  const card=document.getElementById('fb-'+qid).closest('.qcard-body');
-  card.querySelectorAll('.chip').forEach(el=>{
-    const id=el.id; const sel=CS[id]||false; const should=correct.includes(id);
-    el.style.pointerEvents='none'; el.classList.remove('sel');
-    if(sel&&should){el.classList.add('ok');c++;}
-    else if(sel&&!should){el.classList.add('no');w++;}
-    else if(!sel&&should){el.classList.add('ok');}
-  });
-  const fb=document.getElementById('fb-'+qid);
-  if(w===0&&c===correct.length){cor++;pts+=10;fb.className='fb show ok';fb.innerHTML='✓ Ідеально! '+exp;}
-  else{wrn++;fb.className='fb show no';fb.innerHTML='✗ '+c+' з '+correct.length+' правильно. '+exp;}
-  upd();chkBadge();if(dn>=TOTAL)setTimeout(showResult,1400);
-}
-
-// ── SORT GAME ──
-const sortOk={
-  u:{su1:'bku1',su2:'bku2',su3:'bku1',su4:'bku2',su5:'bku1',su6:'bku2'},
-  d:{sd1:'bkd1',sd2:'bkd2',sd3:'bkd1',sd4:'bkd2',sd5:'bkd1',sd6:'bkd2'}
-};
-const sortTxt={
-  su1:'🪝 Гачок',su2:'🎨 Пляшка',su3:'⚙️ Мех.сорт',su4:'📱 Логотип',su5:'🔌 Розетка',su6:'🧪 Реакція',
-  sd1:'🧴 Тюбик',sd2:'📐 Зварювання',sd3:'🚗 Кузов авто',sd4:'🎵 Мелодія',sd5:'🏺 Орнамент',sd6:'⚗️ Препарат'
-};
-const sortPlaced={u:{},d:{}};
-const curChip={u:null,d:null};
-function selSC(id,mode){
-  document.querySelectorAll('.sc').forEach(c=>c.classList.remove('sel'));
-  curChip[mode]=id; document.getElementById(id).classList.add('sel');
-}
-function dropIn(bkid,mode){
-  if(!curChip[mode]||AD['sort_'+mode]) return;
-  const cc=curChip[mode];
-  sortPlaced[mode][cc]=bkid;
-  const tag=document.createElement('div');tag.className='btag';tag.textContent=sortTxt[cc];
-  const n=bkid.replace('bku','').replace('bkd','');
-  document.getElementById('bt'+mode+n).appendChild(tag);
-  document.getElementById(cc).classList.add('used');
-  curChip[mode]=null;
-  document.querySelectorAll('.sc').forEach(c=>c.classList.remove('sel'));
-  const allKeys=Object.keys(sortOk[mode]);
-  if(Object.keys(sortPlaced[mode]).length===allKeys.length){
-    document.getElementById('sort-'+mode+'-btn').style.display='inline-block';
-  }
-}
-function chkSort(mode){
-  if(AD['sort_'+mode]) return; AD['sort_'+mode]=true; dn+=6;
-  let c=0;
-  for(let s in sortOk[mode]){
-    const ok=sortPlaced[mode][s]===sortOk[mode][s]; if(ok)c++;
-    const bk=document.getElementById(sortPlaced[mode][s]||'');
-    if(bk) bk.classList.add(ok?'ok-bk':'no-bk');
-  }
-  cor+=c;wrn+=(6-c);pts+=c*10;
-  const qid=mode==='u'?'u04':'d04';
-  const fb=document.getElementById('fb-'+qid);
-  if(c===6){fb.className='fb show ok';fb.innerHTML='✓ Ідеально! Усі 6 об\'єктів правильно розсортовано!';}
-  else{fb.className='fb show no';fb.innerHTML='✗ '+c+' з 6 правильно. Зелені — правильні категорії.';}
-  document.getElementById('sort-'+mode+'-btn').style.display='none';
-  upd();chkBadge();if(dn>=TOTAL)setTimeout(showResult,1400);
-}
-
-// ── MATCH ──
-const mPairs={
-  u:{umt1:'umd2',umt2:'umd3',umt3:'umd1',umt4:'umd4'},
-  d:{dmt1:'dmd4',dmt2:'dmd2',dmt3:'dmd1',dmt4:'dmd3'}
-};
-const mSel={u:{L:null,R:null},d:{L:null,R:null}};
-const mDone={u:{},d:{}};
-function mClick(id,side,mode){
-  if(mDone[mode][id]) return;
-  const lefts=Object.keys(mPairs[mode]);
-  const rights=Object.values(mPairs[mode]);
-  if(side==='L'){
-    lefts.forEach(x=>{if(!mDone[mode][x]){const el=document.getElementById(x);if(el)el.classList.remove('sel');}});
-    mSel[mode].L=id; document.getElementById(id).classList.add('sel');
-  } else {
-    rights.forEach(x=>{if(!mDone[mode][x]){const el=document.getElementById(x);if(el)el.classList.remove('sel');}});
-    mSel[mode].R=id; document.getElementById(id).classList.add('sel');
-  }
-  if(mSel[mode].L&&mSel[mode].R){
-    const ok=mPairs[mode][mSel[mode].L]===mSel[mode].R;
-    const lE=document.getElementById(mSel[mode].L),rE=document.getElementById(mSel[mode].R);
-    lE.classList.remove('sel');rE.classList.remove('sel');
-    if(ok){
-      lE.classList.add('ok');rE.classList.add('ok');
-      mDone[mode][mSel[mode].L]=true;mDone[mode][mSel[mode].R]=true;
-      cor++;pts+=10;
-      const allDone=Object.keys(mPairs[mode]).every(k=>mDone[mode][k]);
-      if(allDone&&!AD['match_'+mode]){
-        AD['match_'+mode]=true; dn+=4;
-        const qid=mode==='u'?'u13':'d13';
-        const fb=document.getElementById('fb-'+qid);
-        fb.className='fb show ok';fb.innerHTML='✓ Усі 4 пари правильно! +40 очок 🎉';
-        upd();chkBadge();if(dn>=TOTAL)setTimeout(showResult,1400);
-      }
-    } else {
-      wrn++;lE.classList.add('nm');rE.classList.add('nm');
-      setTimeout(()=>{lE.classList.remove('nm');rE.classList.remove('nm');},600);
-    }
-    mSel[mode].L=null;mSel[mode].R=null;upd();
-  }
-}
-
-// ── CALC ──
-function chkCalcU(){
-  if(AD['u11']) return; AD['u11']=true; dn++;
-  const v=parseInt(document.getElementById('uci').value)||0;
-  const fb=document.getElementById('fb-u11');
-  // 10000 * 150 * 4% = 60000
-  if(v===60000){cor++;pts+=10;fb.className='fb show ok';fb.innerHTML='✓ Правильно! 10 000 × 150 = 1 500 000 грн. × 4% = <strong>60 000 грн</strong> 💰';}
-  else{wrn++;fb.className='fb show no';fb.innerHTML='✗ Не вірно. 10 000 × 150 грн = 1 500 000. × 4% = <strong>60 000 грн</strong>';}
-  upd();chkBadge();if(dn>=TOTAL)setTimeout(showResult,1400);
-}
-function chkCalcD(){
-  if(AD['d11']) return; AD['d11']=true; dn++;
-  const v=parseInt(document.getElementById('dci').value)||0;
-  const fb=document.getElementById('fb-d11');
-  // 5000 * 400 * 6% = 120000
-  if(v===120000){cor++;pts+=10;fb.className='fb show ok';fb.innerHTML='✓ Правильно! 5 000 × 400 = 2 000 000 грн. × 6% = <strong>120 000 грн</strong> 💰';}
-  else{wrn++;fb.className='fb show no';fb.innerHTML='✗ Не вірно. 5 000 × 400 = 2 000 000. × 6% = <strong>120 000 грн</strong>';}
-  upd();chkBadge();if(dn>=TOTAL)setTimeout(showResult,1400);
-}
-
-// ── TABS ──
-function switchMode(mode,btn){
-  document.querySelectorAll('.game-sec').forEach(s=>s.classList.remove('on'));
-  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('on'));
-  document.getElementById('game-'+mode).classList.add('on');
-  btn.classList.add('on');
-}
-function subTab(mode,name,btn){
-  const sec=document.getElementById('game-'+mode);
-  sec.querySelectorAll('.sub-sec').forEach(s=>s.classList.remove('on'));
-  sec.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
-  document.getElementById(mode+'-'+name).classList.add('on');
-  btn.classList.add('on');
-}
-
-// ── BADGES ──
-const bdefs=[
-  {t:1,e:'⚡',h:'СИСТЕМИ ЗАПУЩЕНО',p:'Перше питання answered',lime:false},
-  {t:5,e:'⚙️',h:'ІНЖЕНЕР НОВАЧОК',p:'5 завдань з Корисних моделей',lime:false},
-  {t:11,e:'🎨',h:'ДИЗАЙН-ДЕТЕКТИВ',p:'Переключився на зразки!',lime:true},
-  {t:15,e:'🔬',h:'ПАТЕНТНИЙ АГЕНТ',p:'15 завдань пройдено!',lime:false},
-  {t:22,e:'🏆',h:'МАЙСТЕР ІВ',p:'Усі 22 завдання!',lime:true},
 ];
-const shownB=new Set();
-function chkBadge(){
-  bdefs.forEach(b=>{if(dn>=b.t&&!shownB.has(b.t)){shownB.add(b.t);setTimeout(()=>showBadge(b),500);}});
-}
-function showBadge(b){
-  const el=document.getElementById('bdg');
-  document.getElementById('be').textContent=b.e;
-  document.getElementById('bt').textContent=b.h;
-  document.getElementById('bp').textContent=b.p;
-  el.className='badge show'+(b.lime?' lime-bdg':'');
-  setTimeout(closeBadge,3500);
-}
-function closeBadge(){document.getElementById('bdg').classList.remove('show');}
 
-// ── RESULT ──
+const RECS={
+  novelty:{icon:"🔒",title:"Захист новизни до публікації",text:"Правило №1: спочатку патентна заявка, потім будь-яка публічність. Пітч, конференція, LinkedIn-пост — все це може знищити новизну. Розгляньте NDA для ранніх демонстрацій."},
+  tech:{icon:"💻",title:"Патентування технологічних рішень",text:"Чистий алгоритм не патентується. Але технічне рішення з вимірюваним ефектом — може. Формулювання у заявці критичне. Патент = монополія, незалежно від того як конкурент отримав технологію."},
+  strategy:{icon:"♟️",title:"Патентна стратегія",text:"Патент vs ноу-хау — стратегічний вибір. PCT для міжнародного захисту. Невикористання патенту 3+ роки в Україні відкриває шлях до примусової ліцензії. Патентний портфель — переговорний актив."},
+  international:{icon:"🌍",title:"Міжнародний захист через PCT",text:"PCT-заявка дає 30 місяців і єдиний пріоритет для виходу в 150+ країн. Для стартапів — час зібрати інвестиції на національні фази. Подавайте PCT до будь-якої публічної презентації."},
+  employment:{icon:"💼",title:"Службові винаходи",text:"Службовий винахід = створений в межах трудових обов'язків або з ресурсами роботодавця. Перевірте трудовий договір. Документуйте особисті розробки поза роботою — дати, матеріали, незалежність від роботодавця."},
+  design:{icon:"📐",title:"Промисловий зразок і дизайн",text:"Промисловий зразок захищає зовнішній вигляд виробу. Зміна матеріалу чи кольору не рятує від порушення якщо загальне зорове враження однакове. Комбінуйте з авторським правом на художні елементи."},
+  process:{icon:"🔬",title:"Патент на спосіб виробництва",text:"Спосіб виробництва патентується незалежно від відомості кінцевого продукту. Це поширена стратегія у фармацевтиці і хімічній промисловості для захисту виробничої ефективності."}
+};
+
+let cur=0,ok=0,no=0,pts=0,wrongTags=new Set();
+function startQuiz(){
+  document.getElementById('hero').style.display='none';
+  document.getElementById('intro-block').style.display='none';
+  document.getElementById('progress-wrap').classList.add('show');
+  document.getElementById('score-row').classList.add('show');
+  showQ();
+}
+function showQ(){
+  const c=document.getElementById('q-container');
+  c.innerHTML='';
+  if(cur>=Q.length){showResult();return;}
+  const q=Q[cur];
+  document.getElementById('progress-fill').style.width=(cur/Q.length*100)+'%';
+  document.getElementById('progress-label').textContent=(cur+1)+' / '+Q.length;
+  const diffLabel={med:'Середній рівень',hard:'Складний рівень'};
+  const typeLabel={tech:'💻 Технології',design:'📐 Дизайн',strategy:'♟️ Стратегія',process:'🔬 Спосіб'};
+  const w=document.createElement('div');
+  w.innerHTML=`
+    <div class="q-meta">
+      <div class="q-num">Питання ${cur+1} з ${Q.length}</div>
+      <span class="q-diff ${q.diff}">${diffLabel[q.diff]}</span>
+      <span class="q-type ${q.type}">${typeLabel[q.type]||''}</span>
+    </div>
+    <div class="case-box">
+      <div class="case-label">📋 Ситуація</div>
+      <div class="case-text">${q.case}</div>
+    </div>
+    <div class="q-text">${q.text}</div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="fb"></div>
+    <button class="next-btn" id="nb" onclick="nextQ()">${cur<Q.length-1?'Наступне питання →':'Переглянути результат →'}</button>
+  `;
+  c.appendChild(w);
+  const opts=document.getElementById('opts');
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='opt';b.textContent=o;b.onclick=()=>answer(i);
+    opts.appendChild(b);
+  });
+}
+function answer(idx){
+  const q=Q[cur];
+  const btns=document.querySelectorAll('.opt');
+  btns.forEach(b=>b.disabled=true);
+  const fb=document.getElementById('fb');
+  if(idx===q.correct){
+    btns[idx].classList.add('correct');ok++;pts+=10;
+    fb.className='feedback show ok';
+    fb.innerHTML=`<strong>✅ Правильно!</strong>${q.ok}<div class="law-ref">📖 ${q.law}</div>`;
+  }else{
+    btns[idx].classList.add('wrong');btns[q.correct].classList.add('correct');
+    no++;wrongTags.add(q.tag);
+    fb.className='feedback show no';
+    fb.innerHTML=`<strong>❌ Не зовсім.</strong>${q.no}<div class="law-ref">📖 ${q.law}</div>`;
+  }
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-no').textContent=no;
+  document.getElementById('sc-pt').textContent=pts;
+  document.getElementById('nb').classList.add('show');
+}
+function nextQ(){cur++;showQ();}
 function showResult(){
-  const pct=Math.round(cor/TOTAL*100);
-  document.getElementById('r-c').textContent=cor;
-  document.getElementById('r-s').textContent=pts;
+  document.getElementById('progress-wrap').style.display='none';
+  document.getElementById('score-row').style.display='none';
+  document.getElementById('q-container').innerHTML='';
+  const pct=Math.round(ok/Q.length*100);
+  document.getElementById('r-correct').textContent=ok+' правильних з '+Q.length;
   document.getElementById('r-pct').textContent=pct+'%';
-  let ico,h,p;
-  if(pct>=90){ico='🏆';h='ПАТЕНТНИЙ ЕКСПЕРТ';p='Феноменально! Ти знаєш корисні моделі та промислові зразки краще за більшість дорослих.';}
-  else if(pct>=70){ico='🎯';h='ВІДМІННО';p='Чудовий результат! Ще трохи практики — і будеш справжнім фахівцем ІВ.';}
-  else if(pct>=50){ico='📚';h:'НЕПОГАНО';p='Добрий старт. Повтори теорію і спробуй ще раз.';}
-  else{ico='💪';h='НЕ ЗДАВАЙСЯ';p='ІВ — серйозна тема. Ще раз прочитай теорію і повтори!';}
-  document.getElementById('r-ico').textContent=ico;
-  document.getElementById('r-h').textContent=h||'РЕЗУЛЬТАТ';
-  document.getElementById('r-p').textContent=p;
+  setTimeout(()=>{document.getElementById('r-bar').style.width=pct+'%';},100);
+  let icon,title,sub;
+  if(pct>=80){icon='🏆';title='Патентний стратег';sub='Ви розумієте патентну систему як бізнес-інструмент. Наступний крок — аудит існуючих рішень і розробка патентної стратегії для вашого продукту.';}
+  else if(pct>=50){icon='⚙️';title='Базовий рівень';sub='Загальне розуміння є. Але патентні помилки коштують дорого — особливо публічне розкриття до заявки і неправильна оцінка службових винаходів.';}
+  else{icon:'⚠️';title:'Технологія під загрозою';sub:'Без патентного захисту ваші розробки доступні для копіювання конкурентами. Консультація патентного спеціаліста допоможе визначити що і коли варто захищати.';}
+  document.getElementById('r-icon').textContent=icon;
+  document.getElementById('r-title').textContent=title;
+  document.getElementById('r-sub').textContent=sub;
+  const recs=document.getElementById('r-recs');
+  const tags=wrongTags.size>0?[...wrongTags].slice(0,3):['novelty','strategy'];
+  tags.forEach(t=>{
+    const r=RECS[t];
+    if(r) recs.innerHTML+=`<div class="rec-card"><h4>${r.icon} ${r.title}</h4><p>${r.text}</p></div>`;
+  });
   document.getElementById('result').classList.add('show');
-  document.getElementById('result').scrollIntoView({behavior:'smooth'});
 }
 </script>
-
-<div class="site-footer">© Юридична кухня Сосновського · Всі права захищені</div>
-
 
 </body></html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- saved from url=(0527)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82/%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82/%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B5%20%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D1%80%D0%BE%D1%81%D0%BB%D0%B8%D1%85%20%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.html -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Авторське право — Юридична кухня Сосновського</title>
+<link href="./sim-copyright_files/css2" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0d0d;--card:#161616;--card2:#1e1e1e;
+  --gold:#c8992a;--gold2:#ffd166;--white:#f0ede8;
+  --red:#e05050;--red-bg:rgba(224,80,80,0.1);
+  --ok:#22c98e;--ok-bg:rgba(34,201,142,0.1);
+  --text:#d8d4cc;--muted:#7a7570;--border:rgba(255,255,255,0.07);
+  --accent:#c8992a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+
+.brand{background:#080808;text-align:center;padding:16px 20px 14px;border-bottom:1px solid var(--border);}
+.brand-name{font-family:'Unbounded',sans-serif;font-size:clamp(0.85rem,2.5vw,1.1rem);color:#fff;font-weight:700;}
+.brand-name span{color:var(--gold2);}
+.brand-slogan{font-size:0.7rem;color:#7aa3e8;font-style:italic;margin-top:4px;}
+.brand-line{width:36px;height:2px;background:var(--gold);margin:8px auto 0;border-radius:2px;}
+
+.hero{background:linear-gradient(160deg,#0d0d0d 0%,#1a1400 60%,#0d0d0d 100%);padding:52px 24px 48px;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.hero::before{content:'©';font-family:'Unbounded',sans-serif;font-size:16rem;font-weight:900;position:absolute;right:-40px;top:-40px;opacity:0.03;color:var(--gold);pointer-events:none;line-height:1;}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 60%,rgba(200,153,42,0.06) 0%,transparent 55%);pointer-events:none;}
+.hero-tag{display:inline-block;background:rgba(200,153,42,0.15);color:var(--gold2);border:1px solid rgba(200,153,42,0.3);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:20px;position:relative;z-index:1;}
+.hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(1.6rem,5vw,2.6rem);color:#fff;font-weight:900;line-height:1.1;margin-bottom:16px;position:relative;z-index:1;}
+.hero h1 em{font-style:normal;color:var(--gold2);}
+.hero-sub{font-size:15px;color:var(--muted);max-width:540px;margin:0 auto 12px;line-height:1.75;position:relative;z-index:1;}
+.hero-note{font-size:13px;color:rgba(200,153,42,0.7);margin-bottom:28px;position:relative;z-index:1;}
+.start-btn{background:var(--gold);color:#0d0d0d;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:15px 44px;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.5px;transition:background .2s,transform .15s;position:relative;z-index:1;}
+.start-btn:hover{background:var(--gold2);transform:translateY(-2px);}
+
+.progress-wrap{background:#080808;padding:12px 24px;display:none;align-items:center;gap:14px;border-bottom:1px solid var(--border);}
+.progress-wrap.show{display:flex;}
+.progress-track{flex:1;height:3px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--gold);border-radius:3px;transition:width .5s ease;}
+.progress-label{font-size:11px;color:var(--muted);white-space:nowrap;font-weight:700;letter-spacing:1px;}
+
+.score-row{display:none;background:#0a0a0a;border-bottom:1px solid var(--border);padding:10px 24px;}
+.score-row.show{display:flex;}
+.sc-cell{flex:1;text-align:center;border-right:1px solid var(--border);padding:6px 0;}
+.sc-cell:last-child{border-right:none;}
+.sc-cell .n{font-family:'Unbounded',sans-serif;font-size:1.4rem;font-weight:900;line-height:1;}
+.sc-cell:nth-child(1) .n{color:var(--ok);}
+.sc-cell:nth-child(2) .n{color:var(--red);}
+.sc-cell:nth-child(3) .n{color:var(--gold2);}
+.sc-cell .l{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+
+.main{max-width:720px;margin:0 auto;padding:36px 20px 64px;}
+
+/* INTRO CARDS */
+.intro-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:32px;}
+.prof-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:border-color .2s;}
+.prof-card:hover{border-color:rgba(200,153,42,0.3);}
+.prof-ico{font-size:2.2rem;margin-bottom:10px;}
+.prof-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;}
+.prof-issue{font-size:12px;color:var(--muted);line-height:1.5;}
+
+.intro-text{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:28px;}
+.intro-text strong{color:var(--white);}
+
+/* QUESTION */
+.q-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.q-num{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+.q-diff{font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;}
+.q-diff.med{background:rgba(200,153,42,0.12);color:var(--gold2);border:1px solid rgba(200,153,42,0.2);}
+.q-diff.hard{background:rgba(224,80,80,0.1);color:#f0a0a0;border:1px solid rgba(224,80,80,0.2);}
+
+.q-text{font-size:17px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:20px;}
+
+.case-box{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:20px;}
+.case-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.case-text{font-size:14px;color:var(--text);line-height:1.75;}
+.case-text strong{color:var(--white);}
+
+.opts{display:grid;gap:9px;margin-bottom:16px;}
+.opt{background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:15px 18px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--text);cursor:pointer;text-align:left;line-height:1.45;transition:border-color .15s,background .15s,transform .1s;}
+.opt:hover:not(:disabled){border-color:rgba(200,153,42,0.5);background:rgba(200,153,42,0.05);transform:translateX(3px);}
+.opt.correct{border-color:var(--ok)!important;background:var(--ok-bg)!important;color:var(--ok)!important;}
+.opt.wrong{border-color:var(--red)!important;background:var(--red-bg)!important;color:var(--red)!important;}
+.opt:disabled{cursor:default;}
+
+.feedback{display:none;border-radius:10px;padding:16px 18px;font-size:14px;line-height:1.7;margin-bottom:16px;}
+.feedback.show{display:block;}
+.feedback.ok{background:var(--ok-bg);border:1px solid rgba(34,201,142,0.25);color:#90e8c0;}
+.feedback.no{background:var(--red-bg);border:1px solid rgba(224,80,80,0.25);color:#f0a8a8;}
+.feedback strong{display:block;font-size:15px;margin-bottom:6px;color:#fff;}
+
+/* LAW REF */
+.law-ref{font-size:11px;color:rgba(200,153,42,0.5);margin-top:8px;font-style:italic;}
+
+.next-btn{background:var(--gold);color:#0d0d0d;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 30px;border:none;border-radius:4px;cursor:pointer;display:none;transition:background .2s,transform .15s;}
+.next-btn.show{display:inline-block;}
+.next-btn:hover{background:var(--gold2);transform:translateY(-1px);}
+
+/* RESULT */
+.result{display:none;}
+.result.show{display:block;}
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:44px 32px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden;}
+.result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.result-icon{font-size:4rem;margin-bottom:16px;}
+.result-title{font-family:'Unbounded',sans-serif;font-size:clamp(1.2rem,4vw,1.8rem);color:#fff;font-weight:900;margin-bottom:10px;}
+.result-sub{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:24px;}
+.score-bar-wrap{background:rgba(255,255,255,0.05);border-radius:4px;height:6px;margin:0 0 8px;overflow:hidden;}
+.score-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:4px;transition:width 1.2s ease;}
+.score-nums{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);font-weight:700;letter-spacing:0.5px;}
+
+.rec-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:28px 0 14px;}
+.rec-card{background:var(--card);border:1px solid var(--border);border-left:2px solid var(--gold);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:10px;text-align:left;}
+.rec-card h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px;}
+.rec-card p{font-size:13px;color:var(--muted);line-height:1.65;}
+
+.cta-box{background:linear-gradient(135deg,#1a1200,#0d0d0d);border:1px solid rgba(200,153,42,0.2);border-radius:12px;padding:32px 24px;text-align:center;margin-top:20px;}
+.cta-box p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:18px;}
+.cta-box strong{color:var(--gold2);}
+.cta-btn{background:var(--gold);color:#0d0d0d;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:14px 36px;border:none;border-radius:4px;cursor:pointer;transition:background .2s;}
+.cta-btn:hover{background:var(--gold2);}
+.restart-link{display:block;margin-top:14px;font-size:12px;color:rgba(255,255,255,0.2);cursor:pointer;text-decoration:underline;}
+.restart-link:hover{color:var(--muted);}
+
+.footer{text-align:center;padding:16px;font-size:11px;color:rgba(255,255,255,0.15);border-top:1px solid var(--border);}
+@media(max-width:500px){.q-text{font-size:15px;}.main{padding:24px 14px 48px;}.intro-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="brand">
+  <div class="brand-name">Юридична кухня <span>Сосновського</span></div>
+  <div class="brand-slogan">Правовий захист — це не формальність, а продовження вашого твору</div>
+  <div class="brand-line"></div>
+</div>
+
+<div class="hero" id="hero">
+  <div class="hero-tag">© Авторське право · Для дорослих</div>
+  <h1>Ваша робота.<br><em>Ваші права.</em></h1>
+  <div class="hero-sub">12 практичних кейсів для фотографів, дизайнерів, ілюстраторів і всіх, хто продає творчі послуги. Реальні ситуації — без теорії заради теорії.</div>
+  <div class="hero-note">⏱ ~8 хвилин · Кожне питання з поясненням та посиланням на закон</div>
+  <button class="start-btn" onclick="startQuiz()">Розпочати тест →</button>
+</div>
+
+<div class="progress-wrap" id="progress-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="progress-label" id="progress-label">1 / 12</div>
+</div>
+<div class="score-row" id="score-row">
+  <div class="sc-cell"><div class="n" id="sc-ok">0</div><div class="l">✅ Правильно</div></div>
+  <div class="sc-cell"><div class="n" id="sc-no">0</div><div class="l">❌ Помилки</div></div>
+  <div class="sc-cell"><div class="n" id="sc-pt">0</div><div class="l">★ Балів</div></div>
+</div>
+
+<div class="main">
+  <div id="intro-block">
+    <div class="intro-text">
+      Авторське право існує — але воно не захищає вас автоматично у бізнес-відносинах. Ця вікторина перевіряє, чи знаєте ви <strong>де закон на вашому боці</strong>, а де ви самі підписали угоду не на свою користь.
+    </div>
+    <div class="intro-grid">
+      <div class="prof-card"><div class="prof-ico">📸</div><div class="prof-title">Фотограф</div><div class="prof-issue">Клієнт використав фото не за призначенням. Що можна вимагати?</div></div>
+      <div class="prof-card"><div class="prof-ico">🎨</div><div class="prof-title">Ілюстратор</div><div class="prof-issue">Замовник «передав» роботу агентству. Чи законно це без вашого дозволу?</div></div>
+      <div class="prof-card"><div class="prof-ico">💻</div><div class="prof-title">UX/UI Дизайнер</div><div class="prof-issue">Роботодавець патентує ваш інтерфейс. Кому належать права?</div></div>
+      <div class="prof-card"><div class="prof-ico">✍️</div><div class="prof-title">Копірайтер</div><div class="prof-issue">Текст переписали й не вказали вас автором. Це порушення?</div></div>
+    </div>
+  </div>
+
+  <div id="q-container"></div>
+
+  <div class="result" id="result">
+    <div class="result-card">
+      <div class="result-icon" id="r-icon">©</div>
+      <div class="result-title" id="r-title">Ваш результат</div>
+      <div class="result-sub" id="r-sub"></div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" id="r-bar"></div></div>
+      <div class="score-nums"><span id="r-correct">0 правильних</span><span id="r-pct">0%</span></div>
+    </div>
+    <div class="rec-title">Рекомендації за вашими результатами</div>
+    <div id="r-recs"></div>
+    <div class="cta-box">
+      <p>Авторське право працює лише тоді, коли ви знаєте свої права <strong>і правильно оформлюєте договори</strong>.<br>Отримайте персональну консультацію для вашої сфери.</p>
+      <button class="cta-btn" onclick="alert(&#39;Вставте посилання на форму або Telegram&#39;)">Записатися на консультацію</button>
+      <span class="restart-link" onclick="location.reload()">↺ Пройти ще раз</span>
+    </div>
+  </div>
+</div>
+
+<div class="footer">© Юридична кухня Сосновського · Всі права захищені</div>
+
+<script>
+const Q=[
+  {
+    diff:"med",
+    case:"Фотограф зняв корпоратив для компанії, передав файли замовнику і отримав оплату. Через рік виявив, що компанія використовує ці фото в рекламних білбордах по всьому місту. У договорі було написано лише «передача фотографій для корпоративного використання».",
+    text:"Чи має фотограф право вимагати додаткову оплату або припинення використання?",
+    opts:["Ні — «корпоративне використання» охоплює будь-яку рекламу компанії","Так — білборди є окремим видом використання, не передбаченим договором","Лише якщо фотограф зареєстрував авторське право","Ні — після оплати всі права автоматично перейшли до замовника"],
+    correct:1,
+    ok:"Правильно. Ліцензія надається лише на ті способи використання, що <strong>прямо вказані в договорі</strong>. «Корпоративне використання» не означає рекламні білборди. Фотограф може вимагати додаткову виплату або припинення.",
+    no:"«Корпоративне використання» — розмита формулювка. За законом ліцензія охоплює лише те, що <strong>прямо вказано</strong>. Зовнішня реклама потребує окремого дозволу і, зазвичай, вищого гонорару.",
+    law:"ст. 33 ЗУ «Про авторське право і суміжні права»",
+    tag:"contracts"
+  },
+  {
+    diff:"med",
+    case:"UX-дизайнер розробив інтерфейс мобільного застосунку, працюючи за трудовим договором. Компанія подала патентну заявку на дизайн без відома дизайнера і без жодної додаткової виплати.",
+    text:"Чи має дизайнер право на частку від патенту або додаткову винагороду?",
+    opts:["Ні — все, створене під час роботи, автоматично належить роботодавцю","Так — службовий твір: майнові права у роботодавця, але автор має право на справедливу винагороду","Так — дизайнер є єдиним власником, бо він фізична особа-автор","Лише якщо це прописано у трудовому договорі"],
+    correct:1,
+    ok:"Правильно. Службовий твір: <strong>майнові права</strong> належать роботодавцю (якщо договором не встановлено інше), але автор зберігає <strong>особисті немайнові права</strong> і має право на додаткову винагороду понад зарплату.",
+    no:"Службовий твір — не безоплатна передача всього. Роботодавець отримує майнові права, але закон гарантує автору право на <strong>додаткову справедливу винагороду</strong> за використання твору.",
+    law:"ст. 16 ЗУ «Про авторське право і суміжні права»",
+    tag:"employment"
+  },
+  {
+    diff:"hard",
+    case:"Ілюстратор виконав роботу для рекламного агентства. Агентство без погодження «покращило» ілюстрацію: змінило кольори, додало елементи і опублікувало в соцмережах під своїм логотипом без підпису автора.",
+    text:"Які права ілюстратора порушено?",
+    opts:["Лише майнові права — несанкціонована зміна твору","Лише особисті — не вказали авторство","Обидва: право на недоторканність твору і право авторства","Жодних — агентство є замовником і може редагувати"],
+    correct:2,
+    ok:"Правильно. Порушено одразу два немайнових права: <strong>право авторства</strong> (не вказали ім'я) і <strong>право на недоторканність</strong> (змінили твір без дозволу). Ці права не можна передати за договором — вони належать автору довічно.",
+    no:"Навіть якщо замовник сплатив — він не може змінювати твір без дозволу і зобов'язаний вказувати автора. Це <strong>особисті немайнові права</strong>, які не передаються навіть за договором.",
+    law:"ст. 14 ЗУ «Про авторське право і суміжні права»",
+    tag:"moral_rights"
+  },
+  {
+    diff:"med",
+    case:"Копірайтер написав серію статей для блогу компанії як фрілансер. Договору не було — лише листування в Telegram і оплата на карту. Компанія тепер стверджує, що є власником текстів.",
+    text:"Кому належать авторські права на тексти без письмового договору?",
+    opts:["Компанії — вона замовила і оплатила роботу","Копірайтеру — оплата не означає передачу авторських прав без письмового договору","Порівну — 50/50 між автором і замовником","Нікому — без договору тексти у вільному доступі"],
+    correct:1,
+    ok:"Правильно. Без письмового договору про передачу прав <strong>авторські права залишаються у автора</strong>. Факт оплати — це лише розрахунок за послугу, не передача ІВ.",
+    no:"Оплата ≠ передача авторських прав. Для переходу майнових прав потрібен <strong>письмовий договір</strong>. Без нього автор залишається правовласником незалежно від того, хто замовив і оплатив роботу.",
+    law:"ст. 31 ЗУ «Про авторське право і суміжні права»",
+    tag:"contracts"
+  },
+  {
+    diff:"hard",
+    case:"Фотограф опублікував знімок у своєму Instagram. Онлайн-видання взяло фото без дозволу і опублікувало у статті, посилаючись на те, що «взяли з відкритих джерел».",
+    text:"Чи є аргумент «відкрите джерело» юридично обґрунтованим?",
+    opts:["Так — публікація в інтернеті означає згоду на вільне використання","Так, якщо вони вказали посилання на Instagram","Ні — публікація в мережі не є ліцензією на використання третіми особами","Лише якщо фото комерційне, а не особисте"],
+    correct:2,
+    ok:"Правильно. Публікація у соцмережах <strong>не є ліцензією</strong> для інших. «Взяли з відкритих джерел» — не правова підстава. Видання зобов'язане отримати дозвіл або виплатити компенсацію.",
+    no:"«Відкрите джерело» — міф. Публікація в Instagram регулюється Умовами використання платформи, але не скасовує авторське право автора. Видання порушило закон навіть зі вказівкою джерела.",
+    law:"ст. 50 ЗУ «Про авторське право і суміжні права»",
+    tag:"online"
+  },
+  {
+    diff:"med",
+    case:"Дизайнер розробив логотип для стартапу. У договорі прописано «передачу виключних майнових прав». Через рік стартап збанкрутував і нові власники активів хочуть продати логотип іншій компанії.",
+    text:"Чи можуть нові власники стартапу продати логотип без згоди дизайнера?",
+    opts:["Ні — дизайнер зберігає контроль над логотипом назавжди","Так — майнові права були передані стартапу і входять до складу активів","Лише якщо дизайнер отримає додаткову оплату","Лише якщо в договорі немає заборони на перепродаж"],
+    correct:1,
+    ok:"Правильно. Після передачі <strong>виключних майнових прав</strong> логотип став активом компанії. При банкрутстві він входить до конкурсної маси і може бути проданий. Дизайнер зберігає лише право авторства.",
+    no:"Виключні майнові права — це повноцінний актив. Після передачі автор втрачає контроль над комерційним використанням. Саме тому варто <strong>ліцензувати, а не відчужувати</strong> права у більшості випадків.",
+    law:"ст. 31-32 ЗУ «Про авторське право і суміжні права»",
+    tag:"contracts"
+  },
+  {
+    diff:"hard",
+    case:"Музикант створив трек і завантажив його на SoundCloud з позначкою «Free Download». Рекламна агенція скачала трек і використала його у відеорекламі для великого бренду.",
+    text:"Чи порушила агенція авторське право?",
+    opts:["Ні — «Free Download» означає вільне використання для будь-яких цілей","Ні, якщо вказала ім'я автора у відео","Так — «Free Download» дозволяє лише особисте прослуховування, не комерційне використання","Лише якщо реклама вийшла на ТБ, а не в інтернеті"],
+    correct:2,
+    ok:"Правильно. «Free Download» — дозвіл <strong>безкоштовно завантажити для особистого використання</strong>. Комерційна реклама потребує окремої синхронізаційної ліцензії. Агенція порушила авторське право.",
+    no:"Free Download ≠ комерційна ліцензія. Для використання музики в рекламі потрібна <strong>синхронізаційна ліцензія</strong> — окремий договір з автором або видавництвом.",
+    law:"ст. 15, 33 ЗУ «Про авторське право і суміжні права»",
+    tag:"online"
+  },
+  {
+    diff:"med",
+    case:"Архітектор розробив проєкт приватного будинку. Замовник без дозволу передав проєктну документацію іншому підряднику для будівництва другого ідентичного будинку.",
+    text:"Чи порушив замовник авторське право архітектора?",
+    opts:["Ні — замовник оплатив проєкт і може використовувати його як хоче","Так — архітектурний проєкт охороняється авторським правом, повторне використання без дозволу — порушення","Лише якщо другий будинок будується на продаж","Архітектурні проєкти не підпадають під авторське право"],
+    correct:1,
+    ok:"Правильно. Архітектурний проєкт — об'єкт авторського права. Замовник отримав право <strong>збудувати один об'єкт</strong> за цим проєктом. Передача документації для іншого будівництва — порушення.",
+    no:"Архітектура охороняється авторським правом нарівні з літературою і музикою. Оплата дає право на один об'єкт. Тиражування проєкту без дозволу — порушення.",
+    law:"ст. 8 ЗУ «Про авторське право і суміжні права»",
+    tag:"moral_rights"
+  },
+  {
+    diff:"hard",
+    case:"Веб-розробник написав код для інтернет-магазину. Через 6 місяців клієнт звернувся з вимогою надати вихідний код, бо «ми заплатили за сайт». Договір про передачу прав на код відсутній.",
+    text:"Чи зобов'язаний розробник передати вихідний код клієнту?",
+    opts:["Так — хто платить, той і отримує всі матеріали","Ні — програмний код є об'єктом авторського права, і без відповідного договору права залишаються у розробника","Лише бекенд-частину, фронтенд — клієнту","Залежить від суми договору"],
+    correct:1,
+    ok:"Правильно. Програмний код — об'єкт авторського права. Оплата за розробку ≠ передача прав на код. Без письмового договору про передачу або ліцензію <strong>права залишаються у розробника</strong>.",
+    no:"Програмний код охороняється як літературний твір. Клієнт отримав працюючий сайт — але не право власності на код. Для отримання вихідного коду потрібен окремий договір.",
+    law:"ст. 8, 31 ЗУ «Про авторське право і суміжні права»",
+    tag:"employment"
+  },
+  {
+    diff:"med",
+    case:"Ілюстратор створив серію малюнків для дитячої книги. Видавництво випустило книгу з ілюстраціями, але у вихідних даних зазначено лише ім'я автора тексту.",
+    text:"Яке право ілюстратора порушено і що він може вимагати?",
+    opts:["Нічого — ілюстратор отримав гонорар","Порушено право авторства — ілюстратор може вимагати вказання свого імені у всіх примірниках","Лише якщо книга стала бестселером","Ілюстрації до книг не охороняються окремо"],
+    correct:1,
+    ok:"Правильно. <strong>Право авторства</strong> — невідчужуване. Ілюстратор має право вимагати зазначення свого імені, виправлення у наступних тиражах та компенсацію моральної шкоди.",
+    no:"Ілюстрації охороняються окремо від тексту. Право на зазначення імені автора — особисте немайнове право, яке не залежить від гонорару і не може бути скасоване договором.",
+    law:"ст. 14 ЗУ «Про авторське право і суміжні права»",
+    tag:"moral_rights"
+  },
+  {
+    diff:"hard",
+    case:"Фотограф зафіксував протестну акцію. Один зі знімків — де впізнаваний учасник протесту — видання хоче опублікувати без згоди зображеної особи.",
+    text:"Чи потрібна згода зображеної особи для публікації фото з публічного заходу?",
+    opts:["Ні — публічна акція означає згоду на зйомку і публікацію","Так — завжди потрібна письмова згода кожної особи","Залежить від мети публікації: для новин — можливо без згоди, для реклами — обов'язково зі згодою","Лише якщо особа впізнавана на фото"],
+    correct:2,
+    ok:"Правильно. Це перетин авторського права і права на приватність. Для <strong>журналістських і новинних цілей</strong> публікація впізнаваних осіб на публічних заходах допускається. Для комерційних цілей — потрібна згода.",
+    no:"Право на зображення — окремий правовий інститут. Новинна журналістика має ширші права. Комерційне використання зображення конкретної людини без її згоди — порушення, навіть якщо знято у публічному місці.",
+    law:"ст. 307-308 ЦКУ, ст. 14 ЗУ «Про авторське право»",
+    tag:"privacy"
+  },
+  {
+    diff:"hard",
+    case:"Дизайнерка розробила фірмовий стиль для кафе: логотип, меню, упаковку. Кафе закрилось, власник відкрив нове під іншою назвою і використовує ті самі матеріали з мінімальними змінами.",
+    text:"Що може зробити дизайнерка, якщо в договорі була передача виключних майнових прав?",
+    opts:["Нічого — вона вже передала права, ситуація законна","Вимагати припинення використання — передача прав стосувалась конкретного кафе, не нового бізнесу","Лише якщо нова назва кафе схожа на стару","Подати на реєстрацію торгової марки заднім числом"],
+    correct:1,
+    ok:"Правильно. Якщо у договорі права передавались для конкретного суб'єкта господарювання, використання тих самих матеріалів новим юридичним суб'єктом <strong>виходить за межі ліцензії</strong>. Дизайнерка може діяти.",
+    no:"Передача прав юридичній особі не означає автоматичне право правонаступника або нового бізнесу того самого власника. Конкретний об'єм переданих прав визначається договором.",
+    law:"ст. 31-33 ЗУ «Про авторське право і суміжні права»",
+    tag:"contracts"
+  }
+];
+
+const RECS={
+  contracts:{icon:"📝",title:"Договори з замовниками",text:"Завжди прописуйте конкретні способи використання, територію і строк. «Корпоративне використання» або «для сайту» — небезпечно розмиті формулювання. Ліцензія ≠ відчуження."},
+  employment:{icon:"💼",title:"Службові твори і трудові договори",text:"Перевірте свій трудовий договір на наявність пунктів про ІВ. Навіть при передачі майнових прав роботодавцю — ви маєте право на додаткову винагороду."},
+  moral_rights:{icon:"✍️",title:"Особисті немайнові права",text:"Право авторства і право на недоторканність не передаються і не відчужуються — навіть за договором. Будь-які зміни твору без вашої згоди — порушення."},
+  online:{icon:"🌐",title:"Авторське право в інтернеті",text:"Публікація в соцмережах, Free Download, CC ліцензії — різні режими використання. Чітко визначайте умови ще до публікації власних робіт."},
+  privacy:{icon:"👤",title:"Право на зображення",text:"Авторське право фотографа і право зображеної особи — окремі правові режими. Для комерційного використання портретних фото потрібна модельна угода."}
+};
+
+let cur=0,ok=0,no=0,pts=0,wrongTags=new Set();
+
+function startQuiz(){
+  document.getElementById('hero').style.display='none';
+  document.getElementById('intro-block').style.display='none';
+  document.getElementById('progress-wrap').classList.add('show');
+  document.getElementById('score-row').classList.add('show');
+  showQ();
+}
+
+function showQ(){
+  const c=document.getElementById('q-container');
+  c.innerHTML='';
+  if(cur>=Q.length){showResult();return;}
+  const q=Q[cur];
+  document.getElementById('progress-fill').style.width=(cur/Q.length*100)+'%';
+  document.getElementById('progress-label').textContent=(cur+1)+' / '+Q.length;
+  const diffLabel={med:'Середній рівень',hard:'Складний рівень'};
+  const w=document.createElement('div');
+  w.innerHTML=`
+    <div class="q-meta">
+      <div class="q-num">Питання ${cur+1} з ${Q.length}</div>
+      <span class="q-diff ${q.diff}">${diffLabel[q.diff]||''}</span>
+    </div>
+    <div class="case-box">
+      <div class="case-label">📋 Ситуація</div>
+      <div class="case-text">${q.case}</div>
+    </div>
+    <div class="q-text">${q.text}</div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="fb"></div>
+    <button class="next-btn" id="nb" onclick="nextQ()">${cur<Q.length-1?'Наступне питання →':'Переглянути результат →'}</button>
+  `;
+  c.appendChild(w);
+  const opts=document.getElementById('opts');
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='opt';b.textContent=o;b.onclick=()=>answer(i);
+    opts.appendChild(b);
+  });
+}
+
+function answer(idx){
+  const q=Q[cur];
+  const btns=document.querySelectorAll('.opt');
+  btns.forEach(b=>b.disabled=true);
+  const fb=document.getElementById('fb');
+  if(idx===q.correct){
+    btns[idx].classList.add('correct');ok++;pts+=10;
+    fb.className='feedback show ok';
+    fb.innerHTML=`<strong>✅ Правильно!</strong>${q.ok}<div class="law-ref">📖 ${q.law}</div>`;
+  }else{
+    btns[idx].classList.add('wrong');btns[q.correct].classList.add('correct');
+    no++;wrongTags.add(q.tag);
+    fb.className='feedback show no';
+    fb.innerHTML=`<strong>❌ Не зовсім.</strong>${q.no}<div class="law-ref">📖 ${q.law}</div>`;
+  }
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-no').textContent=no;
+  document.getElementById('sc-pt').textContent=pts;
+  document.getElementById('nb').classList.add('show');
+}
+
+function nextQ(){cur++;showQ();}
+
+function showResult(){
+  document.getElementById('progress-wrap').style.display='none';
+  document.getElementById('score-row').style.display='none';
+  document.getElementById('q-container').innerHTML='';
+  const pct=Math.round(ok/Q.length*100);
+  document.getElementById('r-correct').textContent=ok+' правильних з '+Q.length;
+  document.getElementById('r-pct').textContent=pct+'%';
+  setTimeout(()=>{document.getElementById('r-bar').style.width=pct+'%';},100);
+  let icon,title,sub;
+  if(pct>=80){icon='⚖️';title='Впевнений рівень';sub='Ви добре орієнтуєтесь у авторському праві для творчих професій. Рекомендуємо аудит ваших поточних договорів — навіть при хорошому знанні теорії практика часто має нюанси.';}
+  else if(pct>=50){icon='📋';title='Є прогалини';sub='Базове розуміння є, але кілька зон ризику потребують уваги. Зверніть особливу увагу на договірні формулювання і обсяг переданих прав.';}
+  else{icon='⚠️';title='Зона ризику';sub='Ваші роботи можуть використовуватись без вашого відома або не на ваших умовах. Консультація допоможе закрити прогалини до того, як вони стануть збитками.';}
+  document.getElementById('r-icon').textContent=icon;
+  document.getElementById('r-title').textContent=title;
+  document.getElementById('r-sub').textContent=sub;
+  const recs=document.getElementById('r-recs');
+  const tags=wrongTags.size>0?[...wrongTags].slice(0,3):['contracts','moral_rights'];
+  tags.forEach(t=>{
+    const r=RECS[t];
+    if(r) recs.innerHTML+=`<div class="rec-card"><h4>${r.icon} ${r.title}</h4><p>${r.text}</p></div>`;
+  });
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+</body></html>

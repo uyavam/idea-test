@@ -1,757 +1,390 @@
 <!DOCTYPE html>
-<!-- saved from url=(0678)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%94%D0%B8%D1%82%D1%8F%D1%87%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8E/%D0%A2%D0%95%D0%A1%D0%A2%D0%98%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_files/%D0%A2%D0%B5%D1%81%D1%82_%20%D0%9B%D1%96%D1%86%D0%B5%D0%BD%D0%B7%D1%96%D0%B9%D0%BD%D1%96%20%D1%83%D0%B3%D0%BE%D0%B4%D0%B8%20%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.html -->
+<!-- saved from url=(0479)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82/%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82/%D0%9B%D1%96%D1%86%D0%B5%D0%BD%D0%B7%D1%96%D0%B9%D0%BD%D1%96%20%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8%20%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.html -->
 <html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Тест: Ліцензійні угоди — Юридична кухня Сосновського</title>
+<title>Ліцензійні договори — Юридична кухня Сосновського</title>
+<link href="./sim-license_files/css2" rel="stylesheet">
 <style>
-  :root {
-    --navy: #1a2b4a;
-    --navy2: #243559;
-    --gold: #c9a84c;
-    --gold-light: #e8c96a;
-    --white: #ffffff;
-    --offwhite: #f7f5f0;
-    --muted: #8a9ab5;
-    --border: #d6d0c4;
-    --green: #2d7a5f;
-    --green-bg: #eaf5f0;
-    --red: #a03030;
-    --red-bg: #fdf0f0;
-    --text: #1a2b4a;
-    --radius: 14px;
-    --shadow: 0 4px 24px rgba(26,43,74,0.10);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  #jk-quiz-wrap {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background: var(--offwhite);
-    color: var(--text);
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-  }
-
-  /* HEADER */
-  .jk-header {
-    background: var(--navy);
-    padding: 32px 40px 28px;
-    text-align: center;
-    position: relative;
-  }
-  .jk-logo {
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 12px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-  }
-  .jk-title {
-    font-size: clamp(20px, 4vw, 28px);
-    color: var(--white);
-    font-weight: normal;
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
-  .jk-subtitle {
-    font-size: 14px;
-    color: var(--muted);
-    font-family: 'Arial', sans-serif;
-  }
-
-  /* PROGRESS */
-  .jk-progress-area {
-    background: var(--navy2);
-    padding: 14px 40px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .jk-progress-track {
-    flex: 1;
-    height: 4px;
-    background: rgba(255,255,255,0.12);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .jk-progress-fill {
-    height: 100%;
-    background: var(--gold);
-    border-radius: 4px;
-    transition: width 0.4s ease;
-    width: 0%;
-  }
-  .jk-progress-text {
-    font-size: 12px;
-    color: var(--muted);
-    font-family: 'Arial', sans-serif;
-    white-space: nowrap;
-    min-width: 60px;
-    text-align: right;
-  }
-
-  /* BODY */
-  .jk-body { padding: 36px 40px; }
-
-  /* INTRO */
-  #jk-intro { display: block; }
-  .jk-intro-text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #3a4a60;
-    margin-bottom: 24px;
-  }
-  .jk-intro-text strong { color: var(--navy); }
-  .jk-topics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 28px;
-  }
-  .jk-topic-item {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--gold);
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-size: 13px;
-    font-family: 'Arial', sans-serif;
-    color: var(--navy);
-  }
-
-  /* QUESTION */
-  #jk-question { display: none; }
-  .jk-q-label {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    margin-bottom: 14px;
-  }
-  .jk-q-text {
-    font-size: 19px;
-    line-height: 1.5;
-    color: var(--navy);
-    margin-bottom: 24px;
-    font-weight: normal;
-  }
-  .jk-options { display: grid; gap: 10px; margin-bottom: 20px; }
-  .jk-opt {
-    background: var(--white);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px 18px;
-    font-family: 'Arial', sans-serif;
-    font-size: 15px;
-    color: var(--navy);
-    cursor: pointer;
-    text-align: left;
-    transition: border-color 0.18s, background 0.18s, transform 0.12s;
-    line-height: 1.4;
-  }
-  .jk-opt:hover:not(:disabled) {
-    border-color: var(--gold);
-    background: #fffdf4;
-    transform: translateX(3px);
-  }
-  .jk-opt.selected-correct {
-    border-color: var(--green);
-    background: var(--green-bg);
-    color: var(--green);
-  }
-  .jk-opt.selected-wrong {
-    border-color: var(--red);
-    background: var(--red-bg);
-    color: var(--red);
-  }
-  .jk-opt.reveal-correct {
-    border-color: var(--green);
-    background: var(--green-bg);
-    color: var(--green);
-  }
-  .jk-opt:disabled { cursor: default; }
-
-  /* FEEDBACK */
-  .jk-feedback {
-    display: none;
-    padding: 14px 18px;
-    border-radius: var(--radius);
-    font-family: 'Arial', sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  .jk-feedback.ok {
-    display: block;
-    background: var(--green-bg);
-    border: 1px solid #a8d5c2;
-    color: #1e5c45;
-  }
-  .jk-feedback.nope {
-    display: block;
-    background: var(--red-bg);
-    border: 1px solid #e0b0b0;
-    color: #7a2020;
-  }
-  .jk-feedback strong { display: block; margin-bottom: 4px; font-size: 15px; }
-
-  /* RESULT */
-  #jk-result { display: none; }
-  .jk-result-header {
-    text-align: center;
-    padding: 20px 0 28px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 28px;
-  }
-  .jk-result-icon { font-size: 3.5rem; margin-bottom: 12px; }
-  .jk-result-title {
-    font-size: 26px;
-    color: var(--navy);
-    margin-bottom: 8px;
-  }
-  .jk-result-subtitle {
-    font-size: 15px;
-    color: #3a4a60;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-  }
-  .jk-score-bar-wrap {
-    background: #e8e4da;
-    border-radius: 8px;
-    height: 12px;
-    margin: 18px 0 6px;
-    overflow: hidden;
-  }
-  .jk-score-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--gold), var(--gold-light));
-    border-radius: 8px;
-    transition: width 1s ease;
-    width: 0%;
-  }
-  .jk-score-nums {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    color: var(--muted);
-  }
-
-  /* RECOMMENDATIONS */
-  .jk-rec-title {
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
-  .jk-rec-block {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px 22px;
-    margin-bottom: 12px;
-  }
-  .jk-rec-block h4 {
-    font-size: 15px;
-    color: var(--navy);
-    margin-bottom: 8px;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-  .jk-rec-block p {
-    font-size: 14px;
-    color: #3a4a60;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-  }
-
-  /* CTA */
-  .jk-cta {
-    background: var(--navy);
-    border-radius: var(--radius);
-    padding: 24px 28px;
-    text-align: center;
-    margin-top: 24px;
-  }
-  .jk-cta p {
-    color: rgba(255,255,255,0.8);
-    font-family: 'Arial', sans-serif;
-    font-size: 14px;
-    margin-bottom: 14px;
-    line-height: 1.6;
-  }
-  .jk-cta strong { color: var(--gold-light); }
-
-  /* BUTTONS */
-  .jk-btn {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--navy);
-    font-family: 'Arial', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 13px 32px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    letter-spacing: 0.3px;
-    transition: background 0.18s, transform 0.12s;
-    text-decoration: none;
-  }
-  .jk-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
-  .jk-btn-ghost {
-    background: transparent;
-    color: rgba(255,255,255,0.7);
-    border: 1px solid rgba(255,255,255,0.25);
-    margin-top: 10px;
-    font-size: 13px;
-    padding: 10px 24px;
-  }
-  .jk-btn-ghost:hover { background: rgba(255,255,255,0.08); color: white; transform: none; }
-
-  .jk-next-btn {
-    background: var(--navy);
-    color: var(--white);
-    font-family: 'Arial', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 12px 28px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.18s;
-    display: none;
-    letter-spacing: 0.3px;
-  }
-  .jk-next-btn:hover { background: var(--navy2); }
-  .jk-next-btn.show { display: inline-block; }
-
-  /* FOOTER */
-  .jk-footer {
-    background: var(--navy);
-    padding: 14px 40px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 0.5px;
-  }
-
-  @media (max-width: 560px) {
-    .jk-body { padding: 24px 20px; }
-    .jk-header { padding: 24px 20px; }
-    .jk-progress-area { padding: 12px 20px; }
-    .jk-footer { padding: 12px 20px; }
-    .jk-topics { grid-template-columns: 1fr; }
-    .jk-q-text { font-size: 17px; }
-  }
+:root{
+  --bg:#0d0a08;--card:#181410;--card2:#201a14;
+  --amber:#d97706;--amber2:#fbbf24;--gold:#c8992a;--gold2:#ffd166;
+  --red:#e05050;--red-bg:rgba(224,80,80,0.1);
+  --ok:#22c98e;--ok-bg:rgba(34,201,142,0.1);
+  --text:#e0d8cc;--muted:#7a7060;--border:rgba(255,255,255,0.07);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+.brand{background:#080604;text-align:center;padding:16px 20px 14px;border-bottom:1px solid var(--border);}
+.brand-name{font-family:'Unbounded',sans-serif;font-size:clamp(0.85rem,2.5vw,1.1rem);color:#fff;font-weight:700;}
+.brand-name span{color:var(--gold2);}
+.brand-slogan{font-size:0.7rem;color:#7aa3e8;font-style:italic;margin-top:4px;}
+.brand-line{width:36px;height:2px;background:var(--gold);margin:8px auto 0;border-radius:2px;}
+.hero{background:linear-gradient(160deg,#0d0a08 0%,#1a1000 50%,#0d0a08 100%);padding:52px 24px 48px;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.hero::before{content:'§';font-family:'Unbounded',sans-serif;font-size:18rem;font-weight:900;position:absolute;right:-20px;top:-50px;opacity:0.025;color:var(--amber2);pointer-events:none;line-height:1;}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 55%,rgba(217,119,6,0.07) 0%,transparent 55%);pointer-events:none;}
+.hero-tag{display:inline-block;background:rgba(217,119,6,0.12);color:var(--amber2);border:1px solid rgba(217,119,6,0.25);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:20px;position:relative;z-index:1;}
+.hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(1.6rem,5vw,2.6rem);color:#fff;font-weight:900;line-height:1.1;margin-bottom:16px;position:relative;z-index:1;}
+.hero h1 em{font-style:normal;color:var(--amber2);}
+.hero-sub{font-size:15px;color:var(--muted);max-width:540px;margin:0 auto 12px;line-height:1.75;position:relative;z-index:1;}
+.hero-note{font-size:13px;color:rgba(251,191,36,0.55);margin-bottom:28px;position:relative;z-index:1;}
+.start-btn{background:linear-gradient(135deg,var(--amber),var(--amber2));color:#0d0a08;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:15px 44px;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.5px;box-shadow:0 4px 20px rgba(217,119,6,0.25);transition:transform .2s;position:relative;z-index:1;}
+.start-btn:hover{transform:translateY(-2px);}
+.progress-wrap{background:#080604;padding:12px 24px;display:none;align-items:center;gap:14px;border-bottom:1px solid var(--border);}
+.progress-wrap.show{display:flex;}
+.progress-track{flex:1;height:3px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--gold2));border-radius:3px;transition:width .5s ease;}
+.progress-label{font-size:11px;color:var(--muted);white-space:nowrap;font-weight:700;letter-spacing:1px;}
+.score-row{display:none;background:#0a0806;border-bottom:1px solid var(--border);padding:10px 24px;}
+.score-row.show{display:flex;}
+.sc-cell{flex:1;text-align:center;border-right:1px solid var(--border);padding:6px 0;}
+.sc-cell:last-child{border-right:none;}
+.sc-cell .n{font-family:'Unbounded',sans-serif;font-size:1.4rem;font-weight:900;line-height:1;}
+.sc-cell:nth-child(1) .n{color:var(--ok);}
+.sc-cell:nth-child(2) .n{color:var(--red);}
+.sc-cell:nth-child(3) .n{color:var(--gold2);}
+.sc-cell .l{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+.main{max-width:720px;margin:0 auto;padding:36px 20px 64px;}
+.intro-text{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:24px;}
+.intro-text strong{color:#fff;}
+.intro-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:32px;}
+.prof-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:border-color .2s;}
+.prof-card:hover{border-color:rgba(217,119,6,0.3);}
+.prof-ico{font-size:2.2rem;margin-bottom:10px;}
+.prof-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;}
+.prof-issue{font-size:12px;color:var(--muted);line-height:1.5;}
+.q-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+.q-num{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--amber2);}
+.q-diff{font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;}
+.q-diff.med{background:rgba(200,153,42,0.12);color:var(--gold2);border:1px solid rgba(200,153,42,0.2);}
+.q-diff.hard{background:rgba(224,80,80,0.1);color:#f0a0a0;border:1px solid rgba(224,80,80,0.2);}
+.q-text{font-size:17px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:20px;}
+.case-box{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:20px;}
+.case-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--amber2);margin-bottom:8px;}
+.case-text{font-size:14px;color:var(--text);line-height:1.75;}
+.case-text strong{color:#fff;}
+.opts{display:grid;gap:9px;margin-bottom:16px;}
+.opt{background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:15px 18px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--text);cursor:pointer;text-align:left;line-height:1.45;transition:border-color .15s,background .15s,transform .1s;}
+.opt:hover:not(:disabled){border-color:rgba(217,119,6,0.5);background:rgba(217,119,6,0.06);transform:translateX(3px);}
+.opt.correct{border-color:var(--ok)!important;background:var(--ok-bg)!important;color:var(--ok)!important;}
+.opt.wrong{border-color:var(--red)!important;background:var(--red-bg)!important;color:var(--red)!important;}
+.opt:disabled{cursor:default;}
+.feedback{display:none;border-radius:10px;padding:16px 18px;font-size:14px;line-height:1.7;margin-bottom:16px;}
+.feedback.show{display:block;}
+.feedback.ok{background:var(--ok-bg);border:1px solid rgba(34,201,142,0.25);color:#90e8c0;}
+.feedback.no{background:var(--red-bg);border:1px solid rgba(224,80,80,0.25);color:#f0a8a8;}
+.feedback strong{display:block;font-size:15px;margin-bottom:6px;color:#fff;}
+.law-ref{font-size:11px;color:rgba(251,191,36,0.45);margin-top:8px;font-style:italic;}
+.next-btn{background:linear-gradient(135deg,var(--amber),var(--amber2));color:#0d0a08;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 30px;border:none;border-radius:4px;cursor:pointer;display:none;transition:transform .15s;}
+.next-btn.show{display:inline-block;}
+.next-btn:hover{transform:translateY(-1px);}
+.result{display:none;}
+.result.show{display:block;}
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:44px 32px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden;}
+.result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--amber2),transparent);}
+.result-icon{font-size:4rem;margin-bottom:16px;}
+.result-title{font-family:'Unbounded',sans-serif;font-size:clamp(1.2rem,4vw,1.8rem);color:#fff;font-weight:900;margin-bottom:10px;}
+.result-sub{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:24px;}
+.score-bar-wrap{background:rgba(255,255,255,0.05);border-radius:4px;height:6px;margin:0 0 8px;overflow:hidden;}
+.score-bar-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--gold2));border-radius:4px;transition:width 1.2s ease;}
+.score-nums{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);font-weight:700;}
+.rec-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--amber2);margin:28px 0 14px;}
+.rec-card{background:var(--card);border:1px solid var(--border);border-left:2px solid var(--amber);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:10px;text-align:left;}
+.rec-card h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px;}
+.rec-card p{font-size:13px;color:var(--muted);line-height:1.65;}
+.cta-box{background:linear-gradient(135deg,#1a1000,#0d0a08);border:1px solid rgba(217,119,6,0.2);border-radius:12px;padding:32px 24px;text-align:center;margin-top:20px;}
+.cta-box p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:18px;}
+.cta-box strong{color:var(--gold2);}
+.cta-btn{background:var(--gold);color:#0d0a08;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:14px 36px;border:none;border-radius:4px;cursor:pointer;transition:background .2s;}
+.cta-btn:hover{background:var(--gold2);}
+.restart-link{display:block;margin-top:14px;font-size:12px;color:rgba(255,255,255,0.2);cursor:pointer;text-decoration:underline;}
+.restart-link:hover{color:var(--muted);}
+.footer{text-align:center;padding:16px;font-size:11px;color:rgba(255,255,255,0.15);border-top:1px solid var(--border);}
+@media(max-width:500px){.q-text{font-size:15px;}.main{padding:24px 14px 48px;}.intro-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-
-<div id="jk-quiz-wrap">
-
-  <!-- HEADER -->
-  <div class="jk-header">
-    <div class="jk-logo">⚖️ Юридична кухня Сосновського</div>
-    <div class="jk-title">Чи захищені ваші договори?</div>
-    <div class="jk-subtitle">Тест з ліцензійних угод та договорів у сфері IP</div>
-  </div>
-
-  <!-- PROGRESS -->
-  <div class="jk-progress-area" id="jk-progress-area" style="display:none;">
-    <div class="jk-progress-track">
-      <div class="jk-progress-fill" id="jk-progress-fill"></div>
-    </div>
-    <div class="jk-progress-text" id="jk-progress-text">1 / 11</div>
-  </div>
-
-  <!-- BODY -->
-  <div class="jk-body">
-
-    <!-- INTRO -->
-    <div id="jk-intro">
-      <div class="jk-intro-text">
-        Ліцензійний договір — це інструмент, який <strong>захищає вас і ваш твір</strong>. Але чи знаєте ви, як він працює насправді?
-        <br><br>
-        Пройдіть тест і дізнайтесь, які ризики існують у вашій ситуації та що потрібно змінити.
-      </div>
-      <div class="jk-topics">
-        <div class="jk-topic-item">📜 Типи ліцензій</div>
-        <div class="jk-topic-item">✍️ Обов'язкові умови договору</div>
-        <div class="jk-topic-item">⚠️ Типові помилки</div>
-        <div class="jk-topic-item">💰 Роялті та оплата</div>
-        <div class="jk-topic-item">🔒 Захист авторських прав</div>
-        <div class="jk-topic-item">🌍 Передача та обмеження</div>
-      </div>
-      <button class="jk-btn" onclick="startQuiz()">Розпочати тест →</button>
-    </div>
-
-    <!-- QUESTION -->
-    <div id="jk-question">
-      <div class="jk-q-label" id="jk-q-label">Питання 1 з 11</div>
-      <div class="jk-q-text" id="jk-q-text"></div>
-      <div class="jk-options" id="jk-options"></div>
-      <div class="jk-feedback" id="jk-feedback"></div>
-      <button class="jk-next-btn" id="jk-next-btn" onclick="nextQuestion()">Наступне питання →</button>
-    </div>
-
-    <!-- RESULT -->
-    <div id="jk-result">
-      <div class="jk-result-header">
-        <div class="jk-result-icon" id="res-icon">📋</div>
-        <div class="jk-result-title" id="res-title">Ваш результат</div>
-        <div class="jk-result-subtitle" id="res-sub"></div>
-        <div class="jk-score-bar-wrap">
-          <div class="jk-score-bar" id="res-bar"></div>
-        </div>
-        <div class="jk-score-nums">
-          <span id="res-correct-lbl">0 правильних</span>
-          <span id="res-pct-lbl">0%</span>
-        </div>
-      </div>
-
-      <div class="jk-rec-title">Рекомендації для вас</div>
-      <div id="res-recs"></div>
-
-      <div class="jk-cta">
-        <p>Правовий захист — це не формальність, а продовження вашого твору.<br>
-        <strong>Отримайте персональну консультацію</strong> та захистіть свої інтереси.</p>
-        <button class="jk-btn" onclick="alert(&#39;Тут може бути посилання на вашу форму запису або Telegram&#39;)">Записатися на консультацію</button>
-        <br>
-        <button class="jk-btn jk-btn-ghost" onclick="restartQuiz()">Пройти тест знову</button>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- FOOTER -->
-  <div class="jk-footer" id="jk-footer">
-    Юридична кухня Сосновського · Правовий захист інтелектуальної власності
-  </div>
-
+<div class="brand">
+  <div class="brand-name">Юридична кухня <span>Сосновського</span></div>
+  <div class="brand-slogan">Правовий захист — це не формальність, а продовження вашого твору</div>
+  <div class="brand-line"></div>
 </div>
+<div class="hero" id="hero">
+  <div class="hero-tag">§ Ліцензійні договори · Для бізнесу</div>
+  <h1>Що ви насправді<br><em>підписали?</em></h1>
+  <div class="hero-sub">12 кейсів для підприємців, авторів і юристів. Ліцензія vs відчуження, виключність, роялті, субліцензія, розірвання — те, що коштує грошей якщо не знати.</div>
+  <div class="hero-note">⏱ ~10 хвилин · Норма закону після кожного питання</div>
+  <button class="start-btn" onclick="startQuiz()">Розпочати тест →</button>
+</div>
+<div class="progress-wrap" id="progress-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="progress-label" id="progress-label">1 / 12</div>
+</div>
+<div class="score-row" id="score-row">
+  <div class="sc-cell"><div class="n" id="sc-ok">0</div><div class="l">✅ Правильно</div></div>
+  <div class="sc-cell"><div class="n" id="sc-no">0</div><div class="l">❌ Помилки</div></div>
+  <div class="sc-cell"><div class="n" id="sc-pt">0</div><div class="l">★ Балів</div></div>
+</div>
+<div class="main">
+  <div id="intro-block">
+    <div class="intro-text">Ліцензійний договір — це не формальність. Це <strong>юридична конструкція, яка визначає хто, де, як і скільки може заробляти на вашій інтелектуальній власності</strong>. Один невірний пункт може коштувати роки доходів.</div>
+    <div class="intro-grid">
+      <div class="prof-card"><div class="prof-ico">✍️</div><div class="prof-title">Автор / правовласник</div><div class="prof-issue">Ліцензія чи відчуження? Виключна чи невиключна? Що залишиться у вас?</div></div>
+      <div class="prof-card"><div class="prof-ico">🏢</div><div class="prof-title">Ліцензіат / бізнес</div><div class="prof-issue">Що ви реально отримали за договором і чи можете передати права далі?</div></div>
+      <div class="prof-card"><div class="prof-ico">🌍</div><div class="prof-title">Міжнародна ліцензія</div><div class="prof-issue">Яке право застосовується? Як захиститись від розірвання?</div></div>
+      <div class="prof-card"><div class="prof-ico">💰</div><div class="prof-title">Роялті і монетизація</div><div class="prof-issue">Паушальний платіж чи відсоток? Мінімальні гарантії — обов'язково?</div></div>
+    </div>
+  </div>
+  <div id="q-container"></div>
+  <div class="result" id="result">
+    <div class="result-card">
+      <div class="result-icon" id="r-icon">§</div>
+      <div class="result-title" id="r-title">Ваш результат</div>
+      <div class="result-sub" id="r-sub"></div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" id="r-bar"></div></div>
+      <div class="score-nums"><span id="r-correct">0 правильних</span><span id="r-pct">0%</span></div>
+    </div>
+    <div class="rec-title">Рекомендації за вашими результатами</div>
+    <div id="r-recs"></div>
+    <div class="cta-box">
+      <p>Правильно складений ліцензійний договір — це <strong>захист доходів на роки вперед</strong>.<br>Перевірте ваші поточні договори з юристом до наступної угоди.</p>
+      <button class="cta-btn" onclick="alert(&#39;Вставте посилання на форму або Telegram&#39;)">Записатися на консультацію</button>
+      <span class="restart-link" onclick="location.reload()">↺ Пройти ще раз</span>
+    </div>
+  </div>
+</div>
+<div class="footer">© Юридична кухня Сосновського · Всі права захищені</div>
 
 <script>
-const QUESTIONS = [
+const Q=[
   {
-    text: "Ви передаєте свій твір (ілюстрацію, текст, музику) замовнику. Який документ юридично закріплює умови використання?",
-    options: [
-      "Достатньо усної домовленості або переписки в месенджері",
-      "Ліцензійний договір або договір про передачу майнових прав",
-      "Рахунок-фактура або акт виконаних робіт",
-      "Публічна оферта на сайті"
-    ],
-    correct: 1,
-    ok: "Саме так. Ліцензійний договір або договір про відчуження майнових прав — єдині документи, що юридично регулюють передачу прав на твір. Без них ви ризикуєте втратити контроль над власним результатом роботи.",
-    nope: "На жаль, це ненадійно. Лише письмовий ліцензійний договір або договір про передачу майнових прав дає реальний правовий захист обом сторонам.",
-    tag: "basics"
+    diff:"med",
+    case:"Художник підписав договір з галереєю, де зазначено «передача виключної ліцензії на репродукцію картин на 5 років». Через рік художник хоче продати право на репродукцію іншому видавцю.",
+    text:"Чи може художник надати іншу ліцензію на ті самі картини під час дії виключної ліцензії галереї?",
+    opts:["Так — він же власник і автор","Ні — виключна ліцензія означає, що лише галерея має право на репродукцію в межах строку і сфери договору","Так, якщо новий договір на іншу країну","Лише якщо галерея не використовує ліцензію активно"],
+    correct:1,
+    ok:"Правильно. <strong>Виключна ліцензія</strong> — монополія ліцензіата. Ліцензіар (художник) не може надавати аналогічних прав іншим у межах тієї ж сфери, строку і території. Порушення — підстава для розірвання і відшкодування.",
+    no:"Виключна ліцензія ≠ невиключна. Підписавши виключну ліцензію, художник фактично «заблокував» себе від паралельних угод на ту саму сферу. Це критично важливо розуміти до підписання.",
+    law:"ст. 32 ЗУ «Про авторське право і суміжні права»",
+    tag:"exclusivity"
   },
   {
-    text: "Чим відрізняється виключна ліцензія від невиключної?",
-    options: [
-      "Виключна — дорожча, невиключна — дешевша. Принципової різниці немає",
-      "При виключній ліцензії лише ліцензіат може використовувати твір, автор більше не може видавати таких ліцензій іншим",
-      "Виключна ліцензія скасовує авторство, невиключна — ні",
-      "Виключна ліцензія діє вічно, невиключна — обмежена у часі"
-    ],
-    correct: 1,
-    ok: "Правильно. Виключна ліцензія фактично «монополізує» право використання для одного ліцензіата. Автор продовжує бути автором, але не може надавати ті самі права іншим у межах обумовленої сфери. Це суттєво впливає на ціну.",
-    nope: "Це поширена помилка. При виключній ліцензії ліцензіат отримує монопольне право у визначеній сфері — автор не може надавати ті самі права іншим. Це дуже важлива умова, яка впливає на вартість договору.",
-    tag: "types"
+    diff:"hard",
+    case:"Ліцензійний договір на використання програмного забезпечення не містить пункту про строк дії. Ліцензіат використовує ПЗ вже 7 років і вважає, що має право користуватись безстроково.",
+    text:"Що відбувається з ліцензійним договором, у якому не зазначено строк дії, за законодавством України?",
+    opts:["Договір є безстроковим — підписали, значить назавжди","Кожна зі сторін може розірвати його у будь-який момент без пояснень","Якщо строк не вказаний — договір вважається укладеним на 5 років","Договір вважається недійсним через відсутність істотної умови"],
+    correct:2,
+    ok:"Правильно. Відповідно до ЗУ «Про авторське право», якщо строк у договорі не визначений — він вважається укладеним на <strong>5 років</strong>. Після спливу строку ліцензіат зобов'язаний припинити використання або переукласти договір.",
+    no:"Відсутність строку — не безстроковість. Закон встановлює презумпцію 5 років. Після цього без поновлення — ліцензіат формально використовує ІВ без підстав, що є порушенням.",
+    law:"ст. 33 ЗУ «Про авторське право і суміжні права»",
+    tag:"terms"
   },
   {
-    text: "Замовник просить передати «всі права» на ваш логотип. Що це означає юридично?",
-    options: [
-      "Ви зможете й надалі використовувати логотип у своєму портфоліо без обмежень",
-      "Потрібно укласти договір про відчуження (передачу) майнових прав — після цього замовник стає повноправним власником",
-      "Достатньо написати у листі «передаю всі права»",
-      "«Всі права» — це стандартний вираз, який нічого не змінює юридично"
-    ],
-    correct: 1,
-    ok: "Так. Передача «всіх прав» — це відчуження майнових прав у повному обсязі. Після підписання відповідного договору ви як автор зберігаєте лише немайнові (особисті) права — зокрема право авторства. Але продавати чи ліцензувати твір далі ви вже не зможете.",
-    nope: "Насправді «передача всіх прав» — серйозний юридичний крок. Потрібен окремий договір про відчуження майнових прав. Без нього передача не відбувається, а усні заяви не мають юридичної сили.",
-    tag: "transfer"
+    diff:"med",
+    case:"Ліцензіат отримав право використовувати торгову марку у договорі, де зазначено «для використання в Україні». Компанія вирішила розширитись і почала продавати товари з цією маркою у Польщі.",
+    text:"Чи порушує ліцензіат договір, продаючи товари під маркою за межами України?",
+    opts:["Ні — якщо марка не зареєстрована у Польщі, обмежень немає","Так — ліцензія обмежена територією України, використання за її межами виходить за межі наданих прав","Лише якщо ліцензіар має окрему реєстрацію у Польщі","Ні, бо ЄС — єдиний ринок і Польща входить до нього"],
+    correct:1,
+    ok:"Правильно. Ліцензія діє лише на <strong>вказаній у договорі території</strong>. Використання за її межами — вихід за межі наданих прав, що є порушенням договору і може бути підставою для його розірвання і вимоги компенсації.",
+    no:"Територія — обов'язкова умова ліцензії. «Україна» у договорі = тільки Україна. Польща — інша юрисдикція. Для виходу на новий ринок потрібна або нова ліцензія, або зміна умов існуючої.",
+    law:"ст. 33 ЗУ «Про авторське право і суміжні права»",
+    tag:"territory"
   },
   {
-    text: "Які умови є обов'язковими в ліцензійному договорі?",
-    options: [
-      "Лише назва твору та сума оплати",
-      "Сторони, опис твору, вид ліцензії (виключна/невиключна), строк, територія, способи використання та розмір винагороди",
-      "Підписи сторін — решта на розсуд",
-      "Достатньо вказати строк і суму"
-    ],
-    correct: 1,
-    ok: "Правильно. Ліцензійний договір без чіткого переліку цих умов — потенційний конфлікт. Особливо критично: способи використання (щоб твір не застосовували там, де ви не планували) та територія.",
-    nope: "На жаль, мінімальний перелік набагато ширший. Відсутність хоча б однієї ключової умови — строку, території чи способів використання — може зробити договір юридично слабким або взагалі незахисним.",
-    tag: "basics"
+    diff:"hard",
+    case:"Компанія отримала ліцензію на використання патенту і хоче передати це право своїй дочірній компанії для виробництва. У ліцензійному договорі немає жодних згадок про субліцензування.",
+    text:"Чи може ліцензіат передати права за ліцензією третій особі без дозволу ліцензіара?",
+    opts:["Так — він же має право користуватись, значить може передати","Так, якщо це дочірня компанія одного холдингу","Ні — право на субліцензування має бути прямо передбачене у договорі","Лише якщо ліцензіар не заперечує протягом 30 днів"],
+    correct:2,
+    ok:"Правильно. <strong>Субліцензія</strong> — право ліцензіата передавати отримані права третім особам. Воно виникає лише якщо <strong>прямо передбачене у договорі</strong>. Без такого пункту — будь-яка передача прав є порушенням, навіть дочірній компанії.",
+    no:"Субліцензування без дозволу — порушення навіть між пов'язаними компаніями. Суд не бере до уваги структуру холдингу: юридична особа-ліцензіат і юридична особа-дочка — різні суб'єкти права.",
+    law:"ст. 33 ЗУ «Про авторське право і суміжні права»",
+    tag:"sublicense"
   },
   {
-    text: "Ви уклали ліцензійний договір, але не вказали строк дії. Що відбувається за законом в Україні?",
-    options: [
-      "Договір вважається безстроковим — права передані назавжди",
-      "Договір вважається укладеним на 5 років",
-      "Кожна зі сторін може розірвати його у будь-який момент без попередження",
-      "Ліцензіат може використовувати твір не більше 1 року, після чого потрібна пролонгація"
-    ],
-    correct: 1,
-    ok: "Правильно. Відповідно до Закону України «Про авторське право і суміжні права», якщо строк у договорі не зазначений, він вважається укладеним на 5 років. Після цього ліцензіат зобов'язаний припинити використання або переукласти договір.",
-    nope: "За українським законодавством, якщо строк ліцензійного договору не вказаний — він становить 5 років. Це важлива деталь, яку часто ігнорують при складанні договорів.",
-    tag: "basics"
+    diff:"med",
+    case:"Ліцензійний договір на використання ПЗ передбачає роялті 8% від виручки ліцензіата. Через рік ліцензіат повідомляє, що виручки немає — продажі нульові — і нічого не платить.",
+    text:"Як захистити інтереси ліцензіара від ситуації 'нульових продажів' при роялті-моделі?",
+    opts:["Ніяк — роялті прив'язані до продажів, якщо їх немає — нема що платити","Включити у договір мінімальні гарантовані роялті (minimum guarantee), незалежно від фактичних продажів","Судитись за зловживання правом","Перейти на паушальну модель після першого року"],
+    correct:1,
+    ok:"Правильно. <strong>Мінімальні гарантовані роялті</strong> — стандартний захисний механізм ліцензіара. Незалежно від фактичних продажів ліцензіат зобов'язаний виплатити мінімальну суму. Без цього пункту ліцензіар ризикує отримати нуль за активну ліцензію.",
+    no:"Роялті без мінімальних гарантій — ризик для ліцензіара. Ліцензіат може роками «не мати продажів» і нічого не платити. Мінімальна гарантія — обов'язковий пункт при будь-якій роялті-моделі.",
+    law:"ЦКУ ст. 629-630 (свобода договору); ст. 33 ЗУ «Про авторське право»",
+    tag:"royalties"
   },
   {
-    text: "Замовник заплатив вам гонорар і каже: «Тепер я можу розміщувати твій твір де завгодно і як завгодно». Він правий?",
-    options: [
-      "Так, якщо заплатив — значить купив усі права",
-      "Так, але тільки в межах України",
-      "Ні — оплата гонорару не означає автоматичної передачі прав. Права передаються лише за письмовим договором",
-      "Залежить від суми оплати"
-    ],
-    correct: 2,
-    ok: "Саме так. Оплата — це лише розрахунок за виконану роботу. Права на твір передаються виключно письмовим договором із чітко визначеними умовами. Без договору — права залишаються у автора.",
-    nope: "Це дуже поширена омана. Факт оплати не переносить авторські права. Лише письмовий договір визначає, що саме і як може використовувати замовник.",
-    tag: "transfer"
+    diff:"hard",
+    case:"Ліцензіар розірвав ліцензійний договір через несплату роялті. Ліцензіат стверджує, що продовжує мати право використовувати твір, бо «заплатив за ліцензію авансом».",
+    text:"Які наслідки розірвання ліцензійного договору для ліцензіата?",
+    opts:["Ліцензіат може довершити незакінчені проєкти і потім зупинитись","Після розірвання ліцензіат зобов'язаний негайно припинити будь-яке використання об'єкту ліцензії","Аванс дає право продовжувати використання до вичерпання оплаченого строку","Ліцензіат має 6 місяців перехідного періоду"],
+    correct:1,
+    ok:"Правильно. Після розірвання договору <strong>всі права повертаються до ліцензіара</strong>. Ліцензіат зобов'язаний негайно припинити використання. Попередньо сплачений аванс може бути утриманий як компенсація — але не дає права продовжувати використання.",
+    no:"Розірвання = припинення всіх прав ліцензіата. Аванс — частина ціни договору, а не «предоплата за використання незалежно від договору». Продовження використання після розірвання — самостійне правопорушення.",
+    law:"ст. 33 ЗУ «Про авторське право», ЦКУ ст. 651-654",
+    tag:"termination"
   },
   {
-    text: "Що таке роялті у ліцензійному договорі?",
-    options: [
-      "Одноразова виплата автору за підписання договору",
-      "Відсоткова або фіксована виплата автору за кожен факт використання або продажу твору",
-      "Штраф за порушення умов договору",
-      "Виплата лише при комерційному використанні за кордоном"
-    ],
-    correct: 1,
-    ok: "Правильно. Роялті — це регулярна (або прив'язана до продажів) винагорода автору. Наприклад: 8% від продажу кожного примірника книги. Це ефективний інструмент монетизації, особливо якщо твір популярний.",
-    nope: "Роялті — це не разова виплата, а регулярна або прив'язана до кількості використань/продажів. Наприклад: 10% від кожного проданого примірника. Такий механізм вигідний автору при тривалому використанні твору.",
-    tag: "money"
+    diff:"med",
+    case:"Підприємець купив програму за ліцензійним договором для «внутрішнього використання у компанії». Тепер він хоче встановити ту саму програму для свого клієнта як частину IT-послуги.",
+    text:"Чи порушує підприємець ліцензію, встановлюючи програму для клієнта?",
+    opts:["Ні — він не передає, а лише надає послугу","Так — «внутрішнє використання» не включає встановлення для третіх осіб","Лише якщо клієнт є конкурентом вендора","Ні, якщо підприємець залишається адміністратором системи"],
+    correct:1,
+    ok:"Правильно. <strong>«Внутрішнє використання»</strong> означає лише в межах організації ліцензіата. Встановлення для клієнта — це фактично передача права третій особі, що виходить за межі ліцензії. Для цього потрібна реселер-ліцензія або партнерська угода.",
+    no:"Тип ліцензії визначає межі використання. «Внутрішнє» ≠ «для клієнтів». Вендори навмисно розмежовують internal use і commercial redistribution. Порушення — підстава для позову.",
+    law:"ЗУ «Про авторське право», ст. 15; ЗУ «Про захист прав споживачів»",
+    tag:"scope"
   },
   {
-    text: "Чи може ліцензіат передати отримані права третій особі без вашого дозволу?",
-    options: [
-      "Так, завжди — він же заплатив за ліцензію",
-      "Лише якщо договір прямо це дозволяє (субліцензія)",
-      "Так, але тільки некомерційним організаціям",
-      "Ні, жодного разу — це заборонено законом безумовно"
-    ],
-    correct: 1,
-    ok: "Правильно. Передача прав третім особам (субліцензування) можлива лише якщо це прямо передбачено у вашому договорі. Якщо такого пункту немає — ліцензіат не має права нікому далі передавати права.",
-    nope: "Субліцензування — передача прав іншим особам — можливе лише якщо це прямо дозволено у договорі. Без такого пункту ліцензіат не може ділитися правами далі. Перевірте свої договори на цю умову.",
-    tag: "transfer"
+    diff:"hard",
+    case:"Ліцензійний договір між українською і британською компанією не містить пункту про застосовне право. Виник спір щодо тлумачення умов договору.",
+    text:"Яке право застосовується до міжнародного ліцензійного договору без вказівки на застосовне право?",
+    opts:["Завжди право країни ліцензіара","Завжди право країни ліцензіата","Право країни, з якою договір найбільш тісно пов'язаний (зазвичай — де виконується характерне зобов'язання)","Міжнародне право ВОІВ автоматично"],
+    correct:2,
+    ok:"Правильно. Без пункту про застосовне право суд застосовує <strong>право країни найбільш тісного зв'язку</strong> — зазвичай де виконується характерне зобов'язання (ліцензіар надає права). Але це створює невизначеність. Завжди прописуйте застосовне право і юрисдикцію явно.",
+    no:"Відсутність пункту про право — джерело невизначеності. Різні суди можуть обрати різне право. В ЄС діє Регламент Рим І. В Україні — МПП правила ЗУ «Про міжнародне приватне право».",
+    law:"ЗУ «Про міжнародне приватне право», ст. 44; Регламент ЄС Рим І",
+    tag:"international"
   },
   {
-    text: "У договорі не вказано, яку саме територію охоплює ліцензія. Що це означає для вас як автора?",
-    options: [
-      "Ліцензія автоматично обмежена Україною",
-      "Ліцензіат може використовувати твір у всьому світі",
-      "Договір є недійсним через відсутність суттєвої умови",
-      "Ліцензія не діє — потрібно переукладати"
-    ],
-    correct: 1,
-    ok: "Важливий момент. Якщо територія не вказана, вважається, що ліцензія діє на всій території України, але це не завжди так трактується на практиці — а у міжнародних договорах відсутність умови про територію фактично означає необмежену дію. Завжди вказуйте територію явно.",
-    nope: "Відсутність умови про територію — ризик для автора. На практиці суди можуть трактувати це по-різному. У міжнародному контексті відсутність цієї умови може означати право на використання по всьому світу.",
-    tag: "basics"
+    diff:"med",
+    case:"Ліцензіар передав ліцензіату право на публікацію книги. Ліцензіат вирішив також випустити аудіокнигу на основі того самого тексту без додаткового дозволу ліцензіара.",
+    text:"Чи потрібен окремий дозвіл для випуску аудіокниги, якщо ліцензія видана лише на 'публікацію книги'?",
+    opts:["Ні — аудіокнига є формою тієї самої публікації","Так — аудіоформат є окремим способом використання, що потребує окремого дозволу","Лише якщо аудіокнига продається дорожче ніж друкована","Ні, якщо ліцензіат сам начитав текст"],
+    correct:1,
+    ok:"Правильно. Кожен <strong>спосіб використання</strong> — окремий об'єкт ліцензії. Аудіокнига — це не «публікація», а «звукозапис». Для неї потрібен окремий дозвіл. Ліцензія тлумачиться вузько: те, що прямо не дозволено — заборонено.",
+    no:"Принцип вузького тлумачення ліцензії: не дозволено явно = не дозволено. Аудіоформат, електронна книга, театральна постановка — кожен спосіб потребує окремого пункту в договорі.",
+    law:"ст. 33 ЗУ «Про авторське право і суміжні права»",
+    tag:"scope"
   },
   {
-    text: "Ви виявили, що ліцензіат використовує ваш твір у спосіб, який не прописаний у договорі (наприклад, розмістив на рекламних білбордах, хоча мав право лише на сайт). Що ви можете зробити?",
-    options: [
-      "Нічого — раз договір підписаний, все дозволено",
-      "Лише надіслати листа з проханням прибрати",
-      "Вимагати припинення порушення, компенсацію збитків або виплату роялті за несанкціоноване використання",
-      "Одразу звертатися до поліції"
-    ],
-    correct: 2,
-    ok: "Правильно. Використання твору поза межами ліцензії — це порушення авторського права. Ви маєте право вимагати: припинення порушення, відшкодування збитків або додаткової виплати за фактичне використання. Це один із найважливіших аргументів на користь деталізованих договорів.",
-    nope: "Ви маєте набагато більше інструментів. Вихід за межі ліцензії — це порушення, яке дає підстави для вимоги компенсації та припинення неправомірного використання. Саме тому у договорі важливо чітко прописувати способи використання.",
-    tag: "protection"
+    diff:"hard",
+    case:"Стартап отримав виключну ліцензію на технологію від університету. Університет — держустанова і отримав фінансування від державного гранту на розробку цієї технології. Стартап хоче повністю монополізувати ринок.",
+    text:"Які обмеження можуть існувати для виключної ліцензії на технологію, розроблену за рахунок державного фінансування?",
+    opts:["Жодних — університет самостійно розпоряджається своєю ІВ","Держава може зберегти право на використання технології для некомерційних або оборонних цілей; у деяких країнах виключна ліцензія обмежена або вимагає march-in rights","Стартап автоматично отримує всі права без обмежень","Лише якщо грант був іноземним"],
+    correct:1,
+    ok:"Правильно. Технологія, розроблена за держфінансування, часто має <strong>march-in rights</strong> — право держави отримати примусову ліцензію якщо власник не комерціалізує належним чином або для суспільних потреб. У США це Bayh-Dole Act, в Україні — ЗУ «Про державне регулювання діяльності у сфері трансферу технологій».",
+    no:"Державне фінансування ≠ повна свобода дій ліцензіата. Держава зберігає певні права на технологію. При укладенні ліцензії з університетом-держустановою необхідно перевірити умови первинного гранту.",
+    law:"ЗУ «Про державне регулювання у сфері трансферу технологій»; Bayh-Dole Act (США, для порівняння)",
+    tag:"public"
   },
   {
-    text: "Яка ключова відмінність між ліцензійним договором та договором про надання послуг (підряд)?",
-    options: [
-      "Немає різниці — обидва регулюють творчу роботу",
-      "За ліцензійним договором автор передає права на готовий твір; за договором підряду — зобов'язується створити твір на замовлення",
-      "Договір підряду завжди дорожчий",
-      "Ліцензійний договір підходить лише для фізичних осіб"
-    ],
-    correct: 1,
-    ok: "Саме так. Ці два типи договорів часто плутають, і це призводить до серйозних правових помилок. Ліцензія регулює використання вже створеного твору. Підряд — це замовлення на створення нового. У другому випадку окремо потрібно прописати, які права і в якому обсязі переходять до замовника.",
-    nope: "Це принципова різниця. Договір підряду регулює процес створення твору. Ліцензійний договір — умови використання вже готового. Якщо у договорі підряду не прописати передачу прав — замовник отримає лише матеріальний результат, але не авторські права на нього.",
-    tag: "basics"
+    diff:"med",
+    case:"Договір передбачає роялті 10% від 'чистого прибутку' ліцензіата. Після трьох років ліцензіат звітує про нульовий прибуток через великі операційні витрати, хоча виручка зросла втричі.",
+    text:"Яка помилка у формулюванні бази для роялті і як її уникнути?",
+    opts:["Помилок немає — чистий прибуток це стандарт","Прив'язка до чистого прибутку небезпечна — ліцензіат може маніпулювати витратами. Безпечніше прив'язувати роялті до виручки (gross revenue) або продажів","Потрібно прив'язати до кількості одиниць продукції","Лише дивіденди є надійною базою"],
+    correct:1,
+    ok:"Правильно. <strong>Чистий прибуток</strong> легко маніпулюється через «оптимізацію» витрат. Ліцензіар залишається ні з чим при зростаючій виручці. Надійніша база — <strong>валова виручка або кількість одиниць</strong>, з чітким визначенням що до них включається.",
+    no:"«Чистий прибуток» як база для роялті — пастка для ліцензіара. Класична схема: роздути витрати, показати нульовий прибуток, нічого не платити. Виручка або штучний обсяг — значно прозоріші бази.",
+    law:"ЗУ «Про авторське право», ст. 33; ЦКУ ст. 632 (ціна договору)",
+    tag:"royalties"
+  },
+  {
+    diff:"hard",
+    case:"Ліцензіар хоче включити у договір право перевіряти бухгалтерські записи ліцензіата для верифікації правильності розрахунку роялті. Ліцензіат відмовляється, посилаючись на комерційну таємницю.",
+    text:"Чи є право аудиту роялті стандартною і юридично обґрунтованою умовою ліцензійного договору?",
+    opts:["Ні — доступ до бухгалтерії порушує комерційну таємницю","Так — право аудиту є стандартним захисним механізмом ліцензіара і може бути прописане з обмеженнями конфіденційності","Лише державні органи можуть перевіряти бухгалтерію","Так, але лише раз на 5 років за законом"],
+    correct:1,
+    ok:"Правильно. <strong>Право аудиту роялті</strong> — стандартна умова міжнародних ліцензійних договорів. Вона прописується з захистом конфіденційності: перевірку проводить незалежний аудитор під NDA, ліцензіар бачить лише підсумкові цифри. Відмова ліцензіата включати цей пункт — тривожний сигнал.",
+    no:"Право аудиту роялті і комерційна таємниця — не взаємовиключні поняття. Стандартна практика: незалежний аудитор перевіряє дані під NDA і підтверджує точність виплат без розкриття деталей бізнесу. Це захист для обох сторін.",
+    law:"ЦКУ ст. 629-630; TRIPS Agreement Art. 40 (для порівняння)",
+    tag:"royalties"
   }
 ];
 
-const RECOMMENDATIONS = {
-  basics: {
-    icon: "📋",
-    title: "Основи договорів",
-    text: "Деякі базові поняття ліцензійного права потребують уваги. Ключовий ризик — неповні або усні домовленості, які не захищають ні автора, ні замовника."
-  },
-  types: {
-    icon: "🔑",
-    title: "Типи ліцензій",
-    text: "Важливо розуміти різницю між виключною та невиключною ліцензією перед підписанням будь-якого договору. Від цього залежить ціна та ваші подальші можливості."
-  },
-  transfer: {
-    icon: "🔄",
-    title: "Передача прав",
-    text: "Права на твір — це окрема юридична категорія. Факт оплати або виконання роботи не означає автоматичної передачі авторських прав."
-  },
-  money: {
-    icon: "💰",
-    title: "Фінансові умови",
-    text: "Роялті та умови виплат потребують чіткого прописування у договорі. Неврегульовані фінансові умови — одна з найпоширеніших причин конфліктів."
-  },
-  protection: {
-    icon: "🛡️",
-    title: "Захист ваших прав",
-    text: "Знання про механізми захисту при порушенні договору — критично важливе. Без розуміння своїх прав ви не зможете захистити власний твір."
-  }
+const RECS={
+  exclusivity:{icon:"🔑",title:"Виключна vs невиключна ліцензія",text:"Виключна ліцензія = монополія ліцензіата. Ліцензіар не може надавати паралельних прав у тій самій сфері. Чітко визначайте сферу, строк і територію виключності перед підписанням."},
+  terms:{icon:"⏳",title:"Строк і умови припинення",text:"Без вказаного строку — 5 років за законом. Прописуйте строк, умови пролонгації і підстави дострокового розірвання. Після розірвання — всі права негайно повертаються до ліцензіара."},
+  territory:{icon:"🌍",title:"Територія дії ліцензії",text:"Ліцензія діє лише там, де прямо вказано. Розширення на нові ринки потребує нового дозволу або зміни договору. Для міжнародних ліцензій прописуйте застосовне право і юрисдикцію."},
+  sublicense:{icon:"🔄",title:"Субліцензування",text:"Право передавати ліцензію третім особам існує лише якщо прямо прописане в договорі. Дочірня компанія ≠ автоматично має права. Контролюйте ланцюжок субліцензій."},
+  royalties:{icon:"💰",title:"Структура роялті",text:"Уникайте бази «чистий прибуток» — краще виручка або обсяг. Включайте мінімальні гарантовані виплати. Право аудиту — стандартний захист, проводиться через незалежного аудитора під NDA."},
+  scope:{icon:"📋",title:"Обсяг і способи використання",text:"Ліцензія дозволяє лише те, що прямо вказано. Аудіокнига, електронна версія, переклад — кожен спосіб потребує окремого пункту. Принцип: не дозволено явно = заборонено."},
+  termination:{icon:"⚠️",title:"Наслідки розірвання",text:"Після розірвання ліцензіат зобов'язаний негайно припинити використання. Попередній аванс не дає права продовжувати. Прописуйте перехідний період і порядок повернення матеріалів."},
+  international:{icon:"🌐",title:"Міжнародні ліцензії",text:"Завжди вказуйте застосовне право і юрисдикцію. Без цього — невизначеність і ризик судового процесу в незручній юрисдикції. Перевіряйте обмеження для технологій держфінансування."},
+  public:{icon:"🏛️",title:"Ліцензії на держтехнології",text:"Технологія розроблена за держкоштом може мати march-in rights. Перевіряйте умови гранту до підписання ліцензії з університетом або держустановою."}
 };
 
-let current = 0;
-let correctCount = 0;
-let wrongTags = new Set();
-
-function startQuiz() {
-  document.getElementById('jk-intro').style.display = 'none';
-  document.getElementById('jk-question').style.display = 'block';
-  document.getElementById('jk-progress-area').style.display = 'flex';
-  showQuestion();
+let cur=0,ok=0,no=0,pts=0,wrongTags=new Set();
+function startQuiz(){
+  document.getElementById('hero').style.display='none';
+  document.getElementById('intro-block').style.display='none';
+  document.getElementById('progress-wrap').classList.add('show');
+  document.getElementById('score-row').classList.add('show');
+  showQ();
 }
-
-function showQuestion() {
-  const q = QUESTIONS[current];
-  document.getElementById('jk-q-label').textContent = `Питання ${current + 1} з ${QUESTIONS.length}`;
-  document.getElementById('jk-q-text').textContent = q.text;
-
-  const opts = document.getElementById('jk-options');
-  opts.innerHTML = '';
-  q.options.forEach((opt, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'jk-opt';
-    btn.textContent = opt;
-    btn.onclick = () => handleAnswer(i);
-    opts.appendChild(btn);
+function showQ(){
+  const c=document.getElementById('q-container');
+  c.innerHTML='';
+  if(cur>=Q.length){showResult();return;}
+  const q=Q[cur];
+  document.getElementById('progress-fill').style.width=(cur/Q.length*100)+'%';
+  document.getElementById('progress-label').textContent=(cur+1)+' / '+Q.length;
+  const diffLabel={med:'Середній рівень',hard:'Складний рівень'};
+  const w=document.createElement('div');
+  w.innerHTML=`
+    <div class="q-meta">
+      <div class="q-num">Питання ${cur+1} з ${Q.length}</div>
+      <span class="q-diff ${q.diff}">${diffLabel[q.diff]}</span>
+    </div>
+    <div class="case-box">
+      <div class="case-label">📋 Ситуація</div>
+      <div class="case-text">${q.case}</div>
+    </div>
+    <div class="q-text">${q.text}</div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="fb"></div>
+    <button class="next-btn" id="nb" onclick="nextQ()">${cur<Q.length-1?'Наступне питання →':'Переглянути результат →'}</button>
+  `;
+  c.appendChild(w);
+  const opts=document.getElementById('opts');
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='opt';b.textContent=o;b.onclick=()=>answer(i);
+    opts.appendChild(b);
   });
-
-  document.getElementById('jk-feedback').className = 'jk-feedback';
-  document.getElementById('jk-feedback').innerHTML = '';
-  document.getElementById('jk-next-btn').classList.remove('show');
-
-  const pct = (current / QUESTIONS.length) * 100;
-  document.getElementById('jk-progress-fill').style.width = pct + '%';
-  document.getElementById('jk-progress-text').textContent = `${current + 1} / ${QUESTIONS.length}`;
 }
-
-function handleAnswer(idx) {
-  const q = QUESTIONS[current];
-  const btns = document.querySelectorAll('.jk-opt');
-  btns.forEach(b => b.disabled = true);
-
-  const fb = document.getElementById('jk-feedback');
-
-  if (idx === q.correct) {
-    btns[idx].classList.add('selected-correct');
-    correctCount++;
-    fb.className = 'jk-feedback ok';
-    fb.innerHTML = `<strong>✓ Правильно!</strong>${q.ok}`;
-  } else {
-    btns[idx].classList.add('selected-wrong');
-    btns[q.correct].classList.add('reveal-correct');
-    wrongTags.add(q.tag);
-    fb.className = 'jk-feedback nope';
-    fb.innerHTML = `<strong>✗ Не зовсім.</strong>${q.nope}`;
+function answer(idx){
+  const q=Q[cur];
+  const btns=document.querySelectorAll('.opt');
+  btns.forEach(b=>b.disabled=true);
+  const fb=document.getElementById('fb');
+  if(idx===q.correct){
+    btns[idx].classList.add('correct');ok++;pts+=10;
+    fb.className='feedback show ok';
+    fb.innerHTML=`<strong>✅ Правильно!</strong>${q.ok}<div class="law-ref">📖 ${q.law}</div>`;
+  }else{
+    btns[idx].classList.add('wrong');btns[q.correct].classList.add('correct');
+    no++;wrongTags.add(q.tag);
+    fb.className='feedback show no';
+    fb.innerHTML=`<strong>❌ Не зовсім.</strong>${q.no}<div class="law-ref">📖 ${q.law}</div>`;
   }
-
-  const nextBtn = document.getElementById('jk-next-btn');
-  nextBtn.textContent = current < QUESTIONS.length - 1 ? 'Наступне питання →' : 'Переглянути результат →';
-  nextBtn.classList.add('show');
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-no').textContent=no;
+  document.getElementById('sc-pt').textContent=pts;
+  document.getElementById('nb').classList.add('show');
 }
-
-function nextQuestion() {
-  current++;
-  if (current < QUESTIONS.length) {
-    showQuestion();
-  } else {
-    showResult();
-  }
-}
-
-function showResult() {
-  document.getElementById('jk-question').style.display = 'none';
-  document.getElementById('jk-result').style.display = 'block';
-  document.getElementById('jk-progress-area').style.display = 'none';
-
-  const pct = Math.round((correctCount / QUESTIONS.length) * 100);
-  document.getElementById('res-correct-lbl').textContent = `${correctCount} правильних з ${QUESTIONS.length}`;
-  document.getElementById('res-pct-lbl').textContent = `${pct}%`;
-  setTimeout(() => {
-    document.getElementById('res-bar').style.width = pct + '%';
-  }, 100);
-
-  let icon, title, sub;
-  if (pct >= 85) {
-    icon = '🏛️'; title = 'Відмінне розуміння';
-    sub = `Ви добре орієнтуєтеся у ліцензійних договорах. Проте навіть при такому рівні знань — один непомічений пункт у договорі може коштувати дорого. Перевірте свої діючі договори з фахівцем.`;
-  } else if (pct >= 60) {
-    icon = '⚖️'; title = 'Базовий рівень';
-    sub = `Загальне розуміння є, але є суттєві прогалини, які можуть призвести до помилок при укладанні реальних договорів. Рекомендуємо консультацію перед підписанням.`;
-  } else {
-    icon = '📌'; title = 'Є над чим попрацювати';
-    sub = `У цій сфері багато нюансів, які легко пропустити без юридичної підготовки. Ваші договори можуть не захищати вас так, як ви думаєте. Варто розібратися детальніше.`;
-  }
-
-  document.getElementById('res-icon').textContent = icon;
-  document.getElementById('res-title').textContent = title;
-  document.getElementById('res-sub').textContent = sub;
-
-  // Рекомендації
-  const recsEl = document.getElementById('res-recs');
-  recsEl.innerHTML = '';
-
-  const shownTags = wrongTags.size > 0 ? wrongTags : new Set(['basics', 'protection']);
-  const tagsToShow = [...shownTags].slice(0, 3);
-
-  if (pct >= 85) {
-    recsEl.innerHTML = `
-      <div class="jk-rec-block">
-        <h4>✅ Ваші договори на правильному шляху</h4>
-        <p>Ви розумієте ключові механізми ліцензування. Наступний крок — аудит діючих договорів та оптимізація умов монетизації. Навіть у добре складених договорах часто є умови, які можна покращити на вашу користь.</p>
-      </div>`;
-  } else {
-    tagsToShow.forEach(tag => {
-      const r = RECOMMENDATIONS[tag];
-      if (r) {
-        recsEl.innerHTML += `
-          <div class="jk-rec-block">
-            <h4>${r.icon} ${r.title}</h4>
-            <p>${r.text}</p>
-          </div>`;
-      }
-    });
-  }
-}
-
-function restartQuiz() {
-  current = 0;
-  correctCount = 0;
-  wrongTags = new Set();
-  document.getElementById('jk-result').style.display = 'none';
-  document.getElementById('jk-intro').style.display = 'block';
-  document.getElementById('jk-progress-fill').style.width = '0%';
+function nextQ(){cur++;showQ();}
+function showResult(){
+  document.getElementById('progress-wrap').style.display='none';
+  document.getElementById('score-row').style.display='none';
+  document.getElementById('q-container').innerHTML='';
+  const pct=Math.round(ok/Q.length*100);
+  document.getElementById('r-correct').textContent=ok+' правильних з '+Q.length;
+  document.getElementById('r-pct').textContent=pct+'%';
+  setTimeout(()=>{document.getElementById('r-bar').style.width=pct+'%';},100);
+  let icon,title,sub;
+  if(pct>=80){icon='⚖️';title='Договірний стратег';sub='Відмінний результат. Ви розумієте ліцензійні договори на практичному рівні. Рекомендуємо аудит поточних договорів — навіть при хорошому знанні теорії деталі вирішують все.';}
+  else if(pct>=50){icon:'📋';title='Є прогалини';sub:'Базове розуміння є, але критичні деталі — субліцензія, аудит роялті, розірвання — потребують уваги. Одна погано прописана умова може коштувати роки доходів.';}
+  else{icon:'⚠️';title='Договір як ризик';sub:'Ліцензійні договори без юридичного аналізу — один з найпоширеніших джерел збитків для бізнесу. Перед наступною угодою — обов'язкова консультація.';}
+  document.getElementById('r-icon').textContent=icon;
+  document.getElementById('r-title').textContent=title;
+  document.getElementById('r-sub').textContent=sub;
+  const recs=document.getElementById('r-recs');
+  const tags=wrongTags.size>0?[...wrongTags].slice(0,3):['exclusivity','royalties'];
+  tags.forEach(t=>{
+    const r=RECS[t];
+    if(r) recs.innerHTML+=`<div class="rec-card"><h4>${r.icon} ${r.title}</h4><p>${r.text}</p></div>`;
+  });
+  document.getElementById('result').classList.add('show');
 }
 </script>
 
