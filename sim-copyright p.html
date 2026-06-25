@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<!-- saved from url=(0496)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%94%D0%B8%D1%82%D1%8F%D1%87%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8E/%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B5%20%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%20%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%BD%D0%B8%D0%BA%D0%B0%20%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.html -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Авторське право художника — Юридична кухня Сосновського</title>
+<link href="./sim-copyright p_files/css2" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a2b4a;
+  --blue:#1a4fd6;
+  --gold:#c8992a;
+  --gold2:#ffd166;
+  --bg:#f4f1eb;
+  --card:#fff;
+  --border:#ddd6c8;
+  --green:#1a7a5e;
+  --green-bg:#e6f7f2;
+  --red:#c0392b;
+  --red-bg:#fdecea;
+  --muted:#6b6258;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--navy);min-height:100vh;}
+
+/* BRAND */
+.brand{
+  background:var(--navy);
+  text-align:center;
+  padding:18px 20px 16px;
+}
+.brand-name{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(0.9rem,3vw,1.2rem);
+  color:#fff;font-weight:700;letter-spacing:0.3px;
+}
+.brand-name span{color:var(--gold2);}
+.brand-slogan{
+  font-size:0.72rem;color:var(--blue);
+  font-style:italic;margin-top:5px;
+  color:#7aa3e8;
+}
+.brand-line{width:40px;height:2px;background:var(--gold);margin:10px auto 0;border-radius:2px;}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,#243559 100%);
+  padding:40px 24px 36px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'🎨';font-size:8rem;
+  position:absolute;right:-20px;top:-10px;
+  opacity:0.07;transform:rotate(15deg);
+}
+.hero-tag{
+  display:inline-block;
+  background:var(--gold);color:var(--navy);
+  font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  padding:5px 14px;border-radius:2px;margin-bottom:18px;
+}
+.hero h1{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(1.4rem,5vw,2.2rem);
+  color:#fff;font-weight:900;
+  line-height:1.2;margin-bottom:14px;
+}
+.hero p{
+  font-size:15px;color:rgba(255,255,255,0.75);
+  max-width:520px;margin:0 auto 24px;line-height:1.7;
+}
+.start-btn{
+  background:var(--gold);color:var(--navy);
+  font-family:'Unbounded',sans-serif;
+  font-size:13px;font-weight:700;
+  padding:14px 36px;border:none;border-radius:4px;
+  cursor:pointer;letter-spacing:0.5px;
+  transition:background .2s,transform .15s;
+}
+.start-btn:hover{background:var(--gold2);transform:translateY(-2px);}
+
+/* PROGRESS */
+.progress-wrap{
+  background:var(--navy);
+  padding:12px 24px;
+  display:none;align-items:center;gap:14px;
+}
+.progress-wrap.show{display:flex;}
+.progress-track{flex:1;height:5px;background:rgba(255,255,255,0.15);border-radius:4px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--gold);border-radius:4px;transition:width .5s ease;}
+.progress-label{font-size:12px;color:rgba(255,255,255,0.5);white-space:nowrap;font-weight:600;}
+
+/* SCORE ROW */
+.score-row{
+  display:none;
+  background:#fff;
+  border-bottom:2px solid var(--border);
+  padding:10px 24px;
+  gap:0;
+}
+.score-row.show{display:flex;}
+.sc-cell{
+  flex:1;text-align:center;
+  border-right:1px solid var(--border);
+  padding:6px 0;
+}
+.sc-cell:last-child{border-right:none;}
+.sc-cell .n{
+  font-family:'Unbounded',sans-serif;
+  font-size:1.5rem;font-weight:900;line-height:1;
+}
+.sc-cell:nth-child(1) .n{color:var(--green);}
+.sc-cell:nth-child(2) .n{color:var(--red);}
+.sc-cell:nth-child(3) .n{color:var(--gold);}
+.sc-cell .l{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+
+/* MAIN */
+.main{max-width:720px;margin:0 auto;padding:32px 20px 60px;}
+
+/* STORY */
+.story-box{
+  background:var(--navy);
+  border-radius:12px;
+  padding:28px 28px 24px;
+  margin-bottom:28px;
+  position:relative;overflow:hidden;
+}
+.story-box::after{
+  content:'📖';font-size:5rem;
+  position:absolute;right:16px;bottom:-8px;
+  opacity:0.1;
+}
+.story-tag{
+  font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+}
+.story-text{
+  font-size:15px;color:rgba(255,255,255,0.88);
+  line-height:1.8;
+}
+.story-text strong{color:var(--gold2);}
+.story-text em{color:#a8c4f0;font-style:normal;}
+
+/* CHARACTERS */
+.chars{
+  display:flex;gap:10px;flex-wrap:wrap;
+  margin-bottom:24px;
+}
+.char-card{
+  background:#fff;border:1.5px solid var(--border);
+  border-radius:10px;padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+  flex:1;min-width:140px;
+}
+.char-ico{font-size:1.8rem;}
+.char-info{}
+.char-name{font-size:13px;font-weight:700;color:var(--navy);}
+.char-role{font-size:11px;color:var(--muted);}
+
+/* QUESTION */
+.q-wrap{display:none;}
+.q-wrap.show{display:block;}
+
+.q-num{
+  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;
+}
+.q-text{
+  font-size:18px;font-weight:700;color:var(--navy);
+  line-height:1.5;margin-bottom:20px;
+}
+.scene{
+  background:#fff3e0;
+  border-left:4px solid var(--gold);
+  border-radius:0 8px 8px 0;
+  padding:14px 18px;margin-bottom:20px;
+  font-size:14px;line-height:1.7;color:#4a3a1a;
+}
+.scene strong{color:var(--navy);}
+
+.opts{display:grid;gap:10px;margin-bottom:16px;}
+.opt{
+  background:#fff;
+  border:2px solid var(--border);
+  border-radius:10px;
+  padding:15px 18px;
+  font-family:'Inter',sans-serif;
+  font-size:14px;font-weight:600;
+  color:var(--navy);
+  cursor:pointer;text-align:left;
+  line-height:1.4;
+  transition:border-color .15s,background .15s,transform .1s;
+}
+.opt:hover:not(:disabled){
+  border-color:var(--blue);
+  background:#f0f4ff;
+  transform:translateX(4px);
+}
+.opt.correct{border-color:var(--green)!important;background:var(--green-bg)!important;color:var(--green)!important;}
+.opt.wrong{border-color:var(--red)!important;background:var(--red-bg)!important;color:var(--red)!important;}
+.opt:disabled{cursor:default;}
+
+.feedback{
+  display:none;
+  border-radius:10px;
+  padding:15px 18px;
+  font-size:14px;line-height:1.65;
+  margin-bottom:16px;
+}
+.feedback.show{display:block;}
+.feedback.ok{background:var(--green-bg);border:1.5px solid #a0ddd0;color:#0e4a38;}
+.feedback.no{background:var(--red-bg);border:1.5px solid #f0b8b3;color:#7a1a14;}
+.feedback strong{display:block;font-size:15px;margin-bottom:5px;}
+
+.next-btn{
+  background:var(--navy);color:#fff;
+  font-family:'Unbounded',sans-serif;
+  font-size:12px;font-weight:700;
+  padding:13px 30px;border:none;border-radius:8px;
+  cursor:pointer;letter-spacing:0.3px;
+  transition:background .2s;
+  display:none;
+}
+.next-btn.show{display:inline-block;}
+.next-btn:hover{background:#243559;}
+
+/* RESULT */
+.result{display:none;}
+.result.show{display:block;}
+.result-card{
+  background:var(--navy);
+  border-radius:16px;
+  padding:40px 32px;
+  text-align:center;
+  margin-bottom:20px;
+}
+.result-icon{font-size:4rem;margin-bottom:16px;}
+.result-title{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(1.3rem,4vw,1.8rem);
+  color:#fff;font-weight:900;margin-bottom:10px;
+}
+.result-sub{font-size:15px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px;}
+.score-bar-wrap{background:rgba(255,255,255,0.1);border-radius:6px;height:10px;margin:0 0 8px;overflow:hidden;}
+.score-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:6px;transition:width 1.2s ease;}
+.score-nums{display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.4);font-weight:600;}
+
+.rec-title{
+  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);margin:24px 0 14px;
+}
+.rec-card{
+  background:#fff;border:1.5px solid var(--border);
+  border-left:4px solid var(--gold);
+  border-radius:10px;padding:18px 20px;margin-bottom:10px;
+  text-align:left;
+}
+.rec-card h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.rec-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+
+.cta-box{
+  background:var(--navy);border-radius:12px;
+  padding:28px 24px;text-align:center;margin-top:20px;
+}
+.cta-box p{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:16px;}
+.cta-box strong{color:var(--gold2);}
+.cta-btn{
+  background:var(--gold);color:var(--navy);
+  font-family:'Unbounded',sans-serif;
+  font-size:12px;font-weight:700;
+  padding:13px 30px;border:none;border-radius:8px;
+  cursor:pointer;transition:background .2s;
+}
+.cta-btn:hover{background:var(--gold2);}
+.restart-link{
+  display:block;margin-top:12px;
+  font-size:12px;color:rgba(255,255,255,0.4);
+  cursor:pointer;text-decoration:underline;
+}
+.restart-link:hover{color:rgba(255,255,255,0.7);}
+
+/* FOOTER */
+.footer{
+  text-align:center;padding:16px;
+  font-size:11px;color:var(--muted);
+  border-top:1px solid var(--border);
+}
+
+@media(max-width:500px){
+  .chars{flex-direction:column;}
+  .q-text{font-size:16px;}
+  .main{padding:20px 16px 40px;}
+}
+</style>
+</head>
+<body>
+
+<!-- BRAND -->
+<div class="brand">
+  <div class="brand-name">Юридична кухня <span>Сосновського</span></div>
+  <div class="brand-slogan">Правовий захист — це не формальність, а продовження вашого твору</div>
+  <div class="brand-line"></div>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-tag">⚖️ Авторське право · 12–16 років</div>
+  <h1>Чи захищений твій малюнок?</h1>
+  <p>Марія малює ілюстрації. Артур фотографує. Дарина створює комікси. Але чи знають вони свої права? Дізнайся разом з ними!</p>
+  <button class="start-btn" onclick="startQuiz()">Почати вікторину →</button>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-wrap" id="progress-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="progress-label" id="progress-label">1 / 10</div>
+</div>
+
+<!-- SCORE -->
+<div class="score-row" id="score-row">
+  <div class="sc-cell"><div class="n" id="sc-ok">0</div><div class="l">✅ Правильно</div></div>
+  <div class="sc-cell"><div class="n" id="sc-no">0</div><div class="l">❌ Помилки</div></div>
+  <div class="sc-cell"><div class="n" id="sc-pt">0</div><div class="l">★ Балів</div></div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- INTRO (shown before quiz) -->
+  <div id="intro-block">
+    <div class="story-box">
+      <div class="story-tag">📖 Наша історія</div>
+      <div class="story-text">
+        <strong>Марія Коваленко</strong> — 14-річна художниця зі Львова. Вона малює цифрові ілюстрації та публікує їх в Instagram. Одного дня вона виявила, що її малюнок хтось використав для реклами без дозволу — і навіть не підписав її ім'я.<br><br>
+        Її друг <strong>Артур Ігорович</strong> фотографує вуличне мистецтво, а подруга <strong>Дарина Орестівна</strong> малює комікси. Разом вони намагаються розібратися: <em>що таке авторське право і як воно захищає художників?</em>
+      </div>
+    </div>
+    <div class="chars">
+      <div class="char-card"><div class="char-ico">👩‍🎨</div><div class="char-info"><div class="char-name">Марія Коваленко</div><div class="char-role">Цифровий художник, 14 р.</div></div></div>
+      <div class="char-card"><div class="char-ico">📸</div><div class="char-info"><div class="char-name">Артур Ігорович</div><div class="char-role">Фотограф-початківець, 15 р.</div></div></div>
+      <div class="char-card"><div class="char-ico">✏️</div><div class="char-info"><div class="char-name">Дарина Орестівна</div><div class="char-role">Авторка коміксів, 13 р.</div></div></div>
+    </div>
+  </div>
+
+  <!-- QUESTIONS -->
+  <div id="q-container"></div>
+
+  <!-- RESULT -->
+  <div class="result" id="result">
+    <div class="result-card">
+      <div class="result-icon" id="r-icon">🎨</div>
+      <div class="result-title" id="r-title">Твій результат</div>
+      <div class="result-sub" id="r-sub"></div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" id="r-bar"></div></div>
+      <div class="score-nums"><span id="r-correct">0 правильних</span><span id="r-pct">0%</span></div>
+    </div>
+
+    <div class="rec-title">Що варто знати художнику</div>
+    <div id="r-recs"></div>
+
+    <div class="cta-box">
+      <p>Твої малюнки — це твоя власність.<br><strong>Захисти їх правильно.</strong> Отримай консультацію для творчих людей.</p>
+      <button class="cta-btn" onclick="alert(&#39;Вставте тут посилання на вашу форму запису або Telegram&#39;)">Дізнатись більше</button>
+      <span class="restart-link" onclick="location.reload()">↺ Пройти ще раз</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">© Юридична кухня Сосновського · Всі права захищені</div>
+
+<script>
+const Q = [
+  {
+    scene: "Марія намалювала цифровий портрет і опублікувала його в Instagram. Вона нікде не реєструвала свій малюнок і не підписувала жодних документів.",
+    text: "Чи захищений малюнок Марії авторським правом?",
+    opts: [
+      "Ні — спочатку треба зареєструвати у спеціальному реєстрі",
+      "Так — авторське право виникає автоматично у момент створення твору",
+      "Лише якщо вона поставила знак ©",
+      "Тільки якщо малюнок надрукований, а не цифровий"
+    ],
+    correct: 1,
+    ok: "Правильно! В Україні авторське право виникає <strong>автоматично</strong> — щойно художник створив твір. Реєстрація не обов'язкова, хоча й може бути корисною як додатковий доказ.",
+    no: "Насправді реєстрація не потрібна. Авторське право виникає <strong>автоматично</strong> у момент створення — чи то малюнок на папері, чи цифровий файл.",
+    tag: "basics"
+  },
+  {
+    scene: "Артур сфотографував графіті на стіні і поширив фото в соціальних мережах. Художник графіті дізнався про це і незадоволений.",
+    text: "Чи має Артур право публікувати фотографію чужого графіті?",
+    opts: [
+      "Так — графіті на публічній стіні не охороняється законом",
+      "Так — будь-яка фотографія є власністю фотографа",
+      "Ні — графіті є твором художника, і для публікації потрібен його дозвіл",
+      "Лише якщо графіті розміщено без дозволу міста"
+    ],
+    correct: 2,
+    ok: "Правильно! Графіті — це художній твір, і його автор має авторські права, навіть якщо зображення на публічній стіні. Для комерційного використання фото потрібен дозвіл художника.",
+    no: "Несподівано, але графіті охороняється авторським правом так само, як і картина в галереї. Автор графіті має права на свій твір.",
+    tag: "others"
+  },
+  {
+    scene: "Дарина намалювала комікс і показала його другу Михайлу. Михайло без запиту розмістив комікс на шкільному сайті, але підписав ім'я Дарини.",
+    text: "Чи порушив Михайло права Дарини, навіть якщо вказав її ім'я?",
+    opts: [
+      "Ні — він вказав авторство, тому все гаразд",
+      "Ні — шкільний сайт некомерційний, дозвіл не потрібен",
+      "Так — для будь-якого публічного використання потрібен дозвіл автора",
+      "Лише якщо Дарина офіційно реєструвала комікс"
+    ],
+    correct: 2,
+    ok: "Правильно! Вказати ім'я автора — важливо, але цього замало. Для <strong>будь-якого публікування</strong> чужого твору потрібен дозвіл автора, навіть якщо сайт некомерційний.",
+    no: "Вказати ім'я — це гарно, але недостатньо. Автор має право вирішувати <strong>де і як</strong> публікується його твір. Без дозволу Дарини — це порушення.",
+    tag: "permission"
+  },
+  {
+    scene: "Марія продала замовнику ілюстрацію для листівки. Замовник заплатив і тепер хоче використати ту саму ілюстрацію ще й для білборду.",
+    text: "Чи може замовник використати ілюстрацію для білборду без додаткової оплати?",
+    opts: [
+      "Так — він заплатив, значить купив усі права",
+      "Так — якщо він не перепродає ілюстрацію",
+      "Ні — оплата не означає передачу всіх прав. Для нового використання потрібен новий дозвіл",
+      "Залежить від суми оплати"
+    ],
+    correct: 2,
+    ok: "Правильно! Оплата за ілюстрацію — це не купівля «всіх прав назавжди». Якщо у договорі не прописано інше, художник дав дозвіл лише на конкретне використання — листівку.",
+    no: "Оплата ≠ всі права. Художник продав право використати ілюстрацію для листівки. Білборд — це інше використання, на яке потрібен окремий дозвіл і, зазвичай, доплата.",
+    tag: "payment"
+  },
+  {
+    scene: "Артур знайшов в інтернеті красиву ілюстрацію без підпису автора і використав її для шкільного проєкту. Він вважає, що якщо автор невідомий — можна брати.",
+    text: "Чи може Артур використовувати ілюстрацію, якщо автор невідомий?",
+    opts: [
+      "Так — анонімні роботи у вільному доступі",
+      "Так — для навчальних цілей завжди можна",
+      "Ні — відсутність підпису не означає відсутність авторського права",
+      "Лише якщо він знайшов її через пошук Google"
+    ],
+    correct: 2,
+    ok: "Правильно! Відсутність підпису не робить твір «нічийним». Автор просто невідомий — але його права існують. Для використання треба шукати автора або обирати твори з ліцензією Creative Commons.",
+    no: "Це поширена помилка. Ілюстрація без підпису не є «вільною». Авторське право існує незалежно від того, підписано роботу чи ні.",
+    tag: "others"
+  },
+  {
+    scene: "Дарина дізналась, що існує ліцензія Creative Commons (CC). Вона хоче дозволити всім використовувати свої комікси, але з обов'язковим зазначенням її імені.",
+    text: "Яка ліцензія Creative Commons підходить Дарині?",
+    opts: [
+      "CC0 — повна відмова від прав",
+      "CC BY — можна використовувати з зазначенням автора",
+      "CC BY-NC — можна використовувати некомерційно без підпису",
+      "Авторське право не можна передати нікому"
+    ],
+    correct: 1,
+    ok: "Правильно! <strong>CC BY</strong> (Attribution) — дозволяє використовувати твір вільно за умови обов'язкового зазначення автора. Саме те, що потрібно Дарині.",
+    no: "CC BY — означає «можна використовувати, якщо підписати автора». CC0 — повна відмова від прав. CC BY-NC — некомерційне використання з підписом автора.",
+    tag: "license"
+  },
+  {
+    scene: "Марія виявила, що рекламна агенція використала її ілюстрацію з Instagram без дозволу і без підпису — для комерційної реклами кафе.",
+    text: "Що Марія може зробити у цій ситуації?",
+    opts: [
+      "Нічого — якщо опублікувала в Instagram, значить дала дозвіл усім",
+      "Лише написати коментар під рекламою",
+      "Вимагати видалення, вибачення та компенсації за незаконне використання",
+      "Тільки якщо вона заздалегідь зареєструвала малюнок"
+    ],
+    correct: 2,
+    ok: "Правильно! Публікація в Instagram не означає дозвіл усім використовувати твір. Марія може вимагати <strong>видалення реклами, публічного вибачення та грошової компенсації</strong>.",
+    no: "Публікація в соцмережі — не ліцензія для всіх. Марія має повне право вимагати припинення порушення і компенсацію.",
+    tag: "protection"
+  },
+  {
+    scene: "Вчитель малювання попросив Артура роздрукувати 30 копій ілюстрації відомого художника для уроку. Артур знайшов зображення в інтернеті.",
+    text: "Чи можна роздрукувати ілюстрацію живого художника для шкільного уроку?",
+    opts: [
+      "Так — освіта завжди виняток з авторського права",
+      "Так, якщо не продавати копії",
+      "В Україні є обмежений виняток для навчання, але краще запитати дозвіл або використати відкриті матеріали",
+      "Ні, категорично заборонено в будь-яких цілях"
+    ],
+    correct: 2,
+    ok: "Правильно! Закон дозволяє обмежене використання творів у навчальних цілях, але це не абсолютний дозвіл. Найкраще — звернутися до автора або використовувати матеріали з відкритою ліцензією.",
+    no: "Освіта — не абсолютний виняток. Закон дозволяє обмежене некомерційне використання для навчання, але безпечніше запитати дозвіл або використати Creative Commons матеріали.",
+    tag: "exceptions"
+  },
+  {
+    scene: "Дарина намалювала фанарт (малюнок за мотивами) популярного аніме-персонажа і продає його на Etsy як принт.",
+    text: "Чи є у Дарини проблема з авторським правом?",
+    opts: [
+      "Ні — фанарт завжди дозволений, це традиція",
+      "Ні — персонаж японський, а Дарина в Україні",
+      "Так — персонаж захищений авторським правом, і його комерційне використання потребує дозволу",
+      "Лише якщо аніме-студія дізнається"
+    ],
+    correct: 2,
+    ok: "Правильно! Персонажі аніме — це об'єкти авторського права студії. <strong>Некомерційний</strong> фанарт зазвичай толерується, але <strong>продаж</strong> принтів без дозволу — це порушення.",
+    no: "Фанарт для особистого задоволення — одне. Але продаж принтів з чужими персонажами — це комерційне використання чужої інтелектуальної власності без дозволу.",
+    tag: "fanart"
+  },
+  {
+    scene: "Марія хоче краще захистити свої роботи. Подруга порадила їй ставити знак © на кожному малюнку.",
+    text: "Чи допомагає знак © захистити малюнок?",
+    opts: [
+      "Ні — це лише декорація, жодного юридичного значення немає",
+      "Так — без © авторського права не існує",
+      "© не є обов'язковим, але позначає авторство і відлякує порушників",
+      "Лише якщо зареєструвати знак в Укрпатенті"
+    ],
+    correct: 2,
+    ok: "Правильно! Знак © не є обов'язковим за українським законом — права існують і без нього. Але він <strong>сигналізує</strong> про авторство, відлякує тих, хто «не знав», і спрощує захист у спорах.",
+    no: "Знак © не створює авторське право — воно вже є автоматично. Але він корисний як попередження: «це захищений твір, автор відомий». Ставити рекомендовано.",
+    tag: "basics"
+  }
+];
+
+const RECS = {
+  basics: {icon:"🎨", title:"Основи авторського права", text:"Твої малюнки захищені з моменту створення. Ніякої реєстрації не потрібно — але знак © та документування дати створення можуть стати у пригоді."},
+  permission: {icon:"🤝", title:"Дозволи та права", text:"Будь-яке публічне використання чужого твору потребує дозволу автора — навіть для некомерційних цілей і навіть з підписом."},
+  payment: {icon:"💰", title:"Оплата ≠ всі права", text:"Гонорар за ілюстрацію — це не купівля всіх прав назавжди. Кожне нове використання потрібно прописувати окремо у договорі."},
+  others: {icon:"👁️", title:"Чужі твори в мережі", text:"Зображення без підпису або знайдені через Google — не «вільні». Для безпечного використання обирай твори з ліцензією Creative Commons."},
+  license: {icon:"📄", title:"Creative Commons", text:"CC ліцензії дозволяють художникам самим вирішувати умови використання. CC BY — з підписом автора. CC0 — повністю вільно."},
+  protection: {icon:"🛡️", title:"Захист своїх прав", text:"Якщо хтось використав твій малюнок без дозволу — ти маєш право вимагати видалення і компенсації. Публікація в соцмережах не дає нікому ліцензії."},
+  exceptions: {icon:"🏫", title:"Освіта та винятки", text:"Закон дозволяє обмежене використання творів у навчанні, але це не абсолютний дозвіл. Краще звертатись до відкритих матеріалів."},
+  fanart: {icon:"🎭", title:"Фанарт та персонажі", text:"Персонажі з аніме, ігор, фільмів охороняються авторським правом. Некомерційний фанарт — зазвичай терпимий, але продаж — ризик порушення."}
+};
+
+let cur=0, ok=0, no=0, pts=0, wrongTags=new Set();
+
+function startQuiz(){
+  document.getElementById('hero').style.display='none';
+  document.getElementById('intro-block').style.display='none';
+  document.getElementById('progress-wrap').classList.add('show');
+  document.getElementById('score-row').classList.add('show');
+  showQ();
+}
+
+function showQ(){
+  const c=document.getElementById('q-container');
+  c.innerHTML='';
+  if(cur>=Q.length){showResult();return;}
+  const q=Q[cur];
+  const pct=(cur/Q.length)*100;
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-label').textContent=(cur+1)+' / '+Q.length;
+
+  const wrap=document.createElement('div');
+  wrap.className='q-wrap show';
+  wrap.innerHTML=`
+    <div class="q-num">Питання ${cur+1} з ${Q.length}</div>
+    ${q.scene?`<div class="scene"><strong>📍 Ситуація:</strong> ${q.scene}</div>`:''}
+    <div class="q-text">${q.text}</div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="fb"></div>
+    <button class="next-btn" id="nb" onclick="nextQ()">${cur<Q.length-1?'Наступне питання →':'Переглянути результат →'}</button>
+  `;
+  c.appendChild(wrap);
+
+  const opts=document.getElementById('opts');
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='opt';
+    b.textContent=o;
+    b.onclick=()=>answer(i);
+    opts.appendChild(b);
+  });
+}
+
+function answer(idx){
+  const q=Q[cur];
+  const btns=document.querySelectorAll('.opt');
+  btns.forEach(b=>b.disabled=true);
+  const fb=document.getElementById('fb');
+  if(idx===q.correct){
+    btns[idx].classList.add('correct');
+    ok++; pts+=10;
+    fb.className='feedback show ok';
+    fb.innerHTML='<strong>✅ Правильно!</strong>'+q.ok;
+  } else {
+    btns[idx].classList.add('wrong');
+    btns[q.correct].classList.add('correct');
+    no++;
+    wrongTags.add(q.tag);
+    fb.className='feedback show no';
+    fb.innerHTML='<strong>❌ Не зовсім.</strong>'+q.no;
+  }
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-no').textContent=no;
+  document.getElementById('sc-pt').textContent=pts;
+  document.getElementById('nb').classList.add('show');
+}
+
+function nextQ(){cur++;showQ();}
+
+function showResult(){
+  document.getElementById('progress-wrap').style.display='none';
+  document.getElementById('score-row').style.display='none';
+  document.getElementById('q-container').innerHTML='';
+  const pct=Math.round(ok/Q.length*100);
+  document.getElementById('r-correct').textContent=ok+' правильних з '+Q.length;
+  document.getElementById('r-pct').textContent=pct+'%';
+  setTimeout(()=>{document.getElementById('r-bar').style.width=pct+'%';},100);
+
+  let icon,title,sub;
+  if(pct>=80){icon='🏆';title='Захисник свого мистецтва!';sub='Чудово! Ти знаєш свої права краще за більшість художників. Твої малюнки під захистом — якщо щось трапиться, ти знаєш що робити.';}
+  else if(pct>=50){icon='🎨';title='Гарний початок!';sub='Базові речі ти розумієш. Але є нюанси, які варто вивчити — особливо щодо дозволів і договорів з замовниками.';}
+  else{icon='📚';title='Час дізнатися більше!';sub='Авторське право — важлива тема для кожного художника. Пройди тест ще раз або отримай консультацію — це захистить твої роботи.';}
+
+  document.getElementById('r-icon').textContent=icon;
+  document.getElementById('r-title').textContent=title;
+  document.getElementById('r-sub').textContent=sub;
+
+  const recs=document.getElementById('r-recs');
+  const tags=wrongTags.size>0?[...wrongTags].slice(0,3):['basics','protection'];
+  tags.forEach(t=>{
+    const r=RECS[t];
+    if(r) recs.innerHTML+=`<div class="rec-card"><h4>${r.icon} ${r.title}</h4><p>${r.text}</p></div>`;
+  });
+
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+</body></html>

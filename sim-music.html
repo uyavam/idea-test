@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<!-- saved from url=(0487)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%94%D0%B8%D1%82%D1%8F%D1%87%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8E/%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B5%20%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%20%D0%B2%20%D0%BC%D1%83%D0%B7%D0%B8%D1%86%D1%96%20%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.html -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Авторське право в музиці — Юридична кухня Сосновського</title>
+<link href="./sim-music_files/css2" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f0f1a;
+  --bg2:#16162a;
+  --card:#1e1e35;
+  --card2:#252540;
+  --navy:#1a2b4a;
+  --purple:#6c3fc5;
+  --purple2:#8b5cf6;
+  --gold:#c8992a;
+  --gold2:#ffd166;
+  --teal:#0ea5a0;
+  --red:#e05050;
+  --red-bg:rgba(224,80,80,0.12);
+  --green:#22c98e;
+  --green-bg:rgba(34,201,142,0.12);
+  --text:#e8e4f0;
+  --muted:#8a85a8;
+  --border:rgba(255,255,255,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+
+/* BRAND */
+.brand{
+  background:#0a0a14;
+  text-align:center;padding:16px 20px 14px;
+  border-bottom:1px solid var(--border);
+}
+.brand-name{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(0.85rem,2.5vw,1.1rem);
+  color:#fff;font-weight:700;
+}
+.brand-name span{color:var(--gold2);}
+.brand-slogan{font-size:0.7rem;color:#7aa3e8;font-style:italic;margin-top:4px;}
+.brand-line{width:36px;height:2px;background:var(--gold);margin:8px auto 0;border-radius:2px;}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0f0f1a 0%,#1a0a35 50%,#0a1a2a 100%);
+  padding:48px 24px 44px;text-align:center;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--border);
+}
+.hero::before{
+  content:'🎵';font-size:12rem;
+  position:absolute;right:-30px;top:-20px;
+  opacity:0.04;transform:rotate(20deg);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 50%,rgba(108,63,197,0.15) 0%,transparent 60%);
+  pointer-events:none;
+}
+.hero-tag{
+  display:inline-block;
+  background:var(--purple);color:#fff;
+  font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+  position:relative;z-index:1;
+}
+.hero h1{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(1.5rem,5vw,2.4rem);
+  color:#fff;font-weight:900;
+  line-height:1.15;margin-bottom:16px;
+  position:relative;z-index:1;
+}
+.hero h1 em{font-style:normal;color:var(--gold2);}
+.hero p{
+  font-size:15px;color:var(--muted);
+  max-width:500px;margin:0 auto 28px;line-height:1.75;
+  position:relative;z-index:1;
+}
+.start-btn{
+  background:linear-gradient(135deg,var(--purple),var(--purple2));
+  color:#fff;
+  font-family:'Unbounded',sans-serif;
+  font-size:12px;font-weight:700;
+  padding:15px 40px;border:none;border-radius:50px;
+  cursor:pointer;letter-spacing:0.5px;
+  box-shadow:0 4px 24px rgba(108,63,197,0.4);
+  transition:transform .2s,box-shadow .2s;
+  position:relative;z-index:1;
+}
+.start-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(108,63,197,0.5);}
+
+/* PROGRESS */
+.progress-wrap{
+  background:#0a0a14;
+  padding:12px 24px;
+  display:none;align-items:center;gap:14px;
+  border-bottom:1px solid var(--border);
+}
+.progress-wrap.show{display:flex;}
+.progress-track{flex:1;height:4px;background:rgba(255,255,255,0.08);border-radius:4px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--purple),var(--gold));border-radius:4px;transition:width .5s ease;}
+.progress-label{font-size:12px;color:var(--muted);white-space:nowrap;font-weight:600;}
+
+/* SCORE */
+.score-row{
+  display:none;
+  background:#0d0d1f;
+  border-bottom:1px solid var(--border);
+  padding:10px 24px;gap:0;
+}
+.score-row.show{display:flex;}
+.sc-cell{flex:1;text-align:center;border-right:1px solid var(--border);padding:6px 0;}
+.sc-cell:last-child{border-right:none;}
+.sc-cell .n{font-family:'Unbounded',sans-serif;font-size:1.4rem;font-weight:900;line-height:1;}
+.sc-cell:nth-child(1) .n{color:var(--green);}
+.sc-cell:nth-child(2) .n{color:var(--red);}
+.sc-cell:nth-child(3) .n{color:var(--gold2);}
+.sc-cell .l{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+
+/* MAIN */
+.main{max-width:700px;margin:0 auto;padding:32px 20px 60px;}
+
+/* STORY */
+.story-box{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;padding:28px;margin-bottom:24px;
+  position:relative;overflow:hidden;
+}
+.story-box::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--purple),var(--gold));
+}
+.story-tag{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--purple2);margin-bottom:12px;}
+.story-text{font-size:14px;color:rgba(232,228,240,0.8);line-height:1.85;}
+.story-text strong{color:#fff;}
+.story-text em{color:var(--gold2);font-style:normal;}
+
+/* CHARS */
+.chars{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.char-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:14px 16px;
+  display:flex;align-items:center;gap:12px;
+  flex:1;min-width:160px;
+  transition:border-color .2s;
+}
+.char-card:hover{border-color:var(--purple);}
+.char-ico{font-size:2rem;}
+.char-name{font-size:13px;font-weight:700;color:#fff;}
+.char-role{font-size:11px;color:var(--muted);margin-top:2px;}
+
+/* QUESTION */
+.q-num{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--purple2);margin-bottom:10px;}
+.q-text{font-size:17px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:20px;}
+
+.scene{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-left:3px solid var(--gold);
+  border-radius:0 12px 12px 0;
+  padding:16px 20px;margin-bottom:20px;
+  font-size:14px;line-height:1.75;color:rgba(232,228,240,0.8);
+}
+.scene strong{color:var(--gold2);}
+
+.opts{display:grid;gap:10px;margin-bottom:16px;}
+.opt{
+  background:var(--card);
+  border:1.5px solid var(--border);
+  border-radius:12px;
+  padding:15px 18px;
+  font-family:'Inter',sans-serif;
+  font-size:14px;font-weight:500;
+  color:var(--text);
+  cursor:pointer;text-align:left;line-height:1.45;
+  transition:border-color .15s,background .15s,transform .12s;
+}
+.opt:hover:not(:disabled){
+  border-color:var(--purple2);
+  background:rgba(108,63,197,0.1);
+  transform:translateX(4px);
+}
+.opt.correct{border-color:var(--green)!important;background:var(--green-bg)!important;color:var(--green)!important;}
+.opt.wrong{border-color:var(--red)!important;background:var(--red-bg)!important;color:var(--red)!important;}
+.opt:disabled{cursor:default;}
+
+.feedback{
+  display:none;border-radius:12px;
+  padding:16px 18px;font-size:14px;line-height:1.65;margin-bottom:16px;
+}
+.feedback.show{display:block;}
+.feedback.ok{background:var(--green-bg);border:1.5px solid rgba(34,201,142,0.3);color:#a0f0d0;}
+.feedback.no{background:var(--red-bg);border:1.5px solid rgba(224,80,80,0.3);color:#f0a8a8;}
+.feedback strong{display:block;font-size:15px;margin-bottom:5px;color:#fff;}
+
+.next-btn{
+  background:linear-gradient(135deg,var(--purple),var(--purple2));
+  color:#fff;
+  font-family:'Unbounded',sans-serif;
+  font-size:11px;font-weight:700;
+  padding:13px 28px;border:none;border-radius:50px;
+  cursor:pointer;letter-spacing:0.3px;
+  display:none;
+  box-shadow:0 4px 16px rgba(108,63,197,0.3);
+  transition:transform .15s;
+}
+.next-btn.show{display:inline-block;}
+.next-btn:hover{transform:translateY(-1px);}
+
+/* RESULT */
+.result{display:none;}
+.result.show{display:block;}
+.result-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:40px 28px;text-align:center;margin-bottom:20px;
+  position:relative;overflow:hidden;
+}
+.result-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--purple),var(--gold));
+}
+.result-icon{font-size:4rem;margin-bottom:16px;}
+.result-title{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(1.2rem,4vw,1.7rem);
+  color:#fff;font-weight:900;margin-bottom:10px;
+}
+.result-sub{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px;}
+.score-bar-wrap{background:rgba(255,255,255,0.06);border-radius:6px;height:8px;margin:0 0 8px;overflow:hidden;}
+.score-bar-fill{height:100%;background:linear-gradient(90deg,var(--purple),var(--gold));border-radius:6px;transition:width 1.2s ease;}
+.score-nums{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:600;}
+
+.rec-title{
+  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--purple2);margin:24px 0 14px;
+}
+.rec-card{
+  background:var(--card);border:1px solid var(--border);
+  border-left:3px solid var(--purple);
+  border-radius:0 12px 12px 0;
+  padding:18px 20px;margin-bottom:10px;text-align:left;
+}
+.rec-card h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px;}
+.rec-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+
+.cta-box{
+  background:linear-gradient(135deg,#1a0a35,#0a1a35);
+  border:1px solid rgba(108,63,197,0.3);
+  border-radius:16px;
+  padding:28px 24px;text-align:center;margin-top:20px;
+}
+.cta-box p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:18px;}
+.cta-box strong{color:var(--gold2);}
+.cta-btn{
+  background:var(--gold);color:#0f0f1a;
+  font-family:'Unbounded',sans-serif;
+  font-size:11px;font-weight:700;
+  padding:13px 30px;border:none;border-radius:50px;
+  cursor:pointer;transition:background .2s,transform .15s;
+}
+.cta-btn:hover{background:var(--gold2);transform:translateY(-1px);}
+.restart-link{
+  display:block;margin-top:14px;
+  font-size:12px;color:rgba(255,255,255,0.25);
+  cursor:pointer;text-decoration:underline;
+}
+.restart-link:hover{color:var(--muted);}
+
+.footer{
+  text-align:center;padding:16px;
+  font-size:11px;color:rgba(255,255,255,0.2);
+  border-top:1px solid var(--border);
+}
+
+@media(max-width:500px){
+  .chars{flex-direction:column;}
+  .q-text{font-size:15px;}
+  .main{padding:20px 14px 40px;}
+}
+</style>
+</head>
+<body>
+
+<div class="brand">
+  <div class="brand-name">Юридична кухня <span>Сосновського</span></div>
+  <div class="brand-slogan">Правовий захист — це не формальність, а продовження вашого твору</div>
+  <div class="brand-line"></div>
+</div>
+
+<div class="hero" id="hero">
+  <div class="hero-tag">🎵 Авторське право в музиці · 15–18 років</div>
+  <h1>Чия це <em>пісня?</em></h1>
+  <p>Соломія написала трек. Данило зробив біт. Катерина заспівала. Але хто отримає гроші і хто має права — залежить від того, що прописано в договорі.</p>
+  <button class="start-btn" onclick="startQuiz()">Пройти вікторину →</button>
+</div>
+
+<div class="progress-wrap" id="progress-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="progress-label" id="progress-label">1 / 10</div>
+</div>
+<div class="score-row" id="score-row">
+  <div class="sc-cell"><div class="n" id="sc-ok">0</div><div class="l">✅ Правильно</div></div>
+  <div class="sc-cell"><div class="n" id="sc-no">0</div><div class="l">❌ Помилки</div></div>
+  <div class="sc-cell"><div class="n" id="sc-pt">0</div><div class="l">★ Балів</div></div>
+</div>
+
+<div class="main">
+
+  <div id="intro-block">
+    <div class="story-box">
+      <div class="story-tag">🎙️ Наша історія</div>
+      <div class="story-text">
+        <strong>Соломія</strong> — 17-річна авторка пісень з Харкова. Вона пише тексти і мелодії, але досі не розуміє, як захистити свою музику.<br><br>
+        Її друг <strong>Данило</strong> — бітмейкер, продає інструментали онлайн. Одного дня він виявив, що його біт використали у відомому треку без дозволу і без оплати.<br><br>
+        <strong>Катерина</strong> — вокалістка, яка записала пісню для невеликого лейблу. Підписала договір не читаючи — і тепер не може виконувати цю пісню на концертах.<br><br>
+        Разом вони з'ясовують: <em>як насправді працює авторське право в музиці — і як не програти ще до першого виступу.</em>
+      </div>
+    </div>
+    <div class="chars">
+      <div class="char-card"><div class="char-ico">🎵</div><div><div class="char-name">Соломія</div><div class="char-role">Авторка пісень, 17 р.</div></div></div>
+      <div class="char-card"><div class="char-ico">🎛️</div><div><div class="char-name">Данило</div><div class="char-role">Бітмейкер, 16 р.</div></div></div>
+      <div class="char-card"><div class="char-ico">🎤</div><div><div class="char-name">Катерина</div><div class="char-role">Вокалістка, 18 р.</div></div></div>
+    </div>
+  </div>
+
+  <div id="q-container"></div>
+
+  <div class="result" id="result">
+    <div class="result-card">
+      <div class="result-icon" id="r-icon">🎵</div>
+      <div class="result-title" id="r-title">Твій результат</div>
+      <div class="result-sub" id="r-sub"></div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" id="r-bar"></div></div>
+      <div class="score-nums"><span id="r-correct">0 правильних</span><span id="r-pct">0%</span></div>
+    </div>
+    <div class="rec-title">Що важливо знати музиканту</div>
+    <div id="r-recs"></div>
+    <div class="cta-box">
+      <p>Музика — це твоя інтелектуальна власність.<br><strong>Не підписуй договір не читаючи.</strong> Отримай консультацію перед наступним кроком.</p>
+      <button class="cta-btn" onclick="alert(&#39;Вставте тут посилання на вашу форму або Telegram&#39;)">Записатися на консультацію</button>
+      <span class="restart-link" onclick="location.reload()">↺ Пройти ще раз</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">© Юридична кухня Сосновського · Всі права захищені</div>
+
+<script>
+const Q = [
+  {
+    scene: "Соломія написала текст і мелодію нової пісні, але нікуди її не реєструвала і нікому не показувала.",
+    text: "Чи існує авторське право на пісню Соломії?",
+    opts: [
+      "Ні — потрібно зареєструвати у спеціальному реєстрі",
+      "Так — авторське право виникає автоматично у момент створення",
+      "Лише якщо вона запише пісню у студії",
+      "Тільки якщо опублікує в мережі"
+    ],
+    correct: 1,
+    ok: "Правильно! Авторське право виникає <strong>автоматично</strong> у момент створення — навіть якщо пісня лише в записнику. Реєстрація не обов'язкова, але є корисним доказом у суперечках.",
+    no: "В Україні авторське право виникає <strong>автоматично</strong> — без будь-якої реєстрації. Щойно Соломія написала слова і мелодію, її права вже захищені законом.",
+    tag: "basics"
+  },
+  {
+    scene: "Данило продав біт онлайн за 500 грн. Покупець Олег використав цей біт у своїй пісні і виклав її на YouTube. Пісня стала популярною і зібрала 2 мільйони переглядів.",
+    text: "Чи має Данило право на частину доходів від цього треку?",
+    opts: [
+      "Ні — він же продав біт, значить відмовився від усіх прав",
+      "Залежить від умов договору при продажу",
+      "Так — автоматично отримує 50% усіх доходів",
+      "Лише якщо підписав договір до публікації пісні"
+    ],
+    correct: 1,
+    ok: "Правильно! Все залежить від того, що було написано при продажу. Якщо Данило продав <strong>невиключну ліцензію</strong> — він може продавати цей біт далі і претендувати на роялті. Якщо передав усі права — ні.",
+    no: "Факт оплати — ще не передача всіх прав. Якщо у угоді не було прописано передачу авторських прав, Данило залишається співавтором і може претендувати на роялті.",
+    tag: "contracts"
+  },
+  {
+    scene: "Катерина підписала договір з лейблом не читаючи. Пізніше виявила пункт: «Виконавець передає всі майнові права на записи лейблу на 10 років».",
+    text: "Що це означає для Катерини на практиці?",
+    opts: [
+      "Нічого особливого — стандартна формальність",
+      "Вона 10 років не може виконувати ці пісні без дозволу лейблу і не отримує грошей від стрімінгу",
+      "Лейбл може змінити текст пісень без її згоди",
+      "Договір недійсний, бо Катерина підписала не читаючи"
+    ],
+    correct: 1,
+    ok: "Саме так. Передача майнових прав означає, що <strong>лейбл контролює пісні</strong>: вирішує де розміщувати, скільки коштують, кому ліцензувати. Катерина не може виступати з цими піснями без дозволу.",
+    no: "Це дуже серйозний пункт. Передавши майнові права, Катерина фактично «продала» пісні лейблу на 10 років. Вона зберігає лише право авторства — але не може заробляти або виступати без дозволу.",
+    tag: "contracts"
+  },
+  {
+    scene: "Соломія дізналась, що відома співачка використала фрагмент її мелодії у своєму хіті. Схожість очевидна, але не ідентична — змінено ритм і тональність.",
+    text: "Чи є це порушенням авторського права?",
+    opts: [
+      "Ні — якщо не скопійовано слово в слово, порушення немає",
+      "Ні — зміна тональності робить мелодію новою",
+      "Можливо — суд оцінить ступінь схожості та оригінальності",
+      "Так, лише якщо співачка заробила понад 1 млн грн"
+    ],
+    correct: 2,
+    ok: "Правильно! Авторське право захищає <strong>оригінальне творче вираження</strong>, а не лише дослівне копіювання. Суд оцінює, чи є запозичення «суттєвим» — навіть при зміні ритму чи тональності.",
+    no: "Зміна тональності або ритму не завжди рятує від порушення. Суд дивиться на те, чи «схожість суттєва» і чи могла широка аудиторія розпізнати оригінальну мелодію.",
+    tag: "protection"
+  },
+  {
+    scene: "Данило знайшов у TikTok відео, де хтось використав 15 секунд його біту. Автор відео каже: «Це ж лише 15 секунд — дрібниця».",
+    text: "Чи може Данило вимагати видалення або компенсації?",
+    opts: [
+      "Ні — менше 30 секунд дозволено законом",
+      "Ні — TikTok сам регулює це",
+      "Так — навіть невеликий фрагмент захищений, якщо він оригінальний",
+      "Лише якщо відео зібрало більше 100 тисяч переглядів"
+    ],
+    correct: 2,
+    ok: "Правильно! Немає законного правила «15 секунд можна». Будь-який фрагмент оригінального твору захищений. Данило може подати скаргу через TikTok або вимагати компенсації.",
+    no: "Міф про «30 секунд можна» не має підстав у законі. Авторське право захищає навіть короткі фрагменти оригінального твору. Данило має повне право вимагати видалення.",
+    tag: "protection"
+  },
+  {
+    scene: "Катерина написала кавер-версію популярної пісні і хоче викласти її на Spotify для заробітку.",
+    text: "Що потрібно зробити Катерині перед публікацією каверу?",
+    opts: [
+      "Нічого — кавери завжди дозволені",
+      "Лише вказати в описі, що це кавер",
+      "Отримати ліцензію або скористатись механізмом примусового ліцензування",
+      "Попросити дозволу у виконавця оригіналу"
+    ],
+    correct: 2,
+    ok: "Правильно! Кавер — це не автоматично вільне. Для комерційної публікації потрібна <strong>механічна ліцензія</strong> від правовласника або через відповідний механізм. Spotify та інші платформи мають вбудовані системи для цього.",
+    no: "Кавер-версія — не виняток з авторського права. Для комерційної публікації потрібна механічна ліцензія. Без неї — порушення, навіть якщо ти вказала ім'я автора.",
+    tag: "license"
+  },
+  {
+    scene: "Соломія і Данило разом написали пісню: вона — текст і мелодію, він — аранжування. Ніякого договору між ними немає.",
+    text: "Хто є автором пісні і як розподіляються права?",
+    opts: [
+      "Лише Соломія, бо вона написала текст і мелодію",
+      "Лише Данило, бо без аранжування пісня не існує",
+      "Обидва є співавторами і мають рівні права, якщо не домовились інакше",
+      "Ніхто, бо немає підписаного договору"
+    ],
+    correct: 2,
+    ok: "Правильно! При спільному творчому внеску обидва є <strong>співавторами</strong>. За законом права розподіляються порівну — якщо немає договору про інший розподіл. Краще прописати все заздалегідь.",
+    no: "Без договору закон захищає обох: Соломія і Данило — співавтори з рівними правами. Але це може призвести до конфліктів — тому договір між співавторами дуже важливий.",
+    tag: "coauthorship"
+  },
+  {
+    scene: "Данило виклав свої інструментали на SoundCloud з позначкою «Free Download». Інший музикант завантажив біт і продав пісню на ньому лейблу.",
+    text: "Чи порушив музикант права Данила?",
+    opts: [
+      "Ні — «Free Download» означає можна використовувати будь-як",
+      "Ні — завантаження було безкоштовним, значить дозвіл є",
+      "Так — «Free Download» означає лише безкоштовне завантаження, а не дозвіл на комерційне використання",
+      "Залежить від країни музиканта"
+    ],
+    correct: 2,
+    ok: "Саме так! <strong>«Free Download» ≠ вільна ліцензія</strong>. Це лише дозвіл завантажити безкоштовно для особистого прослуховування. Комерційне використання потребує окремої ліцензії.",
+    no: "Це поширена пастка. «Free Download» — це дозвіл завантажити, а не використовувати як завгодно. Комерційний продаж пісні на чужому біті без ліцензії — порушення.",
+    tag: "license"
+  },
+  {
+    scene: "Катерина отримала повідомлення від YouTube: відео з її власною піснею заблоковано через скаргу лейблу. Але вона — автор тексту і мелодії.",
+    text: "Чому YouTube заблокував відео авторки пісні?",
+    opts: [
+      "YouTube зробив помилку — таке неможливо",
+      "Лейбл має майнові права на запис, навіть якщо Катерина — автор",
+      "Катерина мала зареєструвати пісню до публікації",
+      "Блокування відбулося через технічну помилку алгоритму"
+    ],
+    correct: 1,
+    ok: "Правильно! Авторське право і <strong>суміжні права на запис</strong> — різні речі. Лейбл, який фінансував запис, може мати права на фонограму. Тому навіть автор не завжди може публікувати «свою» пісню.",
+    no: "Тут ключова різниця: авторське право на твір (слова і мелодія) — одне. Суміжні права на фонограму (запис) — інше. Лейбл може мати права на конкретний запис, навіть якщо Катерина автор пісні.",
+    tag: "related"
+  },
+  {
+    scene: "Соломія хоче захистити нові пісні перед тим, як показувати їх продюсерам. Подруга каже: «Надішли собі листа на email — буде доказом дати».",
+    text: "Чи є це надійним способом зафіксувати авторство?",
+    opts: [
+      "Так, цілком достатньо — суди завжди це приймають",
+      "Частково — краще, ніж нічого, але не замінює нотаріального посвідчення або реєстрації",
+      "Ні — email не є жодним доказом",
+      "Так, але лише якщо надіслати рекомендованим листом"
+    ],
+    correct: 1,
+    ok: "Правильно! Email-лист — це <strong>слабкий доказ</strong>: легко підробити дату, складно перевірити. Надійніше: нотаріальне посвідчення рукопису, депонування у організації з управління правами або blockchain-фіксація.",
+    no: "Email-лист — краще, ніж нічого, але ненадійно. Дату відправлення можна підробити або оскаржити. Для серйозного захисту варто нотаріально посвідчити рукопис або скористатись реєстрацією.",
+    tag: "protection"
+  }
+];
+
+const RECS = {
+  basics: {icon:"🎵", title:"Авторське право виникає автоматично", text:"Реєстрація не потрібна, але фіксація дати створення (нотаріус, депонування) захищає у спорах. Зберігай чернетки, скріншоти, чати з демозаписами."},
+  contracts: {icon:"📝", title:"Читай договір перед підписанням", text:"Пункт про «передачу майнових прав» може позбавити тебе доходів і права виступати з власними піснями на роки. Завжди консультуйся з юристом перед підписанням."},
+  protection: {icon:"🛡️", title:"Захист від порушень", text:"Навіть короткий фрагмент і «схожа» мелодія можуть бути порушенням. Якщо твій твір використали без дозволу — фіксуй факт порушення і звертайся по допомогу."},
+  license: {icon:"📄", title:"Ліцензії та дозволи", text:"Free Download ≠ вільна ліцензія. Кавер ≠ автоматичний дозвіл. Будь-яке комерційне використання чужої музики потребує ліцензії."},
+  coauthorship: {icon:"🤝", title:"Договір між співавторами", text:"Якщо ви пишете разом — підпишіть простий договір про розподіл прав і доходів. Навіть між друзями. Це захищає обох."},
+  related: {icon:"💿", title:"Суміжні права на запис", text:"Авторське право на пісню і суміжні права на фонограму — різні речі. Лейбл може мати права на запис, навіть якщо ти автор тексту і мелодії."}
+};
+
+let cur=0, ok=0, no=0, pts=0, wrongTags=new Set();
+
+function startQuiz(){
+  document.getElementById('hero').style.display='none';
+  document.getElementById('intro-block').style.display='none';
+  document.getElementById('progress-wrap').classList.add('show');
+  document.getElementById('score-row').classList.add('show');
+  showQ();
+}
+
+function showQ(){
+  const c=document.getElementById('q-container');
+  c.innerHTML='';
+  if(cur>=Q.length){showResult();return;}
+  const q=Q[cur];
+  const pct=(cur/Q.length)*100;
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-label').textContent=(cur+1)+' / '+Q.length;
+
+  const wrap=document.createElement('div');
+  wrap.innerHTML=`
+    <div class="q-num">Питання ${cur+1} з ${Q.length}</div>
+    <div class="scene"><strong>📍</strong> ${q.scene}</div>
+    <div class="q-text">${q.text}</div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="fb"></div>
+    <button class="next-btn" id="nb" onclick="nextQ()">${cur<Q.length-1?'Наступне →':'Результат →'}</button>
+  `;
+  c.appendChild(wrap);
+
+  const opts=document.getElementById('opts');
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='opt'; b.textContent=o;
+    b.onclick=()=>answer(i);
+    opts.appendChild(b);
+  });
+}
+
+function answer(idx){
+  const q=Q[cur];
+  const btns=document.querySelectorAll('.opt');
+  btns.forEach(b=>b.disabled=true);
+  const fb=document.getElementById('fb');
+  if(idx===q.correct){
+    btns[idx].classList.add('correct');
+    ok++; pts+=10;
+    fb.className='feedback show ok';
+    fb.innerHTML='<strong>✅ Правильно!</strong>'+q.ok;
+  } else {
+    btns[idx].classList.add('wrong');
+    btns[q.correct].classList.add('correct');
+    no++; wrongTags.add(q.tag);
+    fb.className='feedback show no';
+    fb.innerHTML='<strong>❌ Не зовсім.</strong>'+q.no;
+  }
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-no').textContent=no;
+  document.getElementById('sc-pt').textContent=pts;
+  document.getElementById('nb').classList.add('show');
+}
+
+function nextQ(){cur++;showQ();}
+
+function showResult(){
+  document.getElementById('progress-wrap').style.display='none';
+  document.getElementById('score-row').style.display='none';
+  document.getElementById('q-container').innerHTML='';
+  const pct=Math.round(ok/Q.length*100);
+  document.getElementById('r-correct').textContent=ok+' правильних з '+Q.length;
+  document.getElementById('r-pct').textContent=pct+'%';
+  setTimeout(()=>{document.getElementById('r-bar').style.width=pct+'%';},100);
+
+  let icon,title,sub;
+  if(pct>=80){icon='🏆';title='Музикант з правовим слухом!';sub='Відмінно! Ти розумієш як захистити свою музику. Перед наступним договором з лейблом чи продюсером — покажи його юристу.';}
+  else if(pct>=50){icon='🎸';title:'Добрий початок!';sub='Базові речі ти знаєш, але є прогалини — особливо щодо договорів і ліцензій. Один непрочитаний пункт може коштувати роки роботи.';}
+  else{icon='🎵';title='Музика важливіша за юридику?';sub='Це зрозуміло — але саме незнання прав коштує музикантам найдорожче. Варто розібратись до першого серйозного договору.';}
+
+  document.getElementById('r-icon').textContent=icon;
+  document.getElementById('r-title').textContent=title;
+  document.getElementById('r-sub').textContent=sub;
+
+  const recs=document.getElementById('r-recs');
+  const tags=wrongTags.size>0?[...wrongTags].slice(0,3):['basics','contracts'];
+  tags.forEach(t=>{
+    const r=RECS[t];
+    if(r) recs.innerHTML+=`<div class="rec-card"><h4>${r.icon} ${r.title}</h4><p>${r.text}</p></div>`;
+  });
+
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+</body></html>

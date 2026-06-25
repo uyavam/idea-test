@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- saved from url=(0234)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%94%D0%B8%D1%82%D1%8F%D1%87%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8E/%D0%93%D1%96%D1%82%20%D1%85%D0%B0%D0%B1/sim-trademark.html -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Торгові марки — Юридична кухня Сосновського</title>
+<link href="./quiz-trademark-adult_files/css2" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1a0f;--bg2:#111f11;--card:#1a2e1a;--card2:#213021;
+  --green1:#22c98e;--green2:#4ade80;--gold:#c8992a;--gold2:#ffd166;
+  --red:#e05050;--red-bg:rgba(224,80,80,0.12);
+  --ok:#22c98e;--ok-bg:rgba(34,201,142,0.12);
+  --text:#e0f0e0;--muted:#7a9a7a;--border:rgba(255,255,255,0.08);
+  --accent:#2d8a2d;--accent2:#3db33d;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+
+.brand{background:#080f08;text-align:center;padding:16px 20px 14px;border-bottom:1px solid var(--border);}
+.brand-name{font-family:'Unbounded',sans-serif;font-size:clamp(0.85rem,2.5vw,1.1rem);color:#fff;font-weight:700;}
+.brand-name span{color:var(--gold2);}
+.brand-slogan{font-size:0.7rem;color:#7aa3e8;font-style:italic;margin-top:4px;}
+.brand-line{width:36px;height:2px;background:var(--gold);margin:8px auto 0;border-radius:2px;}
+
+.hero{
+  background:linear-gradient(135deg,#0a140a 0%,#0f2a0f 50%,#0a1a0a 100%);
+  padding:48px 24px 44px;text-align:center;
+  position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+}
+.hero::before{content:'™';font-size:14rem;position:absolute;right:-20px;top:-30px;opacity:0.04;font-family:'Unbounded',sans-serif;font-weight:900;color:var(--green1);pointer-events:none;}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(34,201,142,0.08) 0%,transparent 60%);pointer-events:none;}
+.hero-tag{display:inline-block;background:var(--accent);color:#fff;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:20px;position:relative;z-index:1;}
+.hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(1.5rem,5vw,2.4rem);color:#fff;font-weight:900;line-height:1.15;margin-bottom:16px;position:relative;z-index:1;}
+.hero h1 em{font-style:normal;color:var(--green1);}
+.hero p{font-size:15px;color:var(--muted);max-width:500px;margin:0 auto 28px;line-height:1.75;position:relative;z-index:1;}
+.start-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:15px 40px;border:none;border-radius:50px;cursor:pointer;letter-spacing:0.5px;box-shadow:0 4px 24px rgba(34,201,142,0.2);transition:transform .2s,box-shadow .2s;position:relative;z-index:1;}
+.start-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(34,201,142,0.3);}
+
+.progress-wrap{background:#080f08;padding:12px 24px;display:none;align-items:center;gap:14px;border-bottom:1px solid var(--border);}
+.progress-wrap.show{display:flex;}
+.progress-track{flex:1;height:4px;background:rgba(255,255,255,0.08);border-radius:4px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));border-radius:4px;transition:width .5s ease;}
+.progress-label{font-size:12px;color:var(--muted);white-space:nowrap;font-weight:600;}
+
+.score-row{display:none;background:#0a130a;border-bottom:1px solid var(--border);padding:10px 24px;gap:0;}
+.score-row.show{display:flex;}
+.sc-cell{flex:1;text-align:center;border-right:1px solid var(--border);padding:6px 0;}
+.sc-cell:last-child{border-right:none;}
+.sc-cell .n{font-family:'Unbounded',sans-serif;font-size:1.4rem;font-weight:900;line-height:1;}
+.sc-cell:nth-child(1) .n{color:var(--ok);}
+.sc-cell:nth-child(2) .n{color:var(--red);}
+.sc-cell:nth-child(3) .n{color:var(--gold2);}
+.sc-cell .l{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+
+.main{max-width:700px;margin:0 auto;padding:32px 20px 60px;}
+
+.story-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px;position:relative;overflow:hidden;}
+.story-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent2),var(--gold));}
+.story-tag{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green1);margin-bottom:12px;}
+.story-text{font-size:14px;color:rgba(224,240,224,0.8);line-height:1.85;}
+.story-text strong{color:#fff;}
+.story-text em{color:var(--gold2);font-style:normal;}
+
+.chars{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.char-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;flex:1;min-width:160px;transition:border-color .2s;}
+.char-card:hover{border-color:var(--accent2);}
+.char-ico{font-size:2rem;}
+.char-name{font-size:13px;font-weight:700;color:#fff;}
+.char-role{font-size:11px;color:var(--muted);margin-top:2px;}
+
+.q-num{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green1);margin-bottom:10px;}
+.q-text{font-size:17px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:20px;}
+.scene{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:20px;font-size:14px;line-height:1.75;color:rgba(224,240,224,0.8);}
+.scene strong{color:var(--gold2);}
+
+.opts{display:grid;gap:10px;margin-bottom:16px;}
+.opt{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:15px 18px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--text);cursor:pointer;text-align:left;line-height:1.45;transition:border-color .15s,background .15s,transform .12s;}
+.opt:hover:not(:disabled){border-color:var(--accent2);background:rgba(45,138,45,0.12);transform:translateX(4px);}
+.opt.correct{border-color:var(--ok)!important;background:var(--ok-bg)!important;color:var(--ok)!important;}
+.opt.wrong{border-color:var(--red)!important;background:var(--red-bg)!important;color:var(--red)!important;}
+.opt:disabled{cursor:default;}
+
+.feedback{display:none;border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.65;margin-bottom:16px;}
+.feedback.show{display:block;}
+.feedback.ok{background:var(--ok-bg);border:1.5px solid rgba(34,201,142,0.3);color:#a0f0c8;}
+.feedback.no{background:var(--red-bg);border:1.5px solid rgba(224,80,80,0.3);color:#f0a8a8;}
+.feedback strong{display:block;font-size:15px;margin-bottom:5px;color:#fff;}
+
+.next-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 28px;border:none;border-radius:50px;cursor:pointer;display:none;box-shadow:0 4px 16px rgba(34,201,142,0.15);transition:transform .15s;}
+.next-btn.show{display:inline-block;}
+.next-btn:hover{transform:translateY(-1px);}
+
+.result{display:none;}
+.result.show{display:block;}
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px 28px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden;}
+.result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent2),var(--gold));}
+.result-icon{font-size:4rem;margin-bottom:16px;}
+.result-title{font-family:'Unbounded',sans-serif;font-size:clamp(1.2rem,4vw,1.7rem);color:#fff;font-weight:900;margin-bottom:10px;}
+.result-sub{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px;}
+.score-bar-wrap{background:rgba(255,255,255,0.06);border-radius:6px;height:8px;margin:0 0 8px;overflow:hidden;}
+.score-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));border-radius:6px;transition:width 1.2s ease;}
+.score-nums{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:600;}
+
+.rec-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green1);margin:24px 0 14px;}
+.rec-card{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent2);border-radius:0 12px 12px 0;padding:18px 20px;margin-bottom:10px;text-align:left;}
+.rec-card h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px;}
+.rec-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+
+.cta-box{background:linear-gradient(135deg,#0a1f0a,#0a1a0a);border:1px solid rgba(34,201,142,0.2);border-radius:16px;padding:28px 24px;text-align:center;margin-top:20px;}
+.cta-box p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:18px;}
+.cta-box strong{color:var(--gold2);}
+.cta-btn{background:var(--gold);color:#0f1a0f;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 30px;border:none;border-radius:50px;cursor:pointer;transition:background .2s,transform .15s;}
+.cta-btn:hover{background:var(--gold2);transform:translateY(-1px);}
+.restart-link{display:block;margin-top:14px;font-size:12px;color:rgba(255,255,255,0.2);cursor:pointer;text-decoration:underline;}
+.restart-link:hover{color:var(--muted);}
+
+.footer{text-align:center;padding:16px;font-size:11px;color:rgba(255,255,255,0.2);border-top:1px solid var(--border);}
+
+@media(max-width:500px){.chars{flex-direction:column;}.q-text{font-size:15px;}.main{padding:20px 14px 40px;}}
+</style>
+</head>
+<body>
+
+<div class="brand">
+  <div class="brand-name">Юридична кухня <span>Сосновського</span></div>
+  <div class="brand-slogan">Правовий захист — це не формальність, а продовження вашого твору</div>
+  <div class="brand-line"></div>
+</div>
+
+<div class="hero" id="hero">
+  <div class="hero-tag">™ Торгові марки · 15–18 років</div>
+  <h1>Чий це <em>бренд?</em></h1>
+  <p>Олена відкрила кав'ярню. Максим запустив streetwear-бренд. Юлія створила косметику. Але хто може захистити свою назву — а хто вже спізнився?</p>
+  <button class="start-btn" onclick="startQuiz()">Пройти вікторину →</button>
+</div>
+
+<div class="progress-wrap" id="progress-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="progress-label" id="progress-label">1 / 10</div>
+</div>
+<div class="score-row" id="score-row">
+  <div class="sc-cell"><div class="n" id="sc-ok">0</div><div class="l">✅ Правильно</div></div>
+  <div class="sc-cell"><div class="n" id="sc-no">0</div><div class="l">❌ Помилки</div></div>
+  <div class="sc-cell"><div class="n" id="sc-pt">0</div><div class="l">★ Балів</div></div>
+</div>
+
+<div class="main">
+  <div id="intro-block">
+    <div class="story-box">
+      <div class="story-tag">🏷️ Наша історія</div>
+      <div class="story-text">
+        <strong>Олена</strong> відкрила затишну кав'ярню «Зернятко» у Вінниці. Через рік з'явився конкурент з такою ж назвою — і каже, що він зареєстрував марку першим.<br><br>
+        <strong>Максим</strong> шиє одяг під брендом «GRIT» і продає через Instagram. Нещодавно отримав листа від американської компанії з такою ж назвою.<br><br>
+        <strong>Юлія</strong> розробила лінійку натуральної косметики «Люмен» і хоче вийти на ринок Польщі. Але спочатку треба зрозуміти, як захистити бренд за кордоном.<br><br>
+        <em>Торгова марка — це не просто логотип. Це юридична зброя у конкурентній боротьбі.</em>
+      </div>
+    </div>
+    <div class="chars">
+      <div class="char-card"><div class="char-ico">☕</div><div><div class="char-name">Олена</div><div class="char-role">Власниця кав'ярні, 17 р.</div></div></div>
+      <div class="char-card"><div class="char-ico">👕</div><div><div class="char-name">Максим</div><div class="char-role">Streetwear-бренд, 16 р.</div></div></div>
+      <div class="char-card"><div class="char-ico">🧴</div><div><div class="char-name">Юлія</div><div class="char-role">Косметичний бренд, 18 р.</div></div></div>
+    </div>
+  </div>
+
+  <div id="q-container"></div>
+
+  <div class="result" id="result">
+    <div class="result-card">
+      <div class="result-icon" id="r-icon">™</div>
+      <div class="result-title" id="r-title">Твій результат</div>
+      <div class="result-sub" id="r-sub"></div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" id="r-bar"></div></div>
+      <div class="score-nums"><span id="r-correct">0 правильних</span><span id="r-pct">0%</span></div>
+    </div>
+    <div class="rec-title">Що важливо знати про бренд</div>
+    <div id="r-recs"></div>
+    <div class="cta-box">
+      <p>Назва бренду — це актив.<br><strong>Захисти його до того, як це зробить хтось інший.</strong></p>
+      <button class="cta-btn" onclick="alert(&#39;Вставте посилання на форму або Telegram&#39;)">Записатися на консультацію</button>
+      <span class="restart-link" onclick="location.reload()">↺ Пройти ще раз</span>
+    </div>
+  </div>
+</div>
+
+<div class="footer">© Юридична кухня Сосновського · Всі права захищені</div>
+
+<script>
+const Q = [
+  {
+    scene: "Олена відкрила кав'ярню «Зернятко» і використовує цю назву вже рік. Реєстрацію торгової марки вона не робила.",
+    text: "Чи захищена назва «Зернятко» від копіювання конкурентами?",
+    opts:[
+      "Так — рік роботи під назвою дає автоматичний захист",
+      "Ні — без реєстрації торгової марки правового захисту немає",
+      "Так, якщо вона має зареєстроване ФОП з такою назвою",
+      "Лише якщо назва є у Google Maps"
+    ],
+    correct:1,
+    ok:"Правильно! На відміну від авторського права, <strong>торгова марка не виникає автоматично</strong>. Без реєстрації будь-хто може зареєструвати «Зернятко» і змусити Олену перейменуватись.",
+    no:"Торгова марка — не авторське право. Вона не виникає автоматично. Без реєстрації назва не захищена, навіть якщо ти використовуєш її роками.",
+    tag:"basics"
+  },
+  {
+    scene: "Максим хоче зареєструвати торгову марку «GRIT» для одягу. Під час перевірки виявилось, що така назва вже зареєстрована для взуття.",
+    text: "Чи може Максим все одно зареєструвати «GRIT» для одягу?",
+    opts:[
+      "Ні — якщо назва вже існує, реєстрація неможлива",
+      "Так — реєстрація можлива в іншому класі товарів, якщо немає ризику плутанини",
+      "Так, але лише з іншим логотипом",
+      "Лише якщо він домовиться з власником марки для взуття"
+    ],
+    correct:1,
+    ok:"Правильно! Торгова марка реєструється у конкретних <strong>класах товарів (система Ніцца)</strong>. Одяг і взуття — різні класи. Якщо назви у різних класах не плутають споживача — реєстрація можлива.",
+    no:"Захист торгової марки діє лише у зареєстрованих класах. Одяг (клас 25) і взуття (теж клас 25, але різні підкласи — варто уточнити). У різних класах та сама назва може бути дозволена.",
+    tag:"classes"
+  },
+  {
+    scene: "Юлія хоче вийти на ринок Польщі з косметикою «Люмен». Торгову марку вона зареєструвала лише в Україні.",
+    text: "Чи захищений бренд «Люмен» у Польщі?",
+    opts:[
+      "Так — українська реєстрація діє в усьому ЄС",
+      "Ні — для захисту в Польщі потрібна окрема реєстрація або Мадридська система",
+      "Так, якщо Юлія є громадянкою ЄС",
+      "Лише якщо бренд зареєстровано до 2004 року"
+    ],
+    correct:1,
+    ok:"Правильно! Українська реєстрація захищає лише в Україні. Для Польщі (ЄС) потрібна або <strong>реєстрація EUIPO</strong> (єдина марка ЄС), або через <strong>Мадридську систему ВОІВ</strong>.",
+    no:"Торгова марка має територіальну дію. Українська реєстрація — захист лише в Україні. Для ЄС потрібна або марка ЄС через EUIPO, або Мадридська система.",
+    tag:"territory"
+  },
+  {
+    scene: "Конкурент Олени відкрив кав'ярню «Зернятко UA» — змінив лише одну букву і додав «UA». Олена вже зареєструвала «Зернятко».",
+    text: "Чи порушує конкурент права Олени?",
+    opts:[
+      "Ні — назва технічно інша",
+      "Лише якщо він у тому самому місті",
+      "Так — схожа до ступеня змішування назва є порушенням",
+      "Лише якщо він скопіював і логотип"
+    ],
+    correct:2,
+    ok:"Правильно! Закон захищає від знаків, <strong>схожих до ступеня змішування</strong> — коли споживач може переплутати бренди. «Зернятко UA» явно схоже і вводить в оману.",
+    no:"«Схожість до ступеня змішування» — ключовий принцип. Додавання однієї літери чи слова не рятує від порушення, якщо споживач може переплутати бренди.",
+    tag:"infringement"
+  },
+  {
+    scene: "Максим продає одяг під «GRIT» вже 2 роки. Він дізнався, що інша компанія подала заявку на реєстрацію «GRIT» для одягу раніше за нього.",
+    text: "Що може зробити Максим для захисту свого бренду?",
+    opts:[
+      "Нічого — хто перший подав заявку, той і правий",
+      "Подати заперечення проти реєстрації, довівши попереднє використання бренду",
+      "Змінити написання на «GR1T»",
+      "Подати кримінальну скаргу на компанію"
+    ],
+    correct:1,
+    ok:"Правильно! Максим може подати <strong>заперечення до Укрпатенту</strong>, надавши докази використання бренду раніше: фото, чеки, публікації в Instagram, дата реєстрації домену.",
+    no:"В Україні діє принцип першого використання як аргумент у суперечках. Максим може оскаржити реєстрацію, надавши докази більш раннього використання.",
+    tag:"registration"
+  },
+  {
+    scene: "Юлія отримала пропозицію від дистриб'ютора: той хоче продавати «Люмен» у Румунії і просить передати йому права на торгову марку в цій країні.",
+    text: "Як правильно оформити співпрацю, не втрачаючи права на марку?",
+    opts:[
+      "Передати права назавжди — так простіше",
+      "Укласти ліцензійний договір: дистриб'ютор отримує право використовувати марку, але власником залишається Юлія",
+      "Зареєструвати спільну марку",
+      "Усна домовленість достатня для довіреного партнера"
+    ],
+    correct:1,
+    ok:"Правильно! <strong>Ліцензійний договір</strong> — правильний інструмент. Юлія залишається власником марки і контролює якість. Передача прав назавжди — небезпечно і незворотньо.",
+    no:"Ліцензія — це дозвіл використовувати марку за певних умов. Власник залишається Юлія. Передача прав назавжди означає втрату контролю над брендом у цій країні.",
+    tag:"licensing"
+  },
+  {
+    scene: "Олена зареєструвала логотип «Зернятко» як торгову марку 5 років тому, але жодного разу не поновлювала реєстрацію.",
+    text: "Що відбувається з торговою маркою через 10 років без поновлення?",
+    opts:[
+      "Нічого — торгова марка діє вічно після реєстрації",
+      "Марка автоматично стає суспільним надбанням",
+      "Реєстрація припиняється, і назву може зареєструвати хтось інший",
+      "Марка переходить до Укрпатенту"
+    ],
+    correct:2,
+    ok:"Правильно! Торгова марка в Україні діє <strong>10 років і потребує поновлення</strong>. Без поновлення реєстрація анулюється — і хтось інший може зареєструвати цю назву.",
+    no:"Торгова марка — не безстрокова. В Україні реєстрація діє 10 років, після чого потрібно сплатити збір і поновити. Інакше марка «вільна» для всіх.",
+    tag:"basics"
+  },
+  {
+    scene: "Максим побачив, що китайська компанія на AliExpress продає футболки з його логотипом «GRIT» без дозволу.",
+    text: "Що може зробити Максим, якщо його марка зареєстрована в Україні?",
+    opts:[
+      "Нічого — юрисдикція Китаю, Україна не допоможе",
+      "Подати скаргу через платформу AliExpress і одночасно ініціювати реєстрацію марки в Китаї",
+      "Написати у коментарях під товаром",
+      "Лише звернутись до поліції України"
+    ],
+    correct:1,
+    ok:"Правильно! AliExpress має механізм захисту ІВ — Максим може <strong>подати скаргу через платформу</strong> і заблокувати товар. Паралельно варто реєструвати марку в Китаї через Мадридську систему.",
+    no:"Великі платформи (AliExpress, Amazon) мають процедури захисту інтелектуальної власності. Скарга через платформу — швидший спосіб зупинити порушника, ніж суд.",
+    tag:"infringement"
+  },
+  {
+    scene: "Юлія хоче назвати нову лінійку «ЧИСТЕ НЕБО». Патентний повірений каже, що така назва може не пройти реєстрацію.",
+    text: "Чому описова або загальна назва може отримати відмову в реєстрації?",
+    opts:[
+      "Бо вона українською — треба латиницею",
+      "Бо описові та загальновживані слова не можуть монополізуватись одним брендом",
+      "Бо небо — це природний об'єкт",
+      "Таких обмежень не існує"
+    ],
+    correct:1,
+    ok:"Правильно! Закон забороняє реєструвати назви, що <strong>описують властивості товару або є загальновживаними</strong>. «Чисте небо» для косметики — описова назва. Унікальний вигаданий бренд захистити легше.",
+    no:"Описові назви (натуральний, чистий, кращий) не підлягають монополізації — інакше б один бренд «заблокував» загальновживані слова для всіх. Вигадані назви реєструються значно простіше.",
+    tag:"registration"
+  },
+  {
+    scene: "Олена отримала листа від юриста конкурента: «Припиніть використання назви «Зернятко», або ми подамо до суду». Але у Олени вже є зареєстрована торгова марка.",
+    text: "Як правильно відреагувати Олені?",
+    opts:[
+      "Негайно перейменуватись, щоб уникнути конфлікту",
+      "Ігнорувати лист",
+      "Надіслати відповідь з доказами реєстрації своєї марки і вимогою припинити тиск",
+      "Закрити кав'ярню тимчасово"
+    ],
+    correct:2,
+    ok:"Правильно! Зареєстрована марка — це <strong>юридична зброя захисту</strong>. Олена має право надіслати відповідь з документами і, навпаки, може вимагати від конкурента припинити використання схожої назви.",
+    no:"Зареєстрована торгова марка — це щит. Олені не потрібно тікати — вона у правовій позиції сили. Відповідь з документами реєстрації — правильний крок.",
+    tag:"infringement"
+  }
+];
+
+const RECS={
+  basics:{icon:"™️",title:"Реєстрація — не формальність",text:"Торгова марка не виникає автоматично. Без реєстрації будь-хто може зайняти вашу назву. Реєстрація діє 10 років і потребує поновлення."},
+  classes:{icon:"📦",title:"Класи товарів Ніцца",text:"Захист діє лише у класах, де зареєстровано. Плануй реєстрацію з урахуванням усіх напрямків бізнесу — навіть майбутніх."},
+  territory:{icon:"🌍",title:"Міжнародний захист",text:"Українська марка — захист лише в Україні. Для виходу на ринок ЄС потрібна марка EUIPO або Мадридська система ВОІВ."},
+  infringement:{icon:"⚠️",title:"Захист від порушників",text:"Схожість до ступеня змішування — порушення навіть без дослівного копіювання. Зареєстрована марка дає право вимагати припинення і компенсації."},
+  registration:{icon:"📋",title:"Вибір і реєстрація назви",text:"Описові та загальні слова важче зареєструвати. Вигадані, унікальні назви — сильніший захист. Перевіряй назву через базу Укрпатенту до запуску."},
+  licensing:{icon:"🤝",title:"Ліцензія замість передачі прав",text:"Дистриб'юторам і партнерам давай ліцензію, а не передавай права. Ліцензія — тимчасовий дозвіл з умовами. Власником залишаєшся ти."}
+};
+
+let cur=0,ok=0,no=0,pts=0,wrongTags=new Set();
+
+function startQuiz(){
+  document.getElementById('hero').style.display='none';
+  document.getElementById('intro-block').style.display='none';
+  document.getElementById('progress-wrap').classList.add('show');
+  document.getElementById('score-row').classList.add('show');
+  showQ();
+}
+
+function showQ(){
+  const c=document.getElementById('q-container');
+  c.innerHTML='';
+  if(cur>=Q.length){showResult();return;}
+  const q=Q[cur];
+  document.getElementById('progress-fill').style.width=(cur/Q.length*100)+'%';
+  document.getElementById('progress-label').textContent=(cur+1)+' / '+Q.length;
+  const w=document.createElement('div');
+  w.innerHTML=`
+    <div class="q-num">Питання ${cur+1} з ${Q.length}</div>
+    <div class="scene"><strong>📍</strong> ${q.scene}</div>
+    <div class="q-text">${q.text}</div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="fb"></div>
+    <button class="next-btn" id="nb" onclick="nextQ()">${cur<Q.length-1?'Наступне →':'Результат →'}</button>
+  `;
+  c.appendChild(w);
+  const opts=document.getElementById('opts');
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='opt';b.textContent=o;b.onclick=()=>answer(i);
+    opts.appendChild(b);
+  });
+}
+
+function answer(idx){
+  const q=Q[cur];
+  const btns=document.querySelectorAll('.opt');
+  btns.forEach(b=>b.disabled=true);
+  const fb=document.getElementById('fb');
+  if(idx===q.correct){
+    btns[idx].classList.add('correct');ok++;pts+=10;
+    fb.className='feedback show ok';
+    fb.innerHTML='<strong>✅ Правильно!</strong>'+q.ok;
+  }else{
+    btns[idx].classList.add('wrong');btns[q.correct].classList.add('correct');
+    no++;wrongTags.add(q.tag);
+    fb.className='feedback show no';
+    fb.innerHTML='<strong>❌ Не зовсім.</strong>'+q.no;
+  }
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-no').textContent=no;
+  document.getElementById('sc-pt').textContent=pts;
+  document.getElementById('nb').classList.add('show');
+}
+
+function nextQ(){cur++;showQ();}
+
+function showResult(){
+  document.getElementById('progress-wrap').style.display='none';
+  document.getElementById('score-row').style.display='none';
+  document.getElementById('q-container').innerHTML='';
+  const pct=Math.round(ok/Q.length*100);
+  document.getElementById('r-correct').textContent=ok+' правильних з '+Q.length;
+  document.getElementById('r-pct').textContent=pct+'%';
+  setTimeout(()=>{document.getElementById('r-bar').style.width=pct+'%';},100);
+  let icon,title,sub;
+  if(pct>=80){icon='🏆';title='Стратег бренду!';sub='Чудово! Ти розумієш як захистити назву і не дати конкурентам скористатись твоєю роботою.';}
+  else if(pct>=50){icon='™️';title='Непоганий старт!';sub='Базові речі зрозумілі, але є нюанси — особливо щодо реєстрації і міжнародного захисту. Варто розібратись до запуску бізнесу.';}
+  else{icon='⚠️';title='Бренд у зоні ризику!';sub='Без розуміння торгових марок можна запустити бізнес — і одного дня отримати листа «змініть назву». Краще розібратись заздалегідь.';}
+  document.getElementById('r-icon').textContent=icon;
+  document.getElementById('r-title').textContent=title;
+  document.getElementById('r-sub').textContent=sub;
+  const recs=document.getElementById('r-recs');
+  const tags=wrongTags.size>0?[...wrongTags].slice(0,3):['basics','territory'];
+  tags.forEach(t=>{
+    const r=RECS[t];
+    if(r) recs.innerHTML+=`<div class="rec-card"><h4>${r.icon} ${r.title}</h4><p>${r.text}</p></div>`;
+  });
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+</body></html>

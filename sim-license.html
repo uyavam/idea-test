@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<!-- saved from url=(0678)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%94%D0%B8%D1%82%D1%8F%D1%87%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8E/%D0%A2%D0%95%D0%A1%D0%A2%D0%98%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_files/%D0%A2%D0%B5%D1%81%D1%82_%20%D0%9B%D1%96%D1%86%D0%B5%D0%BD%D0%B7%D1%96%D0%B9%D0%BD%D1%96%20%D1%83%D0%B3%D0%BE%D0%B4%D0%B8%20%E2%80%94%20%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.html -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тест: Ліцензійні угоди — Юридична кухня Сосновського</title>
+<style>
+  :root {
+    --navy: #1a2b4a;
+    --navy2: #243559;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --white: #ffffff;
+    --offwhite: #f7f5f0;
+    --muted: #8a9ab5;
+    --border: #d6d0c4;
+    --green: #2d7a5f;
+    --green-bg: #eaf5f0;
+    --red: #a03030;
+    --red-bg: #fdf0f0;
+    --text: #1a2b4a;
+    --radius: 14px;
+    --shadow: 0 4px 24px rgba(26,43,74,0.10);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  #jk-quiz-wrap {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--offwhite);
+    color: var(--text);
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  /* HEADER */
+  .jk-header {
+    background: var(--navy);
+    padding: 32px 40px 28px;
+    text-align: center;
+    position: relative;
+  }
+  .jk-logo {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+  }
+  .jk-title {
+    font-size: clamp(20px, 4vw, 28px);
+    color: var(--white);
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .jk-subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    font-family: 'Arial', sans-serif;
+  }
+
+  /* PROGRESS */
+  .jk-progress-area {
+    background: var(--navy2);
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .jk-progress-track {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .jk-progress-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+  .jk-progress-text {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap;
+    min-width: 60px;
+    text-align: right;
+  }
+
+  /* BODY */
+  .jk-body { padding: 36px 40px; }
+
+  /* INTRO */
+  #jk-intro { display: block; }
+  .jk-intro-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #3a4a60;
+    margin-bottom: 24px;
+  }
+  .jk-intro-text strong { color: var(--navy); }
+  .jk-topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .jk-topic-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-family: 'Arial', sans-serif;
+    color: var(--navy);
+  }
+
+  /* QUESTION */
+  #jk-question { display: none; }
+  .jk-q-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .jk-q-text {
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--navy);
+    margin-bottom: 24px;
+    font-weight: normal;
+  }
+  .jk-options { display: grid; gap: 10px; margin-bottom: 20px; }
+  .jk-opt {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    color: var(--navy);
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.18s, background 0.18s, transform 0.12s;
+    line-height: 1.4;
+  }
+  .jk-opt:hover:not(:disabled) {
+    border-color: var(--gold);
+    background: #fffdf4;
+    transform: translateX(3px);
+  }
+  .jk-opt.selected-correct {
+    border-color: var(--green);
+    background: var(--green-bg);
+    color: var(--green);
+  }
+  .jk-opt.selected-wrong {
+    border-color: var(--red);
+    background: var(--red-bg);
+    color: var(--red);
+  }
+  .jk-opt.reveal-correct {
+    border-color: var(--green);
+    background: var(--green-bg);
+    color: var(--green);
+  }
+  .jk-opt:disabled { cursor: default; }
+
+  /* FEEDBACK */
+  .jk-feedback {
+    display: none;
+    padding: 14px 18px;
+    border-radius: var(--radius);
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .jk-feedback.ok {
+    display: block;
+    background: var(--green-bg);
+    border: 1px solid #a8d5c2;
+    color: #1e5c45;
+  }
+  .jk-feedback.nope {
+    display: block;
+    background: var(--red-bg);
+    border: 1px solid #e0b0b0;
+    color: #7a2020;
+  }
+  .jk-feedback strong { display: block; margin-bottom: 4px; font-size: 15px; }
+
+  /* RESULT */
+  #jk-result { display: none; }
+  .jk-result-header {
+    text-align: center;
+    padding: 20px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+  .jk-result-icon { font-size: 3.5rem; margin-bottom: 12px; }
+  .jk-result-title {
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .jk-result-subtitle {
+    font-size: 15px;
+    color: #3a4a60;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  .jk-score-bar-wrap {
+    background: #e8e4da;
+    border-radius: 8px;
+    height: 12px;
+    margin: 18px 0 6px;
+    overflow: hidden;
+  }
+  .jk-score-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 8px;
+    transition: width 1s ease;
+    width: 0%;
+  }
+  .jk-score-nums {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* RECOMMENDATIONS */
+  .jk-rec-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .jk-rec-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    margin-bottom: 12px;
+  }
+  .jk-rec-block h4 {
+    font-size: 15px;
+    color: var(--navy);
+    margin-bottom: 8px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .jk-rec-block p {
+    font-size: 14px;
+    color: #3a4a60;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .jk-cta {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .jk-cta p {
+    color: rgba(255,255,255,0.8);
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .jk-cta strong { color: var(--gold-light); }
+
+  /* BUTTONS */
+  .jk-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 13px 32px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: background 0.18s, transform 0.12s;
+    text-decoration: none;
+  }
+  .jk-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .jk-btn-ghost {
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.25);
+    margin-top: 10px;
+    font-size: 13px;
+    padding: 10px 24px;
+  }
+  .jk-btn-ghost:hover { background: rgba(255,255,255,0.08); color: white; transform: none; }
+
+  .jk-next-btn {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.18s;
+    display: none;
+    letter-spacing: 0.3px;
+  }
+  .jk-next-btn:hover { background: var(--navy2); }
+  .jk-next-btn.show { display: inline-block; }
+
+  /* FOOTER */
+  .jk-footer {
+    background: var(--navy);
+    padding: 14px 40px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 560px) {
+    .jk-body { padding: 24px 20px; }
+    .jk-header { padding: 24px 20px; }
+    .jk-progress-area { padding: 12px 20px; }
+    .jk-footer { padding: 12px 20px; }
+    .jk-topics { grid-template-columns: 1fr; }
+    .jk-q-text { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="jk-quiz-wrap">
+
+  <!-- HEADER -->
+  <div class="jk-header">
+    <div class="jk-logo">⚖️ Юридична кухня Сосновського</div>
+    <div class="jk-title">Чи захищені ваші договори?</div>
+    <div class="jk-subtitle">Тест з ліцензійних угод та договорів у сфері IP</div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="jk-progress-area" id="jk-progress-area" style="display:none;">
+    <div class="jk-progress-track">
+      <div class="jk-progress-fill" id="jk-progress-fill"></div>
+    </div>
+    <div class="jk-progress-text" id="jk-progress-text">1 / 11</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="jk-body">
+
+    <!-- INTRO -->
+    <div id="jk-intro">
+      <div class="jk-intro-text">
+        Ліцензійний договір — це інструмент, який <strong>захищає вас і ваш твір</strong>. Але чи знаєте ви, як він працює насправді?
+        <br><br>
+        Пройдіть тест і дізнайтесь, які ризики існують у вашій ситуації та що потрібно змінити.
+      </div>
+      <div class="jk-topics">
+        <div class="jk-topic-item">📜 Типи ліцензій</div>
+        <div class="jk-topic-item">✍️ Обов'язкові умови договору</div>
+        <div class="jk-topic-item">⚠️ Типові помилки</div>
+        <div class="jk-topic-item">💰 Роялті та оплата</div>
+        <div class="jk-topic-item">🔒 Захист авторських прав</div>
+        <div class="jk-topic-item">🌍 Передача та обмеження</div>
+      </div>
+      <button class="jk-btn" onclick="startQuiz()">Розпочати тест →</button>
+    </div>
+
+    <!-- QUESTION -->
+    <div id="jk-question">
+      <div class="jk-q-label" id="jk-q-label">Питання 1 з 11</div>
+      <div class="jk-q-text" id="jk-q-text"></div>
+      <div class="jk-options" id="jk-options"></div>
+      <div class="jk-feedback" id="jk-feedback"></div>
+      <button class="jk-next-btn" id="jk-next-btn" onclick="nextQuestion()">Наступне питання →</button>
+    </div>
+
+    <!-- RESULT -->
+    <div id="jk-result">
+      <div class="jk-result-header">
+        <div class="jk-result-icon" id="res-icon">📋</div>
+        <div class="jk-result-title" id="res-title">Ваш результат</div>
+        <div class="jk-result-subtitle" id="res-sub"></div>
+        <div class="jk-score-bar-wrap">
+          <div class="jk-score-bar" id="res-bar"></div>
+        </div>
+        <div class="jk-score-nums">
+          <span id="res-correct-lbl">0 правильних</span>
+          <span id="res-pct-lbl">0%</span>
+        </div>
+      </div>
+
+      <div class="jk-rec-title">Рекомендації для вас</div>
+      <div id="res-recs"></div>
+
+      <div class="jk-cta">
+        <p>Правовий захист — це не формальність, а продовження вашого твору.<br>
+        <strong>Отримайте персональну консультацію</strong> та захистіть свої інтереси.</p>
+        <button class="jk-btn" onclick="alert(&#39;Тут може бути посилання на вашу форму запису або Telegram&#39;)">Записатися на консультацію</button>
+        <br>
+        <button class="jk-btn jk-btn-ghost" onclick="restartQuiz()">Пройти тест знову</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="jk-footer" id="jk-footer">
+    Юридична кухня Сосновського · Правовий захист інтелектуальної власності
+  </div>
+
+</div>
+
+<script>
+const QUESTIONS = [
+  {
+    text: "Ви передаєте свій твір (ілюстрацію, текст, музику) замовнику. Який документ юридично закріплює умови використання?",
+    options: [
+      "Достатньо усної домовленості або переписки в месенджері",
+      "Ліцензійний договір або договір про передачу майнових прав",
+      "Рахунок-фактура або акт виконаних робіт",
+      "Публічна оферта на сайті"
+    ],
+    correct: 1,
+    ok: "Саме так. Ліцензійний договір або договір про відчуження майнових прав — єдині документи, що юридично регулюють передачу прав на твір. Без них ви ризикуєте втратити контроль над власним результатом роботи.",
+    nope: "На жаль, це ненадійно. Лише письмовий ліцензійний договір або договір про передачу майнових прав дає реальний правовий захист обом сторонам.",
+    tag: "basics"
+  },
+  {
+    text: "Чим відрізняється виключна ліцензія від невиключної?",
+    options: [
+      "Виключна — дорожча, невиключна — дешевша. Принципової різниці немає",
+      "При виключній ліцензії лише ліцензіат може використовувати твір, автор більше не може видавати таких ліцензій іншим",
+      "Виключна ліцензія скасовує авторство, невиключна — ні",
+      "Виключна ліцензія діє вічно, невиключна — обмежена у часі"
+    ],
+    correct: 1,
+    ok: "Правильно. Виключна ліцензія фактично «монополізує» право використання для одного ліцензіата. Автор продовжує бути автором, але не може надавати ті самі права іншим у межах обумовленої сфери. Це суттєво впливає на ціну.",
+    nope: "Це поширена помилка. При виключній ліцензії ліцензіат отримує монопольне право у визначеній сфері — автор не може надавати ті самі права іншим. Це дуже важлива умова, яка впливає на вартість договору.",
+    tag: "types"
+  },
+  {
+    text: "Замовник просить передати «всі права» на ваш логотип. Що це означає юридично?",
+    options: [
+      "Ви зможете й надалі використовувати логотип у своєму портфоліо без обмежень",
+      "Потрібно укласти договір про відчуження (передачу) майнових прав — після цього замовник стає повноправним власником",
+      "Достатньо написати у листі «передаю всі права»",
+      "«Всі права» — це стандартний вираз, який нічого не змінює юридично"
+    ],
+    correct: 1,
+    ok: "Так. Передача «всіх прав» — це відчуження майнових прав у повному обсязі. Після підписання відповідного договору ви як автор зберігаєте лише немайнові (особисті) права — зокрема право авторства. Але продавати чи ліцензувати твір далі ви вже не зможете.",
+    nope: "Насправді «передача всіх прав» — серйозний юридичний крок. Потрібен окремий договір про відчуження майнових прав. Без нього передача не відбувається, а усні заяви не мають юридичної сили.",
+    tag: "transfer"
+  },
+  {
+    text: "Які умови є обов'язковими в ліцензійному договорі?",
+    options: [
+      "Лише назва твору та сума оплати",
+      "Сторони, опис твору, вид ліцензії (виключна/невиключна), строк, територія, способи використання та розмір винагороди",
+      "Підписи сторін — решта на розсуд",
+      "Достатньо вказати строк і суму"
+    ],
+    correct: 1,
+    ok: "Правильно. Ліцензійний договір без чіткого переліку цих умов — потенційний конфлікт. Особливо критично: способи використання (щоб твір не застосовували там, де ви не планували) та територія.",
+    nope: "На жаль, мінімальний перелік набагато ширший. Відсутність хоча б однієї ключової умови — строку, території чи способів використання — може зробити договір юридично слабким або взагалі незахисним.",
+    tag: "basics"
+  },
+  {
+    text: "Ви уклали ліцензійний договір, але не вказали строк дії. Що відбувається за законом в Україні?",
+    options: [
+      "Договір вважається безстроковим — права передані назавжди",
+      "Договір вважається укладеним на 5 років",
+      "Кожна зі сторін може розірвати його у будь-який момент без попередження",
+      "Ліцензіат може використовувати твір не більше 1 року, після чого потрібна пролонгація"
+    ],
+    correct: 1,
+    ok: "Правильно. Відповідно до Закону України «Про авторське право і суміжні права», якщо строк у договорі не зазначений, він вважається укладеним на 5 років. Після цього ліцензіат зобов'язаний припинити використання або переукласти договір.",
+    nope: "За українським законодавством, якщо строк ліцензійного договору не вказаний — він становить 5 років. Це важлива деталь, яку часто ігнорують при складанні договорів.",
+    tag: "basics"
+  },
+  {
+    text: "Замовник заплатив вам гонорар і каже: «Тепер я можу розміщувати твій твір де завгодно і як завгодно». Він правий?",
+    options: [
+      "Так, якщо заплатив — значить купив усі права",
+      "Так, але тільки в межах України",
+      "Ні — оплата гонорару не означає автоматичної передачі прав. Права передаються лише за письмовим договором",
+      "Залежить від суми оплати"
+    ],
+    correct: 2,
+    ok: "Саме так. Оплата — це лише розрахунок за виконану роботу. Права на твір передаються виключно письмовим договором із чітко визначеними умовами. Без договору — права залишаються у автора.",
+    nope: "Це дуже поширена омана. Факт оплати не переносить авторські права. Лише письмовий договір визначає, що саме і як може використовувати замовник.",
+    tag: "transfer"
+  },
+  {
+    text: "Що таке роялті у ліцензійному договорі?",
+    options: [
+      "Одноразова виплата автору за підписання договору",
+      "Відсоткова або фіксована виплата автору за кожен факт використання або продажу твору",
+      "Штраф за порушення умов договору",
+      "Виплата лише при комерційному використанні за кордоном"
+    ],
+    correct: 1,
+    ok: "Правильно. Роялті — це регулярна (або прив'язана до продажів) винагорода автору. Наприклад: 8% від продажу кожного примірника книги. Це ефективний інструмент монетизації, особливо якщо твір популярний.",
+    nope: "Роялті — це не разова виплата, а регулярна або прив'язана до кількості використань/продажів. Наприклад: 10% від кожного проданого примірника. Такий механізм вигідний автору при тривалому використанні твору.",
+    tag: "money"
+  },
+  {
+    text: "Чи може ліцензіат передати отримані права третій особі без вашого дозволу?",
+    options: [
+      "Так, завжди — він же заплатив за ліцензію",
+      "Лише якщо договір прямо це дозволяє (субліцензія)",
+      "Так, але тільки некомерційним організаціям",
+      "Ні, жодного разу — це заборонено законом безумовно"
+    ],
+    correct: 1,
+    ok: "Правильно. Передача прав третім особам (субліцензування) можлива лише якщо це прямо передбачено у вашому договорі. Якщо такого пункту немає — ліцензіат не має права нікому далі передавати права.",
+    nope: "Субліцензування — передача прав іншим особам — можливе лише якщо це прямо дозволено у договорі. Без такого пункту ліцензіат не може ділитися правами далі. Перевірте свої договори на цю умову.",
+    tag: "transfer"
+  },
+  {
+    text: "У договорі не вказано, яку саме територію охоплює ліцензія. Що це означає для вас як автора?",
+    options: [
+      "Ліцензія автоматично обмежена Україною",
+      "Ліцензіат може використовувати твір у всьому світі",
+      "Договір є недійсним через відсутність суттєвої умови",
+      "Ліцензія не діє — потрібно переукладати"
+    ],
+    correct: 1,
+    ok: "Важливий момент. Якщо територія не вказана, вважається, що ліцензія діє на всій території України, але це не завжди так трактується на практиці — а у міжнародних договорах відсутність умови про територію фактично означає необмежену дію. Завжди вказуйте територію явно.",
+    nope: "Відсутність умови про територію — ризик для автора. На практиці суди можуть трактувати це по-різному. У міжнародному контексті відсутність цієї умови може означати право на використання по всьому світу.",
+    tag: "basics"
+  },
+  {
+    text: "Ви виявили, що ліцензіат використовує ваш твір у спосіб, який не прописаний у договорі (наприклад, розмістив на рекламних білбордах, хоча мав право лише на сайт). Що ви можете зробити?",
+    options: [
+      "Нічого — раз договір підписаний, все дозволено",
+      "Лише надіслати листа з проханням прибрати",
+      "Вимагати припинення порушення, компенсацію збитків або виплату роялті за несанкціоноване використання",
+      "Одразу звертатися до поліції"
+    ],
+    correct: 2,
+    ok: "Правильно. Використання твору поза межами ліцензії — це порушення авторського права. Ви маєте право вимагати: припинення порушення, відшкодування збитків або додаткової виплати за фактичне використання. Це один із найважливіших аргументів на користь деталізованих договорів.",
+    nope: "Ви маєте набагато більше інструментів. Вихід за межі ліцензії — це порушення, яке дає підстави для вимоги компенсації та припинення неправомірного використання. Саме тому у договорі важливо чітко прописувати способи використання.",
+    tag: "protection"
+  },
+  {
+    text: "Яка ключова відмінність між ліцензійним договором та договором про надання послуг (підряд)?",
+    options: [
+      "Немає різниці — обидва регулюють творчу роботу",
+      "За ліцензійним договором автор передає права на готовий твір; за договором підряду — зобов'язується створити твір на замовлення",
+      "Договір підряду завжди дорожчий",
+      "Ліцензійний договір підходить лише для фізичних осіб"
+    ],
+    correct: 1,
+    ok: "Саме так. Ці два типи договорів часто плутають, і це призводить до серйозних правових помилок. Ліцензія регулює використання вже створеного твору. Підряд — це замовлення на створення нового. У другому випадку окремо потрібно прописати, які права і в якому обсязі переходять до замовника.",
+    nope: "Це принципова різниця. Договір підряду регулює процес створення твору. Ліцензійний договір — умови використання вже готового. Якщо у договорі підряду не прописати передачу прав — замовник отримає лише матеріальний результат, але не авторські права на нього.",
+    tag: "basics"
+  }
+];
+
+const RECOMMENDATIONS = {
+  basics: {
+    icon: "📋",
+    title: "Основи договорів",
+    text: "Деякі базові поняття ліцензійного права потребують уваги. Ключовий ризик — неповні або усні домовленості, які не захищають ні автора, ні замовника."
+  },
+  types: {
+    icon: "🔑",
+    title: "Типи ліцензій",
+    text: "Важливо розуміти різницю між виключною та невиключною ліцензією перед підписанням будь-якого договору. Від цього залежить ціна та ваші подальші можливості."
+  },
+  transfer: {
+    icon: "🔄",
+    title: "Передача прав",
+    text: "Права на твір — це окрема юридична категорія. Факт оплати або виконання роботи не означає автоматичної передачі авторських прав."
+  },
+  money: {
+    icon: "💰",
+    title: "Фінансові умови",
+    text: "Роялті та умови виплат потребують чіткого прописування у договорі. Неврегульовані фінансові умови — одна з найпоширеніших причин конфліктів."
+  },
+  protection: {
+    icon: "🛡️",
+    title: "Захист ваших прав",
+    text: "Знання про механізми захисту при порушенні договору — критично важливе. Без розуміння своїх прав ви не зможете захистити власний твір."
+  }
+};
+
+let current = 0;
+let correctCount = 0;
+let wrongTags = new Set();
+
+function startQuiz() {
+  document.getElementById('jk-intro').style.display = 'none';
+  document.getElementById('jk-question').style.display = 'block';
+  document.getElementById('jk-progress-area').style.display = 'flex';
+  showQuestion();
+}
+
+function showQuestion() {
+  const q = QUESTIONS[current];
+  document.getElementById('jk-q-label').textContent = `Питання ${current + 1} з ${QUESTIONS.length}`;
+  document.getElementById('jk-q-text').textContent = q.text;
+
+  const opts = document.getElementById('jk-options');
+  opts.innerHTML = '';
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'jk-opt';
+    btn.textContent = opt;
+    btn.onclick = () => handleAnswer(i);
+    opts.appendChild(btn);
+  });
+
+  document.getElementById('jk-feedback').className = 'jk-feedback';
+  document.getElementById('jk-feedback').innerHTML = '';
+  document.getElementById('jk-next-btn').classList.remove('show');
+
+  const pct = (current / QUESTIONS.length) * 100;
+  document.getElementById('jk-progress-fill').style.width = pct + '%';
+  document.getElementById('jk-progress-text').textContent = `${current + 1} / ${QUESTIONS.length}`;
+}
+
+function handleAnswer(idx) {
+  const q = QUESTIONS[current];
+  const btns = document.querySelectorAll('.jk-opt');
+  btns.forEach(b => b.disabled = true);
+
+  const fb = document.getElementById('jk-feedback');
+
+  if (idx === q.correct) {
+    btns[idx].classList.add('selected-correct');
+    correctCount++;
+    fb.className = 'jk-feedback ok';
+    fb.innerHTML = `<strong>✓ Правильно!</strong>${q.ok}`;
+  } else {
+    btns[idx].classList.add('selected-wrong');
+    btns[q.correct].classList.add('reveal-correct');
+    wrongTags.add(q.tag);
+    fb.className = 'jk-feedback nope';
+    fb.innerHTML = `<strong>✗ Не зовсім.</strong>${q.nope}`;
+  }
+
+  const nextBtn = document.getElementById('jk-next-btn');
+  nextBtn.textContent = current < QUESTIONS.length - 1 ? 'Наступне питання →' : 'Переглянути результат →';
+  nextBtn.classList.add('show');
+}
+
+function nextQuestion() {
+  current++;
+  if (current < QUESTIONS.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById('jk-question').style.display = 'none';
+  document.getElementById('jk-result').style.display = 'block';
+  document.getElementById('jk-progress-area').style.display = 'none';
+
+  const pct = Math.round((correctCount / QUESTIONS.length) * 100);
+  document.getElementById('res-correct-lbl').textContent = `${correctCount} правильних з ${QUESTIONS.length}`;
+  document.getElementById('res-pct-lbl').textContent = `${pct}%`;
+  setTimeout(() => {
+    document.getElementById('res-bar').style.width = pct + '%';
+  }, 100);
+
+  let icon, title, sub;
+  if (pct >= 85) {
+    icon = '🏛️'; title = 'Відмінне розуміння';
+    sub = `Ви добре орієнтуєтеся у ліцензійних договорах. Проте навіть при такому рівні знань — один непомічений пункт у договорі може коштувати дорого. Перевірте свої діючі договори з фахівцем.`;
+  } else if (pct >= 60) {
+    icon = '⚖️'; title = 'Базовий рівень';
+    sub = `Загальне розуміння є, але є суттєві прогалини, які можуть призвести до помилок при укладанні реальних договорів. Рекомендуємо консультацію перед підписанням.`;
+  } else {
+    icon = '📌'; title = 'Є над чим попрацювати';
+    sub = `У цій сфері багато нюансів, які легко пропустити без юридичної підготовки. Ваші договори можуть не захищати вас так, як ви думаєте. Варто розібратися детальніше.`;
+  }
+
+  document.getElementById('res-icon').textContent = icon;
+  document.getElementById('res-title').textContent = title;
+  document.getElementById('res-sub').textContent = sub;
+
+  // Рекомендації
+  const recsEl = document.getElementById('res-recs');
+  recsEl.innerHTML = '';
+
+  const shownTags = wrongTags.size > 0 ? wrongTags : new Set(['basics', 'protection']);
+  const tagsToShow = [...shownTags].slice(0, 3);
+
+  if (pct >= 85) {
+    recsEl.innerHTML = `
+      <div class="jk-rec-block">
+        <h4>✅ Ваші договори на правильному шляху</h4>
+        <p>Ви розумієте ключові механізми ліцензування. Наступний крок — аудит діючих договорів та оптимізація умов монетизації. Навіть у добре складених договорах часто є умови, які можна покращити на вашу користь.</p>
+      </div>`;
+  } else {
+    tagsToShow.forEach(tag => {
+      const r = RECOMMENDATIONS[tag];
+      if (r) {
+        recsEl.innerHTML += `
+          <div class="jk-rec-block">
+            <h4>${r.icon} ${r.title}</h4>
+            <p>${r.text}</p>
+          </div>`;
+      }
+    });
+  }
+}
+
+function restartQuiz() {
+  current = 0;
+  correctCount = 0;
+  wrongTags = new Set();
+  document.getElementById('jk-result').style.display = 'none';
+  document.getElementById('jk-intro').style.display = 'block';
+  document.getElementById('jk-progress-fill').style.width = '0%';
+}
+</script>
+
+</body></html>

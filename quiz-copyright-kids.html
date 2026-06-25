@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!-- saved from url=(0234)file:///C:/Users/User/Desktop/%D0%AE%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D1%83%D1%85%D0%BD%D1%8F/%D0%94%D0%B8%D1%82%D1%8F%D1%87%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8E/%D0%93%D1%96%D1%82%20%D1%85%D0%B0%D0%B1/sim-copyright.html -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Авторське право — Практичні завдання</title>
+<link href="./quiz-copyright-kids_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0e17;
+    --card: #1a1830;
+    --card2: #211f38;
+    --accent: #ff6b35;
+    --yellow: #ffd166;
+    --green: #06d6a0;
+    --red: #ef476f;
+    --blue: #118ab2;
+    --purple: #9b5de5;
+    --text: #fffffe;
+    --muted: #a7a3c2;
+    --border: rgba(255,255,255,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* BG pattern */
+  body::before {
+    content:'';
+    position:fixed; inset:0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(155,93,229,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(255,107,53,0.10) 0%, transparent 50%),
+                radial-gradient(ellipse at 60% 80%, rgba(6,214,160,0.08) 0%, transparent 50%);
+    pointer-events:none; z-index:0;
+  }
+
+  .wrap { position:relative; z-index:1; max-width:860px; margin:0 auto; padding:24px 20px 60px; }
+
+  /* HEADER */
+  header { text-align:center; margin-bottom:36px; }
+  header .badge {
+    display:inline-block; background:var(--accent); color:#fff;
+    font-size:11px; font-weight:900; letter-spacing:2px; text-transform:uppercase;
+    padding:4px 14px; border-radius:20px; margin-bottom:14px;
+  }
+  header h1 {
+    font-family:'Fredoka One', cursive;
+    font-size:clamp(2rem,6vw,3.2rem);
+    line-height:1.1;
+    background: linear-gradient(135deg, #ff6b35, #ffd166, #9b5de5);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom:10px;
+  }
+  header p { color:var(--muted); font-size:15px; }
+
+  /* PROGRESS */
+  .progress-bar-wrap {
+    background:var(--card2); border-radius:12px; height:10px; margin-bottom:28px;
+    overflow:hidden; border:1px solid var(--border);
+  }
+  .progress-bar {
+    height:100%;
+    background: linear-gradient(90deg, var(--accent), var(--purple));
+    border-radius:12px;
+    transition: width 0.5s ease;
+    width:0%;
+  }
+  .progress-label {
+    display:flex; justify-content:space-between;
+    font-size:12px; color:var(--muted); margin-bottom:8px;
+  }
+
+  /* SCORE */
+  .scoreboard {
+    display:flex; gap:12px; margin-bottom:28px; flex-wrap:wrap;
+  }
+  .score-pill {
+    flex:1; min-width:120px;
+    background:var(--card); border:1px solid var(--border);
+    border-radius:14px; padding:14px 16px; text-align:center;
+  }
+  .score-pill .val {
+    font-family:'Fredoka One',cursive; font-size:2rem;
+    line-height:1;
+  }
+  .score-pill .lbl { font-size:11px; color:var(--muted); margin-top:4px; }
+  .score-pill.correct .val { color:var(--green); }
+  .score-pill.wrong .val { color:var(--red); }
+  .score-pill.total .val { color:var(--yellow); }
+
+  /* SECTION TABS */
+  .tabs {
+    display:flex; gap:8px; margin-bottom:24px; flex-wrap:wrap;
+  }
+  .tab-btn {
+    background:var(--card2); border:1px solid var(--border);
+    color:var(--muted); font-family:'Nunito',sans-serif; font-weight:700;
+    font-size:13px; padding:8px 16px; border-radius:10px; cursor:pointer;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { border-color:var(--accent); color:var(--text); }
+  .tab-btn.active {
+    background:var(--accent); border-color:var(--accent);
+    color:#fff;
+  }
+
+  /* CARDS */
+  .section { display:none; }
+  .section.active { display:block; }
+
+  .card {
+    background:var(--card); border:1px solid var(--border);
+    border-radius:18px; padding:24px; margin-bottom:16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(0,0,0,0.4); }
+
+  .card .q-num {
+    font-size:11px; font-weight:900; letter-spacing:2px; text-transform:uppercase;
+    color:var(--muted); margin-bottom:10px;
+  }
+  .card .q-text {
+    font-size:17px; font-weight:700; line-height:1.4; margin-bottom:18px;
+  }
+  .card .q-emoji { font-size:2rem; margin-bottom:10px; display:block; }
+
+  /* OPTIONS */
+  .options { display:grid; gap:10px; }
+  .options.two-col { grid-template-columns:1fr 1fr; }
+  .opt-btn {
+    background:var(--card2); border:1.5px solid var(--border);
+    color:var(--text); font-family:'Nunito',sans-serif;
+    font-size:14px; font-weight:600;
+    padding:12px 16px; border-radius:12px; cursor:pointer;
+    text-align:left; transition: all 0.2s; line-height:1.3;
+  }
+  .opt-btn:hover:not(:disabled) {
+    border-color:var(--accent); background:rgba(255,107,53,0.1);
+  }
+  .opt-btn.correct {
+    border-color:var(--green) !important;
+    background:rgba(6,214,160,0.15) !important;
+    color:var(--green) !important;
+  }
+  .opt-btn.wrong {
+    border-color:var(--red) !important;
+    background:rgba(239,71,111,0.15) !important;
+    color:var(--red) !important;
+  }
+  .opt-btn:disabled { cursor:default; }
+
+  /* FEEDBACK */
+  .feedback {
+    display:none; margin-top:14px;
+    padding:12px 16px; border-radius:12px; font-size:14px; line-height:1.5;
+  }
+  .feedback.show { display:block; }
+  .feedback.ok { background:rgba(6,214,160,0.12); border:1px solid var(--green); color:var(--green); }
+  .feedback.nope { background:rgba(239,71,111,0.12); border:1px solid var(--red); color:#ff8fa3; }
+
+  /* DRAG & DROP */
+  .drag-area {
+    display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px;
+  }
+  .drag-item {
+    background: linear-gradient(135deg, var(--purple), #6e3ec7);
+    color:#fff; font-size:13px; font-weight:700;
+    padding:8px 14px; border-radius:10px; cursor:grab;
+    user-select:none; transition:transform 0.15s, opacity 0.15s;
+    border:1.5px solid rgba(255,255,255,0.15);
+  }
+  .drag-item:active { cursor:grabbing; transform:scale(0.95); }
+  .drag-item.used { opacity:0.35; pointer-events:none; }
+
+  .drop-zones { display:grid; gap:10px; }
+  .drop-zone {
+    background:var(--card2); border:2px dashed var(--border);
+    border-radius:12px; padding:14px 16px; min-height:52px;
+    display:flex; align-items:center; gap:10px;
+    font-size:14px; transition:border-color 0.2s;
+  }
+  .drop-zone .zone-label { color:var(--muted); font-size:13px; font-weight:700; white-space:nowrap; }
+  .drop-zone.dragover { border-color:var(--purple); background:rgba(155,93,229,0.1); }
+  .drop-zone .placed-tag {
+    background:linear-gradient(135deg, #9b5de5, #6e3ec7);
+    color:#fff; font-size:13px; font-weight:700;
+    padding:5px 12px; border-radius:8px;
+  }
+  .drop-zone.correct-zone { border-color:var(--green) !important; }
+  .drop-zone.wrong-zone { border-color:var(--red) !important; }
+
+  /* SCENARIO */
+  .scenario-box {
+    background:linear-gradient(135deg, rgba(17,138,178,0.2), rgba(17,138,178,0.05));
+    border:1px solid rgba(17,138,178,0.4); border-radius:14px;
+    padding:16px 20px; margin-bottom:16px; font-size:15px; line-height:1.6;
+  }
+  .scenario-box strong { color:var(--blue); }
+
+  /* SLIDER QUIZ */
+  .slider-q { margin-bottom:20px; }
+  .slider-q .s-label { font-size:15px; font-weight:700; margin-bottom:12px; }
+  .choices { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+
+  /* CHECK BTN */
+  .check-btn {
+    background: linear-gradient(135deg, var(--accent), #e85d04);
+    color:#fff; font-family:'Fredoka One',cursive;
+    font-size:16px; padding:12px 28px; border:none;
+    border-radius:14px; cursor:pointer; margin-top:14px;
+    transition: transform 0.15s, box-shadow 0.2s;
+    box-shadow:0 4px 20px rgba(255,107,53,0.35);
+  }
+  .check-btn:hover { transform:translateY(-2px); box-shadow:0 6px 28px rgba(255,107,53,0.5); }
+
+  /* RESULT */
+  .result-screen {
+    display:none; text-align:center; padding:40px 20px;
+  }
+  .result-screen.show { display:block; }
+  .result-emoji { font-size:5rem; margin-bottom:16px; }
+  .result-title {
+    font-family:'Fredoka One',cursive;
+    font-size:2.5rem; margin-bottom:10px;
+    background: linear-gradient(135deg, var(--yellow), var(--accent));
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+  .result-text { color:var(--muted); font-size:16px; margin-bottom:28px; }
+  .result-stats {
+    display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:32px;
+  }
+  .rs { text-align:center; }
+  .rs .n { font-family:'Fredoka One',cursive; font-size:2.5rem; color:var(--yellow); }
+  .rs .l { font-size:13px; color:var(--muted); }
+  .restart-btn {
+    background: linear-gradient(135deg, var(--green), #04b386);
+    color:#fff; font-family:'Fredoka One',cursive;
+    font-size:18px; padding:14px 36px; border:none;
+    border-radius:16px; cursor:pointer;
+    box-shadow:0 4px 20px rgba(6,214,160,0.35);
+    transition: transform 0.15s;
+  }
+  .restart-btn:hover { transform:scale(1.05); }
+
+  /* THEORY CARD */
+  .theory-card {
+    background: linear-gradient(135deg, var(--card), var(--card2));
+    border-left:4px solid var(--yellow);
+    border-radius:0 14px 14px 0; padding:16px 20px; margin-bottom:14px;
+  }
+  .theory-card h3 { color:var(--yellow); font-size:14px; margin-bottom:8px; }
+  .theory-card p { font-size:14px; line-height:1.6; color:#d4d0f0; }
+  .theory-card .ex { color:var(--muted); font-style:italic; font-size:13px; margin-top:6px; }
+
+  /* NEXT BTN */
+  .next-btn {
+    background:var(--card2); border:1.5px solid var(--border);
+    color:var(--text); font-family:'Nunito',sans-serif; font-weight:700;
+    font-size:14px; padding:10px 20px; border-radius:12px; cursor:pointer;
+    margin-top:10px; transition:all 0.2s; display:none;
+  }
+  .next-btn.show { display:inline-block; }
+  .next-btn:hover { border-color:var(--green); color:var(--green); }
+
+  /* BADGE WIN */
+  @keyframes pop { 0%{transform:scale(0.5);opacity:0} 70%{transform:scale(1.1)} 100%{transform:scale(1);opacity:1} }
+  .badge-win {
+    display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+    background:var(--card); border:2px solid var(--yellow); border-radius:20px;
+    padding:30px 40px; text-align:center; z-index:100;
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+  }
+  .badge-win.show { display:block; animation: pop 0.4s ease; }
+  .badge-win .b-emoji { font-size:4rem; }
+  .badge-win .b-title { font-family:'Fredoka One',cursive; font-size:1.6rem; color:var(--yellow); margin:8px 0 4px; }
+  .badge-win .b-text { font-size:13px; color:var(--muted); }
+  .badge-win .b-close { margin-top:14px; cursor:pointer; color:var(--accent); font-size:13px; font-weight:700; }
+
+  @media(max-width:520px) {
+    .options.two-col { grid-template-columns:1fr; }
+    .choices { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="badge">⚖️ Правознавство · 12–15 років</div>
+    <h1>Авторське право<br>на практиці</h1>
+    <p>Практичні завдання — від простого до складного 🚀</p>
+  </header>
+
+  <!-- SCORE -->
+  <div class="scoreboard">
+    <div class="score-pill correct"><div class="val" id="sc-correct">0</div><div class="lbl">✅ Правильно</div></div>
+    <div class="score-pill wrong"><div class="val" id="sc-wrong">0</div><div class="lbl">❌ Помилки</div></div>
+    <div class="score-pill total"><div class="val" id="sc-total">0</div><div class="lbl">⭐ Очки</div></div>
+  </div>
+  <div class="progress-label"><span id="pg-label">Прогрес</span><span id="pg-num">0 / 18</span></div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(&#39;basics&#39;)">🧠 Основи</button>
+    <button class="tab-btn" onclick="switchTab(&#39;scenarios&#39;)">📖 Ситуації</button>
+    <button class="tab-btn" onclick="switchTab(&#39;match&#39;)">🔗 З'єднай</button>
+    <button class="tab-btn" onclick="switchTab(&#39;hard&#39;)">🔥 Складні</button>
+  </div>
+
+  <!-- ============ SECTION 1: BASICS ============ -->
+  <div id="sec-basics" class="section active">
+
+    <div class="theory-card">
+      <h3>📚 Запам'ятай!</h3>
+      <p><strong>Авторське право</strong> — це захист для тих, хто щось створив: написав, намалював, зняв, зіграв.</p>
+      <p class="ex">Виникає автоматично — реєстрація не потрібна! Діє все життя автора + ще 70 років.</p>
+    </div>
+
+    <!-- Q1 -->
+    <div class="card" id="q1">
+      <div class="q-num">Питання 1 з 18</div>
+      <span class="q-emoji">🎨</span>
+      <div class="q-text">Олег намалював картину і виклав її в Instagram. Чи потрібно йому кудись йти, щоб отримати авторське право?</div>
+      <div class="options two-col">
+        <button class="opt-btn" onclick="answer(this,&#39;q1&#39;,false,&#39;Авторське право виникає АВТОМАТИЧНО в момент створення. Нікуди ходити не потрібно! 🎉&#39;)">Так, треба реєструватися в державному органі</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q1&#39;,true,&#39;Авторське право виникає АВТОМАТИЧНО в момент створення. Нікуди ходити не потрібно! 🎉&#39;)">Ні, право виникає автоматично</button>
+      </div>
+      <div class="feedback" id="fb-q1"></div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="card" id="q2">
+      <div class="q-num">Питання 2 з 18</div>
+      <span class="q-emoji">📸</span>
+      <div class="q-text">Що саме захищає авторське право?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q2&#39;,false,&#39;Ідеї не захищаються! Захищається лише конкретна форма — текст, малюнок, мелодія.&#39;)">Ідеї та задуми</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q2&#39;,true,&#39;Правильно! Захищається конкретна форма вираження: текст, картина, музика, фото 🎯&#39;)">Конкретні твори: текст, малюнок, музику, фото</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q2&#39;,false,&#39;Інформація (факти, новини) не захищається авторським правом.&#39;)">Інформацію та факти</button>
+      </div>
+      <div class="feedback" id="fb-q2"></div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="card" id="q3">
+      <div class="q-num">Питання 3 з 18</div>
+      <span class="q-emoji">⏳</span>
+      <div class="q-text">Скільки часу діє авторське право в Україні?</div>
+      <div class="options two-col">
+        <button class="opt-btn" onclick="answer(this,&#39;q3&#39;,false,&#39;10 років — занадто мало. Правильна відповідь пов\&#39;язана з тривалістю життя автора.&#39;)">10 років після публікації</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q3&#39;,false,&#39;50 — теж ні.&#39;)">50 років після смерті</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q3&#39;,true,&#39;Саме так! Ціле життя + ще 70 років після смерті. Тому онуки та правнуки теж захищені ✅&#39;)">Усе життя + 70 років після смерті</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q3&#39;,false,&#39;Назавжди — це вже «публічне надбання», але не авторське право.&#39;)">Вічно</button>
+      </div>
+      <div class="feedback" id="fb-q3"></div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card" id="q4">
+      <div class="q-num">Питання 4 з 18</div>
+      <span class="q-emoji">🎵</span>
+      <div class="q-text">Аня придумала мелодію у голові, але нікуди її не записала. Чи є в неї авторське право?</div>
+      <div class="options two-col">
+        <button class="opt-btn" onclick="answer(this,&#39;q4&#39;,false,&#39;Хм, не зовсім. Але без запису дуже важко довести авторство!&#39;)">Так, повністю захищена</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q4&#39;,true,&#39;Юридично право є, але без запису ДОВЕСТИ авторство майже неможливо. Тому краще записувати! 📝&#39;)">Право є, але довести його без запису важко</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q4&#39;,false,&#39;Авторське право виникає з моменту створення, а не запису.&#39;)">Ні, треба спочатку записати</button>
+      </div>
+      <div class="feedback" id="fb-q4"></div>
+    </div>
+
+  </div>
+
+  <!-- ============ SECTION 2: SCENARIOS ============ -->
+  <div id="sec-scenarios" class="section">
+
+    <div class="theory-card">
+      <h3>⚡ Важливо!</h3>
+      <p><strong>Порушення авторського права</strong> — це коли використовуєш чужий твір без дозволу і без вказання автора. Дозволено: навчання, цитати з посиланням, власні перетворення.</p>
+    </div>
+
+    <!-- Q5 -->
+    <div class="card" id="q5">
+      <div class="q-num">Питання 5 з 18</div>
+      <div class="scenario-box">
+        Максим знайшов у Google крутий малюнок і скопіював його на обкладинку своєї шкільної презентації. Автора не вказав.
+      </div>
+      <div class="q-text">Що зробив Максим?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q5&#39;,false,&#39;Ні, навіть для школи потрібно вказувати автора!&#39;)">Все нормально — це для школи, не для продажу</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q5&#39;,true,&#39;Правильно! Навіть для особистих цілей потрібно вказувати автора. Виняток — лише деякі навчальні цілі, але і там краще вказати джерело ✅&#39;)">Порушив авторське право — не вказав автора</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q5&#39;,false,&#39;Знайти в Google ≠ безкоштовно використовувати.&#39;)">Нічого, якщо картинка безкоштовна в Google</button>
+      </div>
+      <div class="feedback" id="fb-q5"></div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="card" id="q6">
+      <div class="q-num">Питання 6 з 18</div>
+      <div class="scenario-box">
+        Катя написала фанфік за всесвітом відомої книги. Вона не продає його — просто виклала безкоштовно на сайт для фанів.
+      </div>
+      <div class="q-text">Чи є проблема з авторським правом?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q6&#39;,false,&#39;Не зовсім. Ситуація неоднозначна.&#39;)">Ні, адже вона нічого не заробляє</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q6&#39;,true,&#39;Правильно! Фанфіки — «сіра зона». Юридично автор оригіналу може заперечити, але більшість авторів не проти фанфіків. Найкраще — вказати, що це фанфік, і не продавати 📖&#39;)">Може бути проблема — фанфік використовує чужих персонажів</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q6&#39;,false,&#39;Ні, але залежить від правил конкретної платформи.&#39;)">Ні, сайт для фанів дає автоматично дозвіл</button>
+      </div>
+      <div class="feedback" id="fb-q6"></div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="card" id="q7">
+      <div class="q-num">Питання 7 з 18</div>
+      <div class="scenario-box">
+        Дмитро робить відеоогляд нового фільму і показує у відео кілька коротких уривків — щоб пояснити, про що він говорить.
+      </div>
+      <div class="q-text">Чи порушує він авторське право?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q7&#39;,true,&#39;Правильно! Короткі цитати для критики та огляду — це «добросовісне використання». Але уривки мають бути короткими і з вказанням джерела 👍&#39;)">Ні — короткі цитати для критики/огляду зазвичай дозволені</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q7&#39;,false,&#39;Не обов\&#39;язково! Є поняття «добросовісне використання» для критики та огляду.&#39;)">Так — будь-яке використання без дозволу заборонено</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q7&#39;,false,&#39;Довжина має значення, але є й інші критерії.&#39;)">Тільки якщо уривки довші 10 хвилин</button>
+      </div>
+      <div class="feedback" id="fb-q7"></div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="card" id="q8">
+      <div class="q-num">Питання 8 з 18</div>
+      <div class="scenario-box">
+        Соня сфотографувала свою подругу Олю на фоні пам'ятника Шевченку. Соня хоче продати фото.
+      </div>
+      <div class="q-text">Яке право потрібно враховувати?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q8&#39;,false,&#39;Авторське право тут є, але це не всі права.&#39;)">Тільки авторське право Соні на фото</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q8&#39;,true,&#39;Бінго! Авторське право Соні на фото + право Олі на зображення (право на приватне зображення). Щоб продавати — потрібна згода Олі! 🎯&#39;)">Авторське право Соні + право Олі на своє зображення</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q8&#39;,false,&#39;Права на пам\&#39;ятник зазвичай не перешкоджають фотографуванню в публічних місцях.&#39;)">Тільки право на пам'ятник (авторське право скульптора)</button>
+      </div>
+      <div class="feedback" id="fb-q8"></div>
+    </div>
+
+  </div>
+
+  <!-- ============ SECTION 3: MATCH ============ -->
+  <div id="sec-match" class="section">
+
+    <div class="theory-card">
+      <h3>🔗 Тренування</h3>
+      <p>Перетягни терміни до правильних визначень. Просто натискай на термін, потім на визначення.</p>
+    </div>
+
+    <!-- MATCH GAME -->
+    <div class="card" id="match-game">
+      <div class="q-num">Питання 9–13 з 18 · Знайди пари</div>
+      <div class="q-text">Натисни термін → потім натисни правильне визначення</div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;" id="terms-area">
+        <button class="drag-item" id="t1" onclick="selectTerm(&#39;t1&#39;)">Ліцензія</button>
+        <button class="drag-item" id="t2" onclick="selectTerm(&#39;t2&#39;)">Плагіат</button>
+        <button class="drag-item" id="t3" onclick="selectTerm(&#39;t3&#39;)">Роялті</button>
+        <button class="drag-item" id="t4" onclick="selectTerm(&#39;t4&#39;)">Цитата</button>
+        <button class="drag-item" id="t5" onclick="selectTerm(&#39;t5&#39;)">Ліцензіат</button>
+      </div>
+
+      <div style="display:grid; gap:8px;" id="defs-area">
+        <div class="drop-zone" id="d1" onclick="placeTerm(&#39;d1&#39;,&#39;t3&#39;)">
+          <span class="zone-label">💰</span>
+          <span style="flex:1; color:var(--muted);">Плата автору за кожне використання його твору</span>
+          <span class="placed-tag" style="display:none;"></span>
+        </div>
+        <div class="drop-zone" id="d2" onclick="placeTerm(&#39;d2&#39;,&#39;t1&#39;)">
+          <span class="zone-label">📜</span>
+          <span style="flex:1; color:var(--muted);">Дозвіл від автора на використання твору</span>
+          <span class="placed-tag" style="display:none;"></span>
+        </div>
+        <div class="drop-zone" id="d3" onclick="placeTerm(&#39;d3&#39;,&#39;t2&#39;)">
+          <span class="zone-label">🚫</span>
+          <span style="flex:1; color:var(--muted);">Видача чужого твору за свій без дозволу</span>
+          <span class="placed-tag" style="display:none;"></span>
+        </div>
+        <div class="drop-zone" id="d4" onclick="placeTerm(&#39;d4&#39;,&#39;t4&#39;)">
+          <span class="zone-label">📝</span>
+          <span style="flex:1; color:var(--muted);">Короткий уривок чужого твору з посиланням на автора</span>
+          <span class="placed-tag" style="display:none;"></span>
+        </div>
+        <div class="drop-zone" id="d5" onclick="placeTerm(&#39;d5&#39;,&#39;t5&#39;)">
+          <span class="zone-label">🤝</span>
+          <span style="flex:1; color:var(--muted);">Той, хто отримав дозвіл використовувати чужий твір</span>
+          <span class="placed-tag" style="display:none;"></span>
+        </div>
+      </div>
+      <div class="feedback" id="fb-match"></div>
+      <button class="check-btn" id="match-check" onclick="checkMatch()" style="display:none;">Перевірити ✓</button>
+    </div>
+
+    <!-- Q14 -->
+    <div class="card" id="q14">
+      <div class="q-num">Питання 14 з 18</div>
+      <span class="q-emoji">💸</span>
+      <div class="q-text">Письменниця Ірина продала видавництву свою книгу. Видавництво продало 5000 примірників по 200 грн. Ірина отримує 10% роялті. Скільки вона отримала?</div>
+      <div class="options two-col">
+        <button class="opt-btn" onclick="answer(this,&#39;q14&#39;,false,&#39;Підрахуй: 5000 × 200 × 10% = ?&#39;)">20 000 грн</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q14&#39;,true,&#39;Правильно! 5000 × 200 = 1 000 000 грн (дохід видавця). 10% від 1 000 000 = 100 000 грн для Ірини 🤑&#39;)">100 000 грн</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q14&#39;,false,&#39;Ні, підрахуй ще раз.&#39;)">50 000 грн</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q14&#39;,false,&#39;Надто багато.&#39;)">200 000 грн</button>
+      </div>
+      <div class="feedback" id="fb-q14"></div>
+    </div>
+
+  </div>
+
+  <!-- ============ SECTION 4: HARD ============ -->
+  <div id="sec-hard" class="section">
+
+    <div class="theory-card">
+      <h3>🔥 Складний рівень</h3>
+      <p>Тут справжні дилеми. Часом однозначної відповіді немає — як і в реальному житті!</p>
+    </div>
+
+    <!-- Q15 -->
+    <div class="card" id="q15">
+      <div class="q-num">Питання 15 з 18</div>
+      <div class="scenario-box">
+        Богдан написав пісню разом із другом Іваном. Пізніше вони посварились. Богдан хоче продати пісню без дозволу Івана.
+      </div>
+      <div class="q-text">Що відбудеться юридично?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q15&#39;,false,&#39;Не зовсім — є поняття «спільне авторство».&#39;)">Богдан може сам продати — він теж автор</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q15&#39;,true,&#39;Бінго! При спільному авторстві розпоряджатись твором можна лише РАЗОМ. Богдан не може продати без згоди Івана — навіть якщо він написав більшу частину! ⚖️&#39;)">Не може — при спільному авторстві потрібна згода обох</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q15&#39;,false,&#39;Суд вирішує, хто автор, але не розриває спільне авторство автоматично.&#39;)">Суд вирішить, хто «справжній» автор</button>
+      </div>
+      <div class="feedback" id="fb-q15"></div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="card" id="q16">
+      <div class="q-num">Питання 16 з 18</div>
+      <div class="scenario-box">
+        Настя попросила ChatGPT написати вірш і виклала його як свій. Вона вказала себе автором.
+      </div>
+      <div class="q-text">Яка тут проблема з авторством?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q16&#39;,false,&#39;Ні, проблема не тільки в назві, а в природі авторства.&#39;)">Ніякої — вона придумала тему вірша</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q16&#39;,false,&#39;Не зовсім — авторське право тут складніше.&#39;)">ШІ має авторське право, тому Настя порушила його</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q16&#39;,true,&#39;Правильно! ШІ не є юридичною особою і не має авторських прав. Але і Настя не «створила» твір у юридичному сенсі. Вірш може бути без автора або автором вважається оператор платформи — залежить від законодавства 🤖&#39;)">ШІ не є автором, але і Настя — технічно теж ні</button>
+      </div>
+      <div class="feedback" id="fb-q16"></div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="card" id="q17">
+      <div class="q-num">Питання 17 з 18</div>
+      <div class="scenario-box">
+        Відомий художник помер 50 років тому. Його картини у музеї. Музей продає листівки з репродукціями і не платить нікому роялті.
+      </div>
+      <div class="q-text">Чи законно це в Україні?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q17&#39;,false,&#39;Не зовсім — в Україні термін захисту 70 років, а не 50.&#39;)">Так — 50 років минуло, всі права закінчились</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q17&#39;,true,&#39;Правильно! В Україні — 70 років після смерті. Якщо пройшло лише 50 — права ще можуть належати спадкоємцям. Музей може порушувати права! 🎨&#39;)">Ні — в Україні діє 70 років, а не 50</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q17&#39;,false,&#39;Музеї не мають автоматичного виключення.&#39;)">Так — музеям дозволено без обмежень</button>
+      </div>
+      <div class="feedback" id="fb-q17"></div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="card" id="q18">
+      <div class="q-num">Питання 18 з 18 · ФІНАЛЬНЕ!</div>
+      <span class="q-emoji">🏆</span>
+      <div class="q-text">Ярослав написав код для гри на уроці інформатики. Школа каже, що це «їхня» власність, бо він писав на уроці. Хто правий?</div>
+      <div class="options">
+        <button class="opt-btn" onclick="answer(this,&#39;q18&#39;,false,&#39;Не зовсім, залежить від умов.&#39;)">Школа — вони платять вчителям і надають обладнання</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q18&#39;,false,&#39;Частково правда, але закон складніший.&#39;)">Яро — він особисто написав код</button>
+        <button class="opt-btn" onclick="answer(this,&#39;q18&#39;,true,&#39;Правильно! Це залежить від контракту/угоди. Якщо Яро ніяких угод не підписував — право на нього. Але якщо є шкільний регламент про права на учнівські роботи — суперечка! Висновок: ЗАВЖДИ читай угоди, які підписуєш 📜&#39;)">Залежить від угоди — без неї право залишається у Яра</button>
+      </div>
+      <div class="feedback" id="fb-q18"></div>
+    </div>
+
+  </div>
+
+  <!-- RESULT -->
+  <div class="result-screen" id="result-screen">
+    <div class="result-emoji" id="res-emoji">🏆</div>
+    <div class="result-title" id="res-title">Молодець!</div>
+    <div class="result-text" id="res-text">Ти пройшов усі завдання!</div>
+    <div class="result-stats">
+      <div class="rs"><div class="n" id="res-correct">0</div><div class="l">Правильних</div></div>
+      <div class="rs"><div class="n" id="res-score">0</div><div class="l">Очок</div></div>
+      <div class="rs"><div class="n" id="res-pct">0%</div><div class="l">Результат</div></div>
+    </div>
+    <button class="restart-btn" onclick="restart()">🔄 Спробувати знову</button>
+  </div>
+
+</div>
+
+<!-- BADGE POPUP -->
+<div class="badge-win" id="badge-win">
+  <div class="b-emoji" id="b-emoji">🏅</div>
+  <div class="b-title" id="b-title">Нова відзнака!</div>
+  <div class="b-text" id="b-text">Ти заробив досягнення</div>
+  <div class="b-close" onclick="closeBadge()">Закрити ✕</div>
+</div>
+
+<script>
+  let correct = 0, wrong = 0, score = 0, answered = 0;
+  const TOTAL = 18;
+  const answeredQ = {};
+
+  // MATCH GAME STATE
+  let selectedTerm = null;
+  const matchCorrect = { d1:'t3', d2:'t1', d3:'t2', d4:'t4', d5:'t5' };
+  const matchPlaced = {};
+  let matchDone = false;
+
+  function switchTab(name) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('sec-' + name).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  function answer(btn, qid, isCorrect, explanation) {
+    if (answeredQ[qid]) return;
+    answeredQ[qid] = true;
+    answered++;
+
+    const parent = document.getElementById(qid);
+    const allBtns = parent.querySelectorAll('.opt-btn');
+    allBtns.forEach(b => b.disabled = true);
+
+    const fb = document.getElementById('fb-' + qid);
+
+    if (isCorrect) {
+      btn.classList.add('correct');
+      correct++;
+      score += 10;
+      fb.className = 'feedback show ok';
+      fb.innerHTML = '✅ ' + explanation;
+    } else {
+      btn.classList.add('wrong');
+      wrong++;
+      fb.className = 'feedback show nope';
+      fb.innerHTML = '❌ ' + explanation;
+      // Show correct
+      allBtns.forEach(b => {
+        if (b.getAttribute('onclick').includes('true')) b.classList.add('correct');
+      });
+    }
+
+    updateScore();
+    checkBadges();
+    if (answered >= TOTAL) setTimeout(showResult, 1200);
+  }
+
+  // MATCH GAME
+  function selectTerm(tid) {
+    if (matchDone) return;
+    document.querySelectorAll('.drag-item').forEach(t => t.style.outline = 'none');
+    selectedTerm = tid;
+    document.getElementById(tid).style.outline = '3px solid var(--yellow)';
+  }
+
+  function placeTerm(did, correctTid) {
+    if (!selectedTerm || matchDone) return;
+    const zone = document.getElementById(did);
+    if (zone.dataset.filled) return;
+
+    zone.dataset.filled = selectedTerm;
+    const tag = zone.querySelector('.placed-tag');
+    tag.textContent = document.getElementById(selectedTerm).textContent;
+    tag.style.display = 'inline-block';
+    document.getElementById(selectedTerm).classList.add('used');
+
+    matchPlaced[did] = selectedTerm;
+    selectedTerm = null;
+    document.querySelectorAll('.drag-item').forEach(t => t.style.outline = 'none');
+
+    // Show check btn if all placed
+    if (Object.keys(matchPlaced).length === 5) {
+      document.getElementById('match-check').style.display = 'inline-block';
+    }
+  }
+
+  function checkMatch() {
+    if (answeredQ['match']) return;
+    answeredQ['match'] = true;
+    matchDone = true;
+    answered += 5;
+
+    let matchCorrectCount = 0;
+    for (let did in matchCorrect) {
+      const zone = document.getElementById(did);
+      if (matchPlaced[did] === matchCorrect[did]) {
+        zone.classList.add('correct-zone');
+        matchCorrectCount++;
+      } else {
+        zone.classList.add('wrong-zone');
+      }
+    }
+
+    correct += matchCorrectCount;
+    wrong += (5 - matchCorrectCount);
+    score += matchCorrectCount * 10;
+
+    const fb = document.getElementById('fb-match');
+    if (matchCorrectCount === 5) {
+      fb.className = 'feedback show ok';
+      fb.innerHTML = '✅ Ідеально! Усі 5 термінів правильно! +50 очок 🎉';
+    } else {
+      fb.className = 'feedback show nope';
+      fb.innerHTML = `❌ ${matchCorrectCount} з 5 правильно. Зелені — правильні, червоні — ні.`;
+    }
+
+    document.getElementById('match-check').style.display = 'none';
+    updateScore();
+    checkBadges();
+    if (answered >= TOTAL) setTimeout(showResult, 1200);
+  }
+
+  function updateScore() {
+    document.getElementById('sc-correct').textContent = correct;
+    document.getElementById('sc-wrong').textContent = wrong;
+    document.getElementById('sc-total').textContent = score;
+    const pct = Math.round((answered / TOTAL) * 100);
+    document.getElementById('progress-bar').style.width = pct + '%';
+    document.getElementById('pg-num').textContent = answered + ' / ' + TOTAL;
+  }
+
+  const badges = [
+    { threshold: 1, emoji:'⚡', title:'Перший крок', text:'Ти відповів на перше питання!' },
+    { threshold: 5, emoji:'🔥', title:'Розігрівся!', text:'5 питань — ти входиш у ритм!' },
+    { threshold: 10, emoji:'💡', title:'Правник-початківець', text:'Половина шляху пройдена!' },
+    { threshold: 18, emoji:'🏆', title:'Знавець авторського права', text:'Усі 18 завдань завершені!' },
+  ];
+  const shownBadges = new Set();
+
+  function checkBadges() {
+    badges.forEach(b => {
+      if (answered >= b.threshold && !shownBadges.has(b.threshold)) {
+        shownBadges.add(b.threshold);
+        setTimeout(() => showBadge(b), 400);
+      }
+    });
+  }
+
+  function showBadge(b) {
+    document.getElementById('b-emoji').textContent = b.emoji;
+    document.getElementById('b-title').textContent = b.title;
+    document.getElementById('b-text').textContent = b.text;
+    document.getElementById('badge-win').classList.add('show');
+    setTimeout(closeBadge, 3000);
+  }
+  function closeBadge() { document.getElementById('badge-win').classList.remove('show'); }
+
+  function showResult() {
+    document.getElementById('result-screen').classList.add('show');
+    const pct = Math.round((correct / TOTAL) * 100);
+    document.getElementById('res-correct').textContent = correct;
+    document.getElementById('res-score').textContent = score;
+    document.getElementById('res-pct').textContent = pct + '%';
+
+    let emoji, title, text;
+    if (pct >= 90) { emoji='🏆'; title='Відмінник права!'; text='Ти справжній знавець авторського права. Можеш консультувати однокласників!'; }
+    else if (pct >= 70) { emoji='🎯'; title='Добре!'; text='Дуже непогано! Ще трохи практики — і будеш ідеальним!'; }
+    else if (pct >= 50) { emoji='📚'; title='Є над чим попрацювати'; text='Непогано для початку. Перечитай теорію і спробуй ще раз!'; }
+    else { emoji='💪'; title='Не здавайся!'; text='Авторське право — складна тема. Спробуй ще раз після повторення!'; }
+
+    document.getElementById('res-emoji').textContent = emoji;
+    document.getElementById('res-title').textContent = title;
+    document.getElementById('res-text').textContent = text;
+  }
+
+  function restart() {
+    location.reload();
+  }
+</script>
+
+</body></html>
